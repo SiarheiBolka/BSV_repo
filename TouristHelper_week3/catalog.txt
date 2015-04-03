@@ -1,0 +1,3 @@
+Cruise: No_food: Bus: 7
+Rest: Breakfast: Train: 10
+Rest: Breakfast: Train: 14

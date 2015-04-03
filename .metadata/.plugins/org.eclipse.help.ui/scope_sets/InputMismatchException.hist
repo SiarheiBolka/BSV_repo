@@ -1,0 +1,4 @@
+#Tue Mar 31 12:43:27 BRT 2015
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=InputMismatchException

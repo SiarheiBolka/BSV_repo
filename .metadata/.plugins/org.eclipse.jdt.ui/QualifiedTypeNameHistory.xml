@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.exceptions.FindByTypeException"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.exceptions.FindByFoodException"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.exceptions.FindByTransportException"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.exceptions.FindByDaysException"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.comparators.SortedByType"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.model.Offer"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.datareaders.TxtFileWriter"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.exceptions.InvalidReadDataException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.runner.Runner"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+</qualifiedTypeNameHistroy>

@@ -1,36 +1,42 @@
-
 public class Calculator {
-	
-	public Calculator() {}
-	
-	public void operation(int x2, String sign2, int y2) {
+
+	public Calculator() {
+	}
+
+	// TODO Will be better use double for input parameters
+	// TODO Incorrect variable naming
+	public void operation(int x, String sign, int y) 
 		double res;
-		switch(sign2) {
-		case "+": 
-			res = x2+y2;
-			System.out.println(x2 + " " + sign2 + " " + y2 + " = " + (int)res);
+		switch (sign) {
+		// TODO There is required tab.
+		case "+":
+			res = x + y;
+			// TODO Can be placed after switch or moved to another print method
+			System.out.println(x + " " + sign + " " + y + " = " + (int) res);
 			break;
 		case "-":
-			res = x2-y2;
-			System.out.println(x2 + " " + sign2 + " " + y2 + " = " + (int)res);
+			res = x - y;
+			// TODO Can be placed after switch or moved to another print method
+			System.out.println(x + " " + sign + " " + y + " = " + (int) res);
 			break;
-		case "*": 
-			res = x2*y2;
-			System.out.println(x2 + " " + sign2 + " " + y2 + " = " + (int)res);
+		case "*":
+			res = x * y;
+			// TODO Can be placed after switch or moved to another print method
+			System.out.println(x + " " + sign + " " + y + " = " + (int) res);
 			break;
-		case "/": 
-			if (y2==0) {
+		case "/":
+			if (y == 0) {
 				System.out.println("Error: Division by zero");
-			} 
-			else {
-				res = (double)x2/(double)y2;
-				System.out.println(x2 + " " + sign2 + " " + y2 + " = " + res);
+			} else {
+				res = (double) x / (double) y;
+				// TODO Can be placed after switch or moved to another print method
+				System.out.println(x + " " + sign + " " + y + " = " + res);
 			}
 			break;
 		default:
+			// TODO Throw exception about not supported method
 			break;
 		}
 
 	}
-
 }

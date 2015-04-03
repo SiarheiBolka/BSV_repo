@@ -1,0 +1,24 @@
+package com.epam.cdp.byta2015.module3.lecture2.tourist.comparators;
+
+import java.util.Comparator;
+import com.epam.cdp.byta2015.module3.lecture2.tourist.model.Offer;
+
+public class SortedByDays implements Comparator<Offer> {
+	
+	public int compare(Offer obj1, Offer obj2) {
+        
+        double price1 = obj1.getDaysCount();
+        double price2 = obj2.getDaysCount();
+
+        if(price1 > price2) {
+               return 1;
+        }
+        else if(price1 < price2) {
+               return -1;
+        }
+        else {
+               return 0;
+        }
+  }
+
+}

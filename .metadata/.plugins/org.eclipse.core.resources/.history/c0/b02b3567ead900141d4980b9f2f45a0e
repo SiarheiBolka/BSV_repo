@@ -1,0 +1,7 @@
+Cruise: All_inclusive: Train: 7
+Rest: All_inclusive: Train: All_inclusive: 10
+Rest: Breakfast: Train: Breakfast: 14
+Cruise: All_inclusive: Bus1: All_inclusive: 10
+Shopping: No_food: Plane: No_food: 14
+Rest: Breakfast: Shopping: Breakfast: 7
+Rest: Breakfast_and_dinner: Plane: Breakfast_and_dinner: 14
