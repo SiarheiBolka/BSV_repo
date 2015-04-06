@@ -5,7 +5,7 @@ public class Calculator {
 
 	// TODO Will be better use double for input parameters
 	// TODO Incorrect variable naming
-	public void operation(int x, String sign, int y) 
+	public void operation(int x, String sign, int y) {
 		double res;
 		switch (sign) {
 		// TODO There is required tab.
