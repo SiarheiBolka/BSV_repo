@@ -1,17 +1,20 @@
 package com.epam.cdp.byta2015.tourist.services;
 
-import com.epam.cdp.byta2015.tourist.exceptions.FindByTransportException;
 import com.epam.cdp.byta2015.tourist.model.BaseTour;
+import com.epam.cdp.byta2015.tourist.runner.Runner;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class FinderByTransport implements Finder {
+public class FinderByTransport {
 
-    public void findBy(String searchValue, List<BaseTour> list){
+    private static List<BaseTour> findByTransportList = new ArrayList<BaseTour>();
+
+    public List<BaseTour> findBy(String searchValue){
 
         int counter = 0;
 
-        for (BaseTour tour : list) {
+        for (BaseTour tour : Runner.getList()) {
             if(searchValue.equals(tour.getTransport())){
                 System.out.println(tour.getInfo());
                 counter ++;
@@ -20,7 +23,15 @@ public class FinderByTransport implements Finder {
        /* if (counter == 0) {
             throw new FindByTransportException(searchValue);
         }*/
+        return findByTransportList;
+    }
 
+    public static List<BaseTour> getFindByTransportList() {
+        return findByTransportList;
+    }
+
+    public static void setFindByTransportList(List<BaseTour> findByTransportList) {
+        FinderByTransport.findByTransportList = findByTransportList;
     }
 
 }

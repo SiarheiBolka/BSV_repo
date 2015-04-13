@@ -12,10 +12,7 @@
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.model.Offer"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.datareaders.TxtFileWriter"/>
@@ -24,4 +21,17 @@
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.epam.cdp.byta2015.module3.lecture2.tourist.runner.Runner"/>
 <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.datareaders.AbstractReader"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.runner.Runner"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.datareaders.TxtFileReader"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.model.Shopping"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.model.Cruise"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.model.Excursion"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.model.BaseTour"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.epam.cdp.byta2015.tourist.services.Print"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="org.xml.sax.helpers.DefaultHandler"/>
 </qualifiedTypeNameHistroy>

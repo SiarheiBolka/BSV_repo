@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="getMessage" key="selection"/>
+		<item value="getFull" key="selection"/>
 		<list key="findhistory">
+			<item value="getfull"/>
+			<item value="info"/>
 			<item value="getMessage"/>
 			<item value="Sorted"/>
 			<item value="List of available offers:"/>
 			<item value="daysCount:"/>
 			<item value="Dayscount"/>
 			<item value="daysco"/>
-			<item value="Type of tour"/>
-			<item value="DaysCount"/>
 		</list>
 		<list key="replacehistory">
 		</list>

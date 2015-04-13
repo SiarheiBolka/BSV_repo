@@ -1,0 +1,14 @@
+<offers>
+	<offer>
+		<type>Cruise</type> 
+		<transport>Bus</transport> 
+		<food>Breakfast</food> 
+		<days>14</days> 
+	</offer>
+	<offer>
+		<type>Shopping</type> 
+		<transport>Train</transport> 
+		<food>No_food</food> 
+		<days>7</days> 
+	</offer>
+</offers>

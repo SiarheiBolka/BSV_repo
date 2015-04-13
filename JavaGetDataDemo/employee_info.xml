@@ -1,0 +1,32 @@
+<employees>
+	<employee>
+		<id>1</id>
+		<fname>Ivan</fname>
+		<lname>Ivanov</lname>
+		<salary>6000.00</salary>
+	</employee>
+	<employee> 
+		<id>2</id>
+		<fname>Petr</fname>
+		<lname>Petrov</lname>
+		<salary>2500.00</salary>
+	</employee>
+	<employee> 
+		<id>3</id>
+		<fname>Andrei</fname>
+		<lname>Andreev</lname>
+		<salary>3400.00</salary>
+	</employee>
+	<employee> 
+		<id>4</id>
+		<fname>Anna</fname>
+		<lname>Alexandrova</lname>
+		<salary>5000.00</salary>
+	</employee>
+	<employee> 
+		<id>5</id>
+		<fname>test</fname>
+		<lname>test</lname>
+		<salary>1000.00</salary>
+	</employee>
+</employees>

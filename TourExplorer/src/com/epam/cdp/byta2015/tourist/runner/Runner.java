@@ -12,7 +12,8 @@ import java.util.Scanner;
 
 public class Runner {
 
-    public static List<BaseTour> list = new ArrayList<BaseTour>();
+
+    private static List<BaseTour> list = new ArrayList<BaseTour>();
 
     public static void main(String[] args) throws FindByTypeException {
 
@@ -41,13 +42,14 @@ public class Runner {
 
                 case 1:
                     list.clear();
-                    list = new TxtFileReader().readAll();
-                    new ServiceSelector().selectAction(list, scanner);
+                    setList(new TxtFileReader().readAll());
+                    new ServiceSelector().selectAction(scanner);
                     break;
 
                 case 2:
                     list.clear();
-                    list = new DatabaseReader().readAll();
+                    setList(new DatabaseReader().readAll());
+                    new ServiceSelector().selectAction(scanner);
                     break;
 
                 case 3:
@@ -66,5 +68,13 @@ public class Runner {
                     break;
             }
         }
+    }
+
+    public static List<BaseTour> getList() {
+        return list;
+    }
+
+    public static void setList(List<BaseTour> list) {
+        Runner.list = list;
     }
 }

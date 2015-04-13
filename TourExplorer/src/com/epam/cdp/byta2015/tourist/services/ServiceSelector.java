@@ -1,9 +1,7 @@
 package com.epam.cdp.byta2015.tourist.services;
 
-import com.epam.cdp.byta2015.tourist.com.epam.cdp.byta2015.Services.ListPrinter;
-import com.epam.cdp.byta2015.tourist.exceptions.FindByFoodException;
-import com.epam.cdp.byta2015.tourist.exceptions.FindByTypeException;
 import com.epam.cdp.byta2015.tourist.model.BaseTour;
+import com.epam.cdp.byta2015.tourist.runner.Runner;
 
 import java.util.List;
 import java.util.Scanner;
@@ -12,7 +10,7 @@ public class ServiceSelector {
 
     private boolean repeat = true;
 
-    public void selectAction(List<BaseTour> list, Scanner scanner) {
+    public void selectAction(Scanner scanner) {
 
         while (repeat) {
             System.out.println("Menu");
@@ -20,6 +18,8 @@ public class ServiceSelector {
             System.out.println("1 - Print tours");
             System.out.println("2 - Find tours");
             System.out.println("3 - Sort tours");
+            System.out.println("4 - Add tours");
+            System.out.println("3 - Delete tours");
 
             int action;
             action = scanner.nextInt();
@@ -31,11 +31,11 @@ public class ServiceSelector {
                     break;
 
                 case 1:
-                    new ListPrinter().print(list);
+                    new ListPrinter().print(Runner.getList());
                     break;
 
                 case 2:
-                    new SearchParameterSelector().chooseParameter(list, scanner);
+                    new SearchParameterSelector().chooseParameter(scanner);
                     break;
 
                 case 3:

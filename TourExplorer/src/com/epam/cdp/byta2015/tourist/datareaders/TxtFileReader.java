@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Siarhei_Bolka on 4/8/2015.
- */
 
 public class TxtFileReader implements Reader {
 

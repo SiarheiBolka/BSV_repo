@@ -1,11 +1,7 @@
 package com.epam.cdp.byta2015.tourist.services;
 
-import com.epam.cdp.byta2015.tourist.exceptions.FindByFoodException;
 import com.epam.cdp.byta2015.tourist.exceptions.FindByPriceException;
-import com.epam.cdp.byta2015.tourist.exceptions.FindByTypeException;
-import com.epam.cdp.byta2015.tourist.model.BaseTour;
 
-import java.util.List;
 import java.util.Scanner;
 //import com.epam.cdp.byta2015.tourist.runner.Runner;
 
@@ -20,7 +16,7 @@ public class SearchParameterSelector {
 
     private boolean repeat = true;
 
-    public void chooseParameter(List<BaseTour> list, Scanner scanner) {
+    public void chooseParameter(Scanner scanner) {
 
         System.out.println("Select search parameter: ");
 
@@ -35,6 +31,7 @@ public class SearchParameterSelector {
             action = scanner.nextInt();
 
             switch (action) {
+
                 case 0:
                     repeat = false;
                     break;
@@ -45,6 +42,7 @@ public class SearchParameterSelector {
                     System.out.println("Select search value: ");
 
                     while (repeat1) {
+
                         System.out.println("0 - Back");
                         System.out.println("1 - " + desctTypeValues[0]);
                         System.out.println("2 - " + desctTypeValues[1]);
@@ -52,28 +50,13 @@ public class SearchParameterSelector {
 
                         action = scanner.nextInt();
 
-                        switch (action) {
-                            case 0:
-                                repeat1 = false;
-                                break;
-                            case 1:
-                                new FinderByDescType().findBy(desctTypeValues[0], list);
-                                repeat = false;
-                                break;
-                            case 2:
-                                new FinderByDescType().findBy(desctTypeValues[1], list);
-                                repeat = false;
-                                break;
-                            case 3:
-                                new FinderByDescType().findBy(desctTypeValues[2], list);
-                                repeat = false;
-                                break;
-                            default:
-                                break;
-                        }
+                       if (action == 0) {
+                           repeat1 = false;
+                       } else {
+                           new ListPrinter().print(new FinderByDescType().findBy(desctTypeValues[action - 1]));
+                           repeat = false;
+                       }
                     }
-
-                    break;
 
                 case 2:
 
@@ -88,28 +71,13 @@ public class SearchParameterSelector {
 
                         action = scanner.nextInt();
 
-                        switch (action) {
-                            case 0:
-                                repeat2 = false;
-                                break;
-                            case 1:
-                                new FinderByFood().findBy(foodValues[0], list);
-                                repeat2 = false;
-                                break;
-                            case 2:
-                                new FinderByFood().findBy(foodValues[1], list);
-                                repeat2 = false;
-                                break;
-                            case 3:
-                                new FinderByFood().findBy(foodValues[2], list);
-                                repeat2 = false;
-                                break;
-                            default:
-                                break;
+                        if (action == 0) {
+                            repeat2 = false;
+                        } else {
+                            new ListPrinter().print(new FinderByDescType().findBy(foodValues[action - 1]));
+                            repeat = false;
                         }
                     }
-
-                  break;
 
                 case 3:
 
@@ -124,36 +92,11 @@ public class SearchParameterSelector {
 
                         action = scanner.nextInt();
 
-                        switch (action) {
-                            case 0:
-                                repeat3 = false;
-                                break;
-                            case 1:
-                                new FinderByTransport().findBy(transportValues[0], list);
-                                repeat3 = false;
-                                break;
-                            case 2:
-                                new FinderByTransport().findBy(transportValues[1], list);
-                                repeat3 = false;
-                                break;
-                            case 3:
-                                new FinderByTransport().findBy(transportValues[2], list);
-                                repeat3 = false;
-                                break;
-                            case 4:
-                                new FinderByTransport().findBy(transportValues[3], list);
-                                repeat3 = false;
-                                break;
-                            case 5:
-                                new FinderByTransport().findBy(transportValues[4], list);
-                                repeat3 = false;
-                                break;
-                            case 6:
-                                new FinderByTransport().findBy(transportValues[5], list);
-                                repeat3 = false;
-                                break;
-                            default:
-                                break;
+                        if (action == 0) {
+                            repeat2 = false;
+                        } else {
+                            new ListPrinter().print(new FinderByDescType().findBy(transportValues[action - 1]));
+                            repeat = false;
                         }
                     }
 
@@ -168,9 +111,7 @@ public class SearchParameterSelector {
                         System.out.println("0 - Back");
                         System.out.println("1 - Enter required price");
 
-                        action = scanner.nextInt();
-                        //System.out.println("Your price: ");
-                        //priceValue = scanner.nextLine();
+                        action = (scanner.nextInt());
                         priceValue = "12.00";
 
                         switch (action) {
@@ -179,7 +120,7 @@ public class SearchParameterSelector {
                                 break;
                             case 1:
                                 try {
-                                    new FinderByPrice().findBy(priceValue, list);
+                                    new ListPrinter().print(new FinderByPrice().findBy(priceValue));
                                 } catch (FindByPriceException e) {
                                     e.getMessage();
                                 }

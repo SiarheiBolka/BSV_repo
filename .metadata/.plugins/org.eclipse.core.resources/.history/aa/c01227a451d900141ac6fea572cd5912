@@ -1,9 +1,0 @@
-package com.epam.cdp.byta2015.module3.lecture2.tourist.datareaders;
-
-import com.epam.cdp.byta2015.module3.lecture2.tourist.model.Offer;
-
-public abstract class AbstractReader {
-	
-	public abstract Offer readInfo();
-
-}

@@ -1,0 +1,16 @@
+package com.epam.cdp.byta2015.tourist.parsers;
+
+import com.epam.cdp.byta2015.tourist.model.BaseTour;
+
+public class TourSAXParser {
+
+	public TourSAXParser() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public BaseTour getTour() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

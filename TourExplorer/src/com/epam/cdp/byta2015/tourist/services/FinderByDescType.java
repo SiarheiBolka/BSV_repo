@@ -1,19 +1,22 @@
 package com.epam.cdp.byta2015.tourist.services;
 
-import com.epam.cdp.byta2015.tourist.exceptions.FindByTypeException;
 import com.epam.cdp.byta2015.tourist.model.BaseTour;
+import com.epam.cdp.byta2015.tourist.runner.Runner;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class FinderByDescType implements Finder{
+public class FinderByDescType {
 
-    public void findBy(String searchValue, List<BaseTour> list){
+    private static List<BaseTour> findByDescTypeList = new ArrayList<BaseTour>();
+
+    public List<BaseTour> findBy(String searchValue){
 
         int counter = 0;
 
-        for (BaseTour tour : list) {
+        for (BaseTour tour : Runner.getList()) {
             if(searchValue.equals(tour.getTypeDesc())){
-                System.out.println(tour.getInfo());
+                findByDescTypeList.add(tour);
                 counter ++;
             }
         }
@@ -21,6 +24,15 @@ public class FinderByDescType implements Finder{
             throw new FindByTypeException(searchValue);
         }*/
 
+        return findByDescTypeList;
+    }
+
+    public static void setFindByDescTypeList(List<BaseTour> findByDescTypeList) {
+        FinderByDescType.findByDescTypeList = findByDescTypeList;
+    }
+
+    public static List<BaseTour> getFindByDescTypeList() {
+        return findByDescTypeList;
     }
 
 }
