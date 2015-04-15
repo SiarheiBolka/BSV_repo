@@ -1,9 +1,12 @@
 package com.epam.cdp.byta2015.tourist.services;
 
 import com.epam.cdp.byta2015.tourist.exceptions.FindByPriceException;
+import com.epam.cdp.byta2015.tourist.model.BaseTour;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
-//import com.epam.cdp.byta2015.tourist.runner.Runner;
 
 public class SearchParameterSelector {
 
@@ -12,20 +15,20 @@ public class SearchParameterSelector {
     private String[] desctTypeValues = {"Shopping", "Cruise", "Excursion"};
     private String[] foodValues = {"No_food", "Tea", "AI", "Breakfast"};
     private String[] transportValues = {"Bus", "Train", "Plane", "Car", "Aurora", "Azura"};
-    private String priceValue;
+    private Double priceValue;
+
 
     private boolean repeat = true;
 
-    public void chooseParameter(Scanner scanner) {
+    public String[] chooseParameter(Scanner scanner) {
+
+        String[] searchParametersValues = new String[4];
 
         System.out.println("Select search parameter: ");
 
         while (repeat) {
             System.out.println("0 - Back");
-            System.out.println("1 - " + searchParameters[0]);
-            System.out.println("2 - " + searchParameters[1]);
-            System.out.println("3 - " + searchParameters[2]);
-            System.out.println("4 - " + searchParameters[3]);
+            System.out.println("1 - Select values for searching");
 
             int action;
             action = scanner.nextInt();
@@ -39,100 +42,75 @@ public class SearchParameterSelector {
                 case 1:
 
                     boolean repeat1 = true;
-                    System.out.println("Select search value: ");
+                    System.out.println("Select a typeDesc value: ");
 
                     while (repeat1) {
 
-                        System.out.println("0 - Back");
-                        System.out.println("1 - " + desctTypeValues[0]);
-                        System.out.println("2 - " + desctTypeValues[1]);
-                        System.out.println("3 - " + desctTypeValues[2]);
-
-                        action = scanner.nextInt();
-
-                       if (action == 0) {
-                           repeat1 = false;
-                       } else {
-                           new ListPrinter().print(new FinderByDescType().findBy(desctTypeValues[action - 1]));
-                           repeat = false;
-                       }
-                    }
-
-                case 2:
-
-                    boolean repeat2 = true;
-                    System.out.println("Select search value: ");
-
-                    while (repeat2) {
-                        System.out.println("0 - Back");
-                        System.out.println("1 - " + foodValues[0]);
-                        System.out.println("2 - " + foodValues[1]);
-                        System.out.println("3 - " + foodValues[2]);
+                        System.out.println("0 - Blank");
+                        for (int i = 0; i < desctTypeValues.length; i++) {
+                            System.out.println((i+1) + " - " + desctTypeValues[i]);
+                        }
 
                         action = scanner.nextInt();
 
                         if (action == 0) {
-                            repeat2 = false;
+                            searchParametersValues[0] ="";
                         } else {
-                            new ListPrinter().print(new FinderByDescType().findBy(foodValues[action - 1]));
-                            repeat = false;
+                            searchParametersValues[0] = desctTypeValues[action - 1];
                         }
-                    }
 
-                case 3:
-
-                    boolean repeat3 = true;
-                    System.out.println("Select search value: ");
-
-                    while (repeat3) {
-                        System.out.println("0 - Back");
-                        System.out.println("1 - " + transportValues[0]);
-                        System.out.println("2 - " + transportValues[1]);
-                        System.out.println("3 - " + transportValues[2]);
+                        System.out.println("Select a food value: ");
+                        System.out.println("0 - Blank");
+                        for (int i = 0; i < foodValues.length; i++) {
+                            System.out.println((i+1) + " - " + foodValues[i]);
+                        }
 
                         action = scanner.nextInt();
 
                         if (action == 0) {
-                            repeat2 = false;
+                            searchParametersValues[1] ="";
                         } else {
-                            new ListPrinter().print(new FinderByDescType().findBy(transportValues[action - 1]));
-                            repeat = false;
+                            searchParametersValues[1] = foodValues[action - 1];
                         }
-                    }
 
-                   break;
+                        System.out.println("Select a transport value: ");
+                        System.out.println("0 - Blank");
+                        for (int i = 0; i < transportValues.length; i++) {
+                            System.out.println((i+1) + " - " + transportValues[i]);
+                        }
 
-                case 4:
+                        action = scanner.nextInt();
 
-                    boolean repeat4 = true;
-                    System.out.println("Select search value: ");
+                        if (action == 0) {
+                            searchParametersValues[2] ="";
+                        } else {
+                            searchParametersValues[2] = transportValues[action - 1];
+                        }
 
-                    while (repeat4) {
-                        System.out.println("0 - Back");
+                        System.out.println("Select a price value: ");
+                        System.out.println("0 - Blank");
                         System.out.println("1 - Enter required price");
 
-                        action = (scanner.nextInt());
-                        priceValue = "12.00";
+                        action = scanner.nextInt();
 
-                        switch (action) {
-                            case 0:
-                                repeat4 = false;
-                                break;
-                            case 1:
-                                try {
-                                    new ListPrinter().print(new FinderByPrice().findBy(priceValue));
-                                } catch (FindByPriceException e) {
-                                    e.getMessage();
-                                }
-                                repeat4 = false;
-                                break;
-                            default:
-                                break;
+                        if (action == 0) {
+                            searchParametersValues[3] ="";
+                        } else if (action == 1) {
+                            System.out.println("Type you price:");
+                            double priceValue = (double) scanner.nextInt();
+                            searchParametersValues[3] = String.valueOf(priceValue);
+                        } else {
+                            System.out.println("Incorrect value entered");
                         }
+                        repeat1 = false;
                     }
 
                     break;
             }
+            repeat = false;
         }
+        return searchParametersValues;
     }
+
+
 }

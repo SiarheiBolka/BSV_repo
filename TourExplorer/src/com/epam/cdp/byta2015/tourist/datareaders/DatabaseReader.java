@@ -4,6 +4,8 @@ import com.epam.cdp.byta2015.tourist.model.BaseTour;
 import com.epam.cdp.byta2015.tourist.model.Cruise;
 import com.epam.cdp.byta2015.tourist.model.Excursion;
 import com.epam.cdp.byta2015.tourist.model.Shopping;
+import com.epam.cdp.byta2015.tourist.services.FileChecker;
+import sun.reflect.generics.tree.BaseType;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,14 +14,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-
-/**
- * Created by Sergik on 08.04.2015.
- */
 public class DatabaseReader implements Reader {
+    public static Connection c = null;
+    static String databaseURL;
+    static String user;
+    static String password;
+    static String driverName;
 
     private static final String DATABASE_PROPERTIES = "database.properties";
-
+    private List<BaseTour> list = new ArrayList<BaseTour>();
     private static Properties pr = new Properties();
 
     static {
@@ -30,63 +33,64 @@ public class DatabaseReader implements Reader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
 
-    static String databaseURL = pr.getProperty("dbURL");
-    static String user = pr.getProperty("user");
-    static String password = pr.getProperty("password");
-    static String driverName = pr.getProperty("driver");
-
-    List<BaseTour> list = new ArrayList<BaseTour>();
-
-    @Override
-    public List<BaseTour> readAll() {
-
-        String[] dbNamesList = {"shoppings", "cruises", "excursions"};
-        String query;
-        PreparedStatement prState = null;
-        ResultSet rs = null;
-        Connection c = null;
+        databaseURL = pr.getProperty("dbURL");
+        user = pr.getProperty("user");
+        password = pr.getProperty("password");
+        driverName = pr.getProperty("driver");
 
         try {
-            Class.forName(driverName);
+            Class.forName(getDriverName());
             System.out.println("OK! Driver is registered! ");
         } catch (ClassNotFoundException e) {
             System.out.println("Mysql JDBC driver not found");
         }
 
-        for( String dbName : dbNamesList ) {
-            try {
-                c = DriverManager.getConnection(databaseURL+dbName, user, password);
-                System.out.println("Connect");
-            } catch (SQLException e) {
-                System.out.println("SQLException " + e.getMessage());
-            }
+        try {
+            c = DriverManager.getConnection(getDatabaseURL()+"tours", getUser(), getPassword());
+            System.out.println("Connect");
+        } catch (SQLException e) {
+            System.out.println("SQLException " + e.getMessage());
+        }
+    }
 
-            query = "SELECT * FROM " + dbName + "; ";
+    @Override
+    public List<BaseTour> readAll() {
+
+        FileChecker.checkFile(DATABASE_PROPERTIES);
+
+        String[] tablesNamesList = {"shoppings", "cruises", "excursions"};
+        String query;
+        PreparedStatement prState = null;
+        ResultSet resSet = null;
+
+        for( String tableName : tablesNamesList ) {
+
+            query = "SELECT * FROM " + tableName + "; ";
+
             try {
                 prState = c.prepareStatement(query);
-                rs = prState.executeQuery();
+                resSet = prState.executeQuery();
 
-                switch (dbName){
+                switch (tableName){
                     case "shoppings":
-                        while (rs.next()) {
+                        while (resSet.next()) {
                             Shopping tour = new Shopping(
-                                    rs.getInt("id"),
-                                    rs.getString("type"),
-                                    rs.getString("food"),
-                                    rs.getString("transport"),
-                                    rs.getInt("duration"),
-                                    rs.getDouble("price"),
-                                    rs.getString("country"),
-                                    rs.getString("nighttransfer"));
+                                    resSet.getInt("id"),
+                                    resSet.getString("type"),
+                                    resSet.getString("food"),
+                                    resSet.getString("transport"),
+                                    resSet.getInt("duration"),
+                                    resSet.getDouble("price"),
+                                    resSet.getString("country"),
+                                    resSet.getString("nighttransfer"));
                             list.add(tour);
                         }
                         break;
 
                     case "cruises":
-                        while (rs.next()) {
-                            String[] countries = rs.getString("countries").split(",");
+                        while (resSet.next()) {
+                            String[] countries = resSet.getString("countries").split(",");
                             List<String> countriesList = new ArrayList<String>();
                             int counter = 0;
 
@@ -95,22 +99,22 @@ public class DatabaseReader implements Reader {
                                 counter++;
                             }
 
-                        Cruise tour = new Cruise(
-                                rs.getInt("id"),
-                                rs.getString("type"),
-                                rs.getString("food"),
-                                rs.getString("transport"),
-                                rs.getInt("duration"),
-                                rs.getDouble("price"),
-                                countriesList);
+                            Cruise tour = new Cruise(
+                                    resSet.getInt("id"),
+                                    resSet.getString("type"),
+                                    resSet.getString("food"),
+                                    resSet.getString("transport"),
+                                    resSet.getInt("duration"),
+                                    resSet.getDouble("price"),
+                                    countriesList);
 
-                        list.add(tour);
-                    }
+                            list.add(tour);
+                        }
                     break;
 
                     case "excursions":
-                        while (rs.next()) {
-                            String[] destinations = rs.getString("destination").split(",");
+                        while (resSet.next()) {
+                            String[] destinations = resSet.getString("destination").split(",");
                             List<String> destinationsList = new ArrayList<String>();
                             int counter = 0;
 
@@ -120,13 +124,13 @@ public class DatabaseReader implements Reader {
                             }
 
                             Excursion tour = new Excursion(
-                                    rs.getInt("id"),
-                                    rs.getString("type"),
-                                    rs.getString("food"),
-                                    rs.getString("transport"),
-                                    rs.getInt("duration"),
-                                    rs.getDouble("price"),
-                                    rs.getString("country"),
+                                    resSet.getInt("id"),
+                                    resSet.getString("type"),
+                                    resSet.getString("food"),
+                                    resSet.getString("transport"),
+                                    resSet.getInt("duration"),
+                                    resSet.getDouble("price"),
+                                    resSet.getString("country"),
                                     destinationsList);
                             list.add(tour);
                         }
@@ -139,8 +143,8 @@ public class DatabaseReader implements Reader {
                 System.out.println("Error during loading data from DB!");
             } finally {
                 try {
-                    if (rs != null)
-                        rs.close();
+                    if (resSet != null)
+                        resSet.close();
                 } catch (SQLException e) {
                 }
                 try {
@@ -148,14 +152,25 @@ public class DatabaseReader implements Reader {
                         prState.close();
                 } catch (SQLException e) {
                 }
-                try {
-                    if (c != null)
-                        c.close();
-                } catch (SQLException e) {
-                }
+
             }
         }
         return list;
     }
 
+    public static String getDatabaseURL() {
+        return databaseURL;
+    }
+
+    public static String getUser() {
+        return user;
+    }
+
+    public static String getPassword() {
+        return password;
+    }
+
+    public static String getDriverName() {
+        return driverName;
+    }
 }

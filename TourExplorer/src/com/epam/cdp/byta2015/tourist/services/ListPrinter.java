@@ -5,24 +5,22 @@ import com.epam.cdp.byta2015.tourist.services.Printer;
 
 import java.util.List;
 
-/**
- * Created by Siarhei_Bolka on 4/8/2015.
- */
 
 public class ListPrinter implements Printer {
 
     public void print(List<BaseTour> list) {
 
-        System.out.println("\nList of available tours:");
-        if (list.size() != 0) {
-            for(BaseTour baseTour : list){
-                System.out.println(baseTour.getInfo());
-            }
-        } else {
-            System.out.println("Error: no tours available!");
+        try {
+            System.out.println("\nList of available tours:");
+                for(BaseTour baseTour : list){
+                    System.out.println(baseTour.getInfo());
+                }
+            System.out.println("\n");
+        }
+        catch (NullPointerException e) {
+            System.out.println("Error: no tours available!\n");
         }
 
-        System.out.println("\n");
     }
 
 }

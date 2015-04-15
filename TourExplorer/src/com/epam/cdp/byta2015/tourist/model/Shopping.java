@@ -1,9 +1,9 @@
 package com.epam.cdp.byta2015.tourist.model;
 
-/**
- * Created by Siarhei_Bolka on 4/8/2015.
- */
+
 public class Shopping extends BaseTour {
+
+
 
     protected String nightTransfer;
     protected String country;
@@ -24,7 +24,11 @@ public class Shopping extends BaseTour {
         this.country = country;
     }
 
-    public String isNightTransfer() {
+    public String setNightTransfer() {
+        return nightTransfer;
+    }
+
+    public String getNightTransfer() {
         return nightTransfer;
     }
 

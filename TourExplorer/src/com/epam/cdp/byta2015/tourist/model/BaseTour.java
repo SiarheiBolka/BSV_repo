@@ -1,8 +1,8 @@
 package com.epam.cdp.byta2015.tourist.model;
 
-/**
- * Created by Siarhei_Bolka on 4/8/2015.
- */
+
+import java.util.Comparator;
+
 public class BaseTour {
 
     protected Integer id;
@@ -79,4 +79,29 @@ public class BaseTour {
                 ", Duration: " + this.duration  +
                 ", Price: " + this.price;
     }
+
+
+    public static Comparator<BaseTour> COMPARE_BY_DESC_TYPE = new Comparator<BaseTour>() {
+        public int compare(BaseTour one, BaseTour other) {
+            return one.getTypeDesc().compareTo(other.getTypeDesc());
+        }
+    };
+
+    public static Comparator<BaseTour> COMPARE_BY_FOOD = new Comparator<BaseTour>() {
+        public int compare(BaseTour one, BaseTour other) {
+            return one.getFood().compareTo(other.getFood());
+        }
+    };
+
+    public static Comparator<BaseTour> COMPARE_BY_TRANSPORT = new Comparator<BaseTour>() {
+        public int compare(BaseTour one, BaseTour other) {
+            return one.getTransport().compareTo(other.getTransport());
+        }
+    };
+
+    public static Comparator<BaseTour> COMPARE_BY_PRICE = new Comparator<BaseTour>() {
+        public int compare(BaseTour one, BaseTour other) {
+            return one.getPrice().compareTo(other.getPrice());
+        }
+    };
 }
