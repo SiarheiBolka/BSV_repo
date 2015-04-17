@@ -1,17 +1,14 @@
-package com.epam.cdp.byta2015.tourist.datareaders;
+package com.epam.cdp.byta2015.tourist.services;
 
 
 import com.epam.cdp.byta2015.tourist.model.BaseTour;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class ConsoleReader {
 
     //TODO use data from BaseTour
-    private static String[] desctTypeValues = {"Shopping", "Cruise", "Excursion"};
+    private static String[] descTypeValues = BaseTour.getDesctTypeValues();
 
     public static String[] selectTourForDeletion() {
 
@@ -21,8 +18,8 @@ public class ConsoleReader {
 
         while (repeat) {
             System.out.println("0 - Cancel");
-            for (int i = 0; i < desctTypeValues.length; i++) {
-                System.out.println((i + 1) + " - " + desctTypeValues[i]);
+            for (int i = 0; i < descTypeValues.length; i++) {
+                System.out.println((i + 1) + " - " + descTypeValues[i]);
             }
 
             int action;
@@ -35,33 +32,33 @@ public class ConsoleReader {
                     break;
 
                 case 1:
-                    values[0] = desctTypeValues[0];
+                    values[0] = descTypeValues[0];
                     repeat = false;
                     boolean repeat1 = true;
                     while (repeat1) {
-                        System.out.println("Enter " + desctTypeValues[0] + " tour id: ");
+                        System.out.println("Enter " + descTypeValues[0] + " tour id: ");
                         values[1] = String.valueOf(scanner.nextInt());
                         repeat1 = false;
                     }
                     break;
 
                 case 2:
-                    values[0] = desctTypeValues[1];
+                    values[0] = descTypeValues[1];
                     repeat = false;
                     boolean repeat2 = true;
                     while (repeat2) {
-                        System.out.println("Enter " + desctTypeValues[1] + "tour id: ");
+                        System.out.println("Enter " + descTypeValues[1] + "tour id: ");
                         values[1] = String.valueOf(scanner.nextInt());
                         repeat2 = false;
                     }
                     break;
 
                 case 3:
-                    values[0] = desctTypeValues[2];
+                    values[0] = descTypeValues[2];
                     repeat = false;
                     boolean repeat3 = true;
                     while (repeat3) {
-                        System.out.println("Enter " + desctTypeValues[2] + "tour id: ");
+                        System.out.println("Enter " + descTypeValues[2] + "tour id: ");
                         values[1] = String.valueOf(scanner.nextInt());
                         repeat3 = false;
                     }
@@ -82,8 +79,8 @@ public class ConsoleReader {
 
         while (repeat) {
             System.out.println("0 - Cancel");
-            for (int i = 0; i < desctTypeValues.length; i++) {
-                System.out.println((i + 1) + " - " + desctTypeValues[i]);
+            for (int i = 0; i < descTypeValues.length; i++) {
+                System.out.println((i + 1) + " - " + descTypeValues[i]);
             }
 
             int action = scanner.nextInt();
@@ -95,7 +92,7 @@ public class ConsoleReader {
 
                 case 1:
                     tourParamaters[0] = "0";
-                    tourParamaters[1] = (desctTypeValues[0]);
+                    tourParamaters[1] = (descTypeValues[0]);
                     System.out.println("Enter food: ");
                     tourParamaters[2] = new Scanner(System.in).nextLine();
                     System.out.println("Enter transport: ");
@@ -113,7 +110,7 @@ public class ConsoleReader {
 
                 case 2:
                     tourParamaters[0] = "0";
-                    tourParamaters[1] = (desctTypeValues[0]);
+                    tourParamaters[1] = (descTypeValues[0]);
                     System.out.println("Enter food: ");
                     tourParamaters[2] = new Scanner(System.in).nextLine();
                     System.out.println("Enter transport: ");
@@ -130,7 +127,7 @@ public class ConsoleReader {
 
                 case 3:
                     tourParamaters[0] = "0";
-                    tourParamaters[1] = (desctTypeValues[0]);
+                    tourParamaters[1] = (descTypeValues[0]);
                     System.out.println("Enter food: ");
                     tourParamaters[2] = new Scanner(System.in).nextLine();
                     System.out.println("Enter transport: ");

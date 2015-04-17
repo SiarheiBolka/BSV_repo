@@ -11,10 +11,9 @@ import java.util.Scanner;
 
 public class SearchParameterSelector {
 
-    private boolean repeat = true;
+    public static String[] chooseParameter() {
 
-    public String[] chooseParameter() {
-
+        boolean repeat = true;
         String[] searchParametersValues = new String[4];
 
         System.out.println("Select search parameter: ");
@@ -97,11 +96,12 @@ public class SearchParameterSelector {
                             System.out.println("Incorrect value entered");
                         }
                         repeat1 = false;
+                        repeat = false;
                     }
 
                     break;
             }
-            repeat = false;
+
         }
         return searchParametersValues;
     }

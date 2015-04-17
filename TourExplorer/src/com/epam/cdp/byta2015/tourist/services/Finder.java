@@ -12,48 +12,52 @@ import java.util.List;
 
 public class Finder {
 
-    public List<BaseTour> FindTours(String[] paramaters) {
+    public static List<BaseTour> FindTours(String[] paramaters) {
 
         List<BaseTour> list = Runner.reader.readAll();
+        List<BaseTour> resultToursList = new ArrayList<>();
 
         try {
             list = findByDescType(list, paramaters[0]);
         } catch (FindByTypeException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            return resultToursList;
         }
         try {
             list = findByFood(list, paramaters[1]);
         } catch (FindByFoodException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            return resultToursList;
         }
         try {
             list = findByTransport(list, paramaters[2]);
         } catch (FindByTransportException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            return resultToursList;
         }
         try {
             list = findByPrice(list, paramaters[3]);
         } catch (FindByPriceException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+            return resultToursList;
         }
         return list;
     }
 
     //Searching by DescType
-    private List<BaseTour> findByDescType(List<BaseTour> list, String searchValue) throws FindByTypeException {
+    private static List<BaseTour> findByDescType(List<BaseTour> list, String searchValue) throws FindByTypeException {
 
         List<BaseTour> resultList = new ArrayList<BaseTour>();
 
-        if (searchValue ==""){
+        if (searchValue.isEmpty()){
             return list;
         } else {
             for (BaseTour tour : list) {
-
                 if(searchValue.equals(tour.getTypeDesc())){
                     resultList.add(tour);
                 }
             }
-        if (resultList.isEmpty()) {
+        if (resultList.size() == 0) {
             throw new FindByTypeException(searchValue);
         }
             return resultList;
@@ -61,12 +65,11 @@ public class Finder {
     }
 
     //Searching by Food
-    public List<BaseTour> findByFood(List<BaseTour> list, String searchValue) throws FindByFoodException {
+    public static List<BaseTour> findByFood(List<BaseTour> list, String searchValue) throws FindByFoodException {
 
         List<BaseTour> resultList = new ArrayList<BaseTour>();
-        int counter = 0;
 
-        if (searchValue ==""){
+        if (searchValue.isEmpty()){
             return list;
         } else {
             for (BaseTour tour : list) {
@@ -74,7 +77,7 @@ public class Finder {
                     resultList.add(tour);
                 }
             }
-            if (resultList.isEmpty()) {
+            if (resultList.size() == 0) {
                 throw new FindByFoodException(searchValue);
             }
             return resultList;
@@ -82,12 +85,11 @@ public class Finder {
     }
 
     //Searching by Transport
-    public List<BaseTour> findByTransport(List<BaseTour> list, String searchValue) throws FindByTransportException {
+    public static List<BaseTour> findByTransport(List<BaseTour> list, String searchValue) throws FindByTransportException {
 
         List<BaseTour> resultList = new ArrayList<BaseTour>();
-        int counter = 0;
 
-        if (searchValue ==""){
+        if (searchValue.isEmpty()){
             return list;
         } else {
             for (BaseTour tour : list) {
@@ -95,7 +97,7 @@ public class Finder {
                     resultList.add(tour);
                 }
             }
-            if (resultList.isEmpty()) {
+            if (resultList.size() == 0) {
                 throw new FindByTransportException(searchValue);
             }
             return resultList;
@@ -103,12 +105,11 @@ public class Finder {
     }
 
      //Searching by Price
-     public List<BaseTour> findByPrice(List<BaseTour> list, String searchValue) throws FindByPriceException {
+     public static List<BaseTour> findByPrice(List<BaseTour> list, String searchValue) throws FindByPriceException {
 
         List<BaseTour> resultList = new ArrayList<BaseTour>();
-         int counter = 0;
 
-         if (searchValue ==""){
+         if (searchValue.isEmpty()){
              return list;
          } else {
              for (BaseTour tour : list) {
@@ -116,7 +117,7 @@ public class Finder {
                      resultList.add(tour);
                  }
              }
-            if (resultList.isEmpty()) {
+            if (resultList.size() == 0) {
                 throw new FindByPriceException(searchValue);
             }
              return resultList;

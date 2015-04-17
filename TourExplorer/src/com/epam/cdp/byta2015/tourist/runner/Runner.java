@@ -20,7 +20,7 @@ public class Runner {
     public static Writer writer;
     public static Remover remover;
 
-    public static void main(String[] args) throws FindByTypeException {
+    public static void main(String[] args) {
 
         boolean repeat = true;
         Scanner scanner = new Scanner(System.in);
@@ -71,6 +71,7 @@ public class Runner {
                         break;
                 }
             } catch (InputMismatchException e) {
+                scanner = new Scanner(System.in);
                 e.getMessage();
                 break;
             }

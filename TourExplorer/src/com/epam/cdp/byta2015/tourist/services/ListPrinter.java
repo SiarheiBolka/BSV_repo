@@ -16,10 +16,9 @@ public class ListPrinter implements Printer {
                 System.out.println(baseTour.getInfo());
             }
         } else {
-            System.out.println("Error: no tours available!");
+            System.out.println("No tours available!");
         }
 
         System.out.println("\n");
-        list.clear();
     }
 }

@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f865b78-d49b-4cdf-98a1-3eadcf773693" name="Default" comment="" />
+    <list default="true" id="9f865b78-d49b-4cdf-98a1-3eadcf773693" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/Comparator.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Comparator/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/datareaders/ConsoleReader.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/datareaders/ConsoleReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/FileChecker.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/FileChecker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Finder.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Finder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/ListPrinter.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/ListPrinter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/runner/Runner.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/runner/Runner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/SearchParameterSelector.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/SearchParameterSelector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/ServiceSelector.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/ServiceSelector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$1.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$2.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$3.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$4.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/services/Sorter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/datareaders/XmlFileReader.class" afterPath="$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/datareaders/XmlFileReader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/FileChecker.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/FileChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Finder.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Finder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/SearchParameterSelector.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/SearchParameterSelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ServiceSelector.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ServiceSelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Sorter.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Sorter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/XmlFileReader.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/XmlFileReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Downloads\MENTORING\BSV_repo\TourExplorer\src\com\epam\cdp\byta2015\tourist\datareaders\ConsoleReader.java" afterPath="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ConsoleReader.java" />
+      <change type="MOVED" beforePath="D:\Downloads\MENTORING\BSV_repo\TourExplorer\src\com\epam\cdp\byta2015\tourist\libraries\mysql-connector-java-5.1.2.jar" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.1.2.jar" />
+    </list>
     <ignored path="TourExplorer.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,80 +58,10 @@
     <favorites_list name="TourExplorer" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DatabaseWorker.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81100917">
-              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TxtFileWriter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datawriters/TxtFileWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TxtFileReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/TxtFileReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsoleReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/ConsoleReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="145" column="35" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServiceSelector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ServiceSelector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListPrinter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -104,10 +71,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/ConsoleReader.java" />
         <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java" />
         <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ServiceSelector.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/SearchParameterSelector.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Sorter.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/ConsoleReader.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Finder.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/FileChecker.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/XmlFileReader.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/parsers/TourSAXParser.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ConsoleReader.java" />
         <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/TxtFileReader.java" />
       </list>
     </option>
   </component>
@@ -115,17 +91,19 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -141,9 +119,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,10 +178,6 @@
               <option name="myItemId" value="tourist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runner" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -224,47 +197,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parsers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TourExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TourExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tourist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TourExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TourExplorer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tourist" />
+              <option name="myItemId" value="datawriters" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,8 +245,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TourExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TourExplorer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,10 +269,17 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/libraries/mysql-connector-java-5.1.2.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Downloads\MENTORING\BSV_repo\TourExplorer\lib" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -435,6 +390,7 @@
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/libraries/mysql-connector-java-5.1.2.jar" />
       <envs />
       <method />
     </configuration>
@@ -507,32 +463,32 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.9564489" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3510759" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22012103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37599093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28308207" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -550,31 +506,31 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/ConsoleReader.java</url>
-          <line>110</line>
+          <url>file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ConsoleReader.java</url>
+          <line>107</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java</url>
-          <line>46</line>
+          <line>67</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ServiceSelector.java</url>
-          <line>42</line>
+          <url>file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Finder.java</url>
+          <line>22</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java</url>
-          <line>49</line>
+          <url>file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Finder.java</url>
+          <line>120</line>
           <properties />
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -587,70 +543,25 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Java/jdk1.7.0_75/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7653374">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.7.0_75/src.zip!/java/lang/Integer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="453" column="0" selection-start-line="453" selection-start-column="0" selection-end-line="453" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/model/BaseTour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1315#1316#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1652#1653#0" expanded="true" />
-            <element signature="e#1694#1695#0" expanded="true" />
-            <element signature="e#1792#1793#0" expanded="true" />
-            <element signature="e#1824#1825#0" expanded="true" />
-            <element signature="e#1940#1941#0" expanded="true" />
-            <element signature="e#1980#1981#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
-            <element signature="e#2116#2117#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1176#1186#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/model/Shopping.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#586#587#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/FileChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5614679">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/TxtFileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -663,23 +574,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/TxtFileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/ConsoleReader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ConsoleReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="145" column="35" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
@@ -697,11 +600,313 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81100917">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1176#1186#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datawriters/TxtFileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/TxtFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ConsoleReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="145" column="35" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ServiceSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/java/util/InputMismatchException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31929824">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/exceptions/FindByTypeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15992971">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321617">
+          <caret line="644" column="17" selection-start-line="644" selection-start-column="17" selection-end-line="644" selection-end-column="17" />
+          <folding>
+            <element signature="e#26118#26119#0" expanded="false" />
+            <element signature="e#26161#26162#0" expanded="false" />
+            <element signature="e#26366#26367#0" expanded="false" />
+            <element signature="e#26424#26425#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Sorter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26410836">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/runner/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26410836">
+          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ServiceSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44469526">
+          <caret line="59" column="58" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/SearchParameterSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.685413">
+          <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18277681">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ListPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/Finder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/FileChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/javax/xml/parsers/SAXParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321617">
+          <caret line="317" column="16" selection-start-line="317" selection-start-column="16" selection-end-line="317" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/org/xml/sax/SAXException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3321617">
+          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.7.0_25/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40555555">
+          <caret line="207" column="24" selection-start-line="207" selection-start-column="24" selection-end-line="207" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/parsers/TourSAXParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="137" column="20" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
+          <folding>
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#5458#5459#0" expanded="true" />
+            <element signature="e#5502#5503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/model/BaseTour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/model/Excursion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/model/Cruise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/model/Shopping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#682#683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datawriters/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datawriters/XmlFileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/services/ConsoleReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/XmlFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5940246">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/TxtFileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2794376">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datawriters/TxtFileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.045694202">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/cdp/byta2015/tourist/datareaders/DatabaseWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.543058">
+          <caret line="367" column="22" selection-start-line="367" selection-start-column="22" selection-end-line="367" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1176#1186#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1544#1545#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

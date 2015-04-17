@@ -1,21 +1,20 @@
 package com.epam.cdp.byta2015.tourist.services;
 
-import com.epam.cdp.byta2015.tourist.datareaders.ConsoleReader;
-import com.epam.cdp.byta2015.tourist.datareaders.DatabaseWorker;
+import com.epam.cdp.byta2015.tourist.model.BaseTour;
 import com.epam.cdp.byta2015.tourist.runner.Runner;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class ServiceSelector {
 
-    private boolean repeat = true;
-    Scanner scanner = new Scanner(System.in);
-    Printer pr = new ListPrinter();
-
-    int action=0;
-
     public void selectAction( ) {
+
+        int action;
+        boolean repeat = true;
+        Scanner scanner = new Scanner(System.in);
+        Printer pr = new ListPrinter();
 
         while (repeat) {
             System.out.println("Menu");
@@ -30,7 +29,8 @@ public class ServiceSelector {
                 action = scanner.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Error: Incorrect value entered.\n");
-                break;
+                scanner = new Scanner(System.in);
+                continue;
             }
 
             switch (action) {
@@ -40,25 +40,28 @@ public class ServiceSelector {
                     break;
 
                 case 1:
-
                     pr.print(Runner.reader.readAll());
                     break;
 
                 case 2:
-                    String[] paramaters = new SearchParameterSelector().chooseParameter();
-                    pr.print(new Finder().FindTours(paramaters));
+                    String[] chooseParameters = SearchParameterSelector.chooseParameter();
+                    List<BaseTour> findToursList = Finder.FindTours(chooseParameters);
+                    pr.print(findToursList);
                     break;
 
                 case 3:
-                    new Sorter().sort();
+                    List<BaseTour> sortToursList = Sorter.sort();
+                    pr.print(sortToursList);
                     break;
 
                 case 4:
-                    Runner.writer.addNewTour(ConsoleReader.selectTourForAdding());
+                    String[] tourParametersForAdd = ConsoleReader.selectTourForAdding();
+                    Runner.writer.addNewTour(tourParametersForAdd);
                     break;
 
                 case 5:
-                    new Runner().remover.removeTour(ConsoleReader.selectTourForDeletion());
+                    String[] tourParametersForDelete = ConsoleReader.selectTourForDeletion();
+                    new Runner().remover.removeTour(tourParametersForDelete);
                     break;
 
                 default:

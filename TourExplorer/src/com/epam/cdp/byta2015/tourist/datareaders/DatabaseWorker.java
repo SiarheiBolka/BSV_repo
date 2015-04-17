@@ -23,8 +23,31 @@ import java.util.Properties;
 public class DatabaseWorker implements Reader, Writer, Remover {
 
     public static Connection c = null;
+    static String databaseURL;
+    static String user;
+    static String password;
+    static String driverName;
 
-    public void DatabaseWorker() {
+    private static final String DATABASE_PROPERTIES = "database.properties";
+    private List<BaseTour> list = new ArrayList<BaseTour>();
+    private static Properties pr = new Properties();
+
+    public enum TableNames{
+        SHOPPINGS("shoppings"), CRUISES("cruises"), EXCURSIONS("excursions");
+
+        String tableName;
+
+        TableNames(String tableName){
+            this.tableName = tableName;
+        }
+
+        public String getTableName() {
+            return tableName;
+        }
+    }
+
+
+    public DatabaseWorker() {
 
         try {
             FileInputStream inp = new FileInputStream(DATABASE_PROPERTIES);
@@ -38,8 +61,6 @@ public class DatabaseWorker implements Reader, Writer, Remover {
         user = pr.getProperty("user");
         password = pr.getProperty("password");
         driverName = pr.getProperty("driver");
-
-        createConnection();
     }
 
     public static void createConnection(){
@@ -66,26 +87,21 @@ public class DatabaseWorker implements Reader, Writer, Remover {
         }
     }
 
-    static String databaseURL;
-    static String user;
-    static String password;
-    static String driverName;
 
-    private static final String DATABASE_PROPERTIES = "database.properties";
-    private List<BaseTour> list = new ArrayList<BaseTour>();
-    private static Properties pr = new Properties();
 
     @Override
     public List<BaseTour> readAll() {
 
+        createConnection();
+
         FileChecker.checkFile(DATABASE_PROPERTIES);
 
-        String[] tableNameList = {"shoppings", "cruises", "excursions"};
+        TableNames[] tableNameList = TableNames.values();
         String query;
         PreparedStatement prState = null;
         ResultSet resSet = null;
 
-        for( String tableName : tableNameList ) {
+        for( TableNames tableName : tableNameList ) {
 
             query = "SELECT * FROM " + tableName + "; ";
 
@@ -94,7 +110,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
                 resSet = prState.executeQuery();
 
                 switch (tableName){
-                    case "shoppings":
+                    case SHOPPINGS:
                         while (resSet.next()) {
                             Shopping tour = new Shopping(
                                     resSet.getInt("id"),
@@ -109,7 +125,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
                         }
                         break;
 
-                    case "cruises":
+                    case CRUISES:
                         while (resSet.next()) {
                             String[] countries = resSet.getString("countries").split(",");
                             List<String> countriesList = new ArrayList<String>();
@@ -133,7 +149,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
                         }
                     break;
 
-                    case "excursions":
+                    case EXCURSIONS:
                         while (resSet.next()) {
                             String[] destinations = resSet.getString("destination").split(",");
                             List<String> destinationsList = new ArrayList<String>();
@@ -173,9 +189,10 @@ public class DatabaseWorker implements Reader, Writer, Remover {
                         prState.close();
                 } catch (SQLException e) {
                 }
-                closeConnection();
+
             }
         }
+        closeConnection();
         return list;
     }
 
@@ -183,15 +200,23 @@ public class DatabaseWorker implements Reader, Writer, Remover {
     public void addNewTour(String[] param){
 
         try {
-            switch (param[1]){
-                //TODO use data from BaseTour in case
-                case "Shopping":
+
+            TableNames table = null;
+            for(TableNames tableName : TableNames.values()){
+                if(tableName.getTableName().equals(param[1])){
+                    table = tableName;
+                    break;
+                }
+            }
+
+            switch (table){
+                case SHOPPINGS:
                     addNewShopping(param);
                     break;
-                case "Cruise":
+                case CRUISES:
                     addNewCruise(param);
                     break;
-                case "Excursion":
+                case EXCURSIONS:
                     addNewExcursion(param);
                     break;
                 default:
@@ -203,6 +228,8 @@ public class DatabaseWorker implements Reader, Writer, Remover {
     }
 
     public void addNewShopping(String[] str) {
+
+        createConnection();
 
         Shopping tour = new Shopping();
 
@@ -218,7 +245,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
         String query;
         PreparedStatement prState = null;
 
-        query = "INSERT INTO shoppings (`id`,`type`, `food`, `transport`, `duration`, `price`, `country`, `nighttransfer`) " +
+        query = "INSERT INTO "+ TableNames.SHOPPINGS.getTableName() +" (`id`,`type`, `food`, `transport`, `duration`, `price`, `country`, `nighttransfer`) " +
                 "VALUES ('" + tour.getId() + "','"+ tour.getTypeDesc() + "','" +tour.getFood() + "','" + tour.getTransport() + "','" + tour.getDuration() +
                 "','" + tour.getPrice() + "','" + tour.getCountry() + "','" + tour.getNightTransfer() + "');";
 
@@ -242,6 +269,8 @@ public class DatabaseWorker implements Reader, Writer, Remover {
 
     public void addNewCruise(String[] str){
 
+        createConnection();
+
         Cruise tour = new Cruise();
 
         tour.setId(null);
@@ -255,7 +284,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
         String query;
         PreparedStatement prState = null;
 
-        query = "INSERT INTO cruises (`id`,`type`, `food`, `transport`, `duration`, `price`, `countries`) " +
+        query = "INSERT INTO "+ TableNames.CRUISES.getTableName() +" (`id`,`type`, `food`, `transport`, `duration`, `price`, `countries`) " +
                 "VALUES ('" + tour.getId() + "','"+ tour.getTypeDesc() + "','" +tour.getFood() + "','" + tour.getTransport() + "','" + tour.getDuration() +
                 "','" + tour.getPrice() + "','" + tour.getCountries() + "');";
 
@@ -279,6 +308,8 @@ public class DatabaseWorker implements Reader, Writer, Remover {
 
     public void addNewExcursion(String[] str){
 
+        createConnection();
+
         Excursion tour = new Excursion();
 
         tour.setId(null);
@@ -293,7 +324,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
         String query;
         PreparedStatement prState = null;
 
-        query = "INSERT INTO excursions (`id`,`type`, `food`, `transport`, `duration`, `price`, `country`, `destinations`) " +
+        query = "INSERT INTO "+ TableNames.EXCURSIONS.getTableName() +" (`id`,`type`, `food`, `transport`, `duration`, `price`, `country`, `destinations`) " +
                 "VALUES ('" + tour.getId() + "','"+ tour.getTypeDesc() + "','" +tour.getFood() + "','" + tour.getTransport() + "','" + tour.getDuration() +
                 "','" + tour.getPrice() + "','" + tour.getCountry() + "','" + tour.getDestination() + "');";
 
@@ -317,6 +348,8 @@ public class DatabaseWorker implements Reader, Writer, Remover {
 
     @Override
     public void removeTour(String[] str) {
+
+        createConnection();
 
         String query;
         PreparedStatement prState = null;

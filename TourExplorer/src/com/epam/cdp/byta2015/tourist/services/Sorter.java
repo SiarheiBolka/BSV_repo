@@ -7,13 +7,10 @@ import java.util.*;
 
 public class Sorter {
 
-    private static int sortParam;
-
     public static List<BaseTour> sort() {
 
-        sortParam = selectSortValue();
-        List<BaseTour> sortedList = new ArrayList<BaseTour>();
-        sortedList = Runner.reader.readAll();
+        int sortParam = selectSortValue();
+        List<BaseTour> sortedList = Runner.reader.readAll();
 
         switch (sortParam){
             case 0:
@@ -41,6 +38,7 @@ public class Sorter {
         System.out.println("Select sort value: ");
         boolean repeat = true;
         Scanner scanner = new Scanner(System.in);
+        int sortParam = 0;
 
         while (repeat) {
             System.out.println("0 - Back");

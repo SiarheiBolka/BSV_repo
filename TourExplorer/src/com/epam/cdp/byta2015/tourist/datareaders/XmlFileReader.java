@@ -13,26 +13,24 @@ import java.util.List;
 public class XmlFileReader implements Reader{
 
     private static final String EMPLOYEE_INFO_XML = "catalog.xml";
-    List<BaseTour> list;
 
 
     @Override
     public List<BaseTour> readAll() {
 
-        FileChecker.checkFile(EMPLOYEE_INFO_XML);
+        List<BaseTour> list = new ArrayList<>();
 
-        XmlFileReader xmlReader = new XmlFileReader();
+        FileChecker.checkFile(EMPLOYEE_INFO_XML);
 
         //Create a "parser factory" for creating SAX parsers
         SAXParserFactory spfac = SAXParserFactory.newInstance();
-        SAXParser sp;
-        TourSAXParser handler = null;
+
+        //Create an instance of this class; it defines all the handler methods
+        TourSAXParser handler = new TourSAXParser();
 
         try {
             //Now use the parser factory to create a SAXParser object
-            sp = spfac.newSAXParser();
-            //Create an instance of this class; it defines all the handler methods
-            handler = new TourSAXParser();
+            SAXParser sp = spfac.newSAXParser();
             //Finally, tell the parser to parse the input and notify the handler
             sp.parse(new File(EMPLOYEE_INFO_XML), handler);
             list = handler.getList();
