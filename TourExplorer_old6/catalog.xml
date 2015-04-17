@@ -1,0 +1,42 @@
+<tours>
+    <shopping>
+        <id>1</id>
+        <typeDesc>Shopping</typeDesc>
+        <food>No_food</food>
+        <transport>Car</transport>
+        <duration>3</duration>
+        <price>200</price>
+        <country>Germany</country>
+        <nightTransfer>Y</nightTransfer>
+    </shopping>
+    <shopping>
+        <id>2</id>
+        <typeDesc>Shopping</typeDesc>
+        <food>Breakfast</food>
+        <transport>Car</transport>
+        <duration>3</duration>
+        <price>220</price>
+        <country>Germany</country>
+        <nightTransfer>Y</nightTransfer>
+    </shopping>
+    <shopping>
+        <id>3</id>
+        <typeDesc>Shopping</typeDesc>
+        <food>No_food</food>
+        <transport>Track</transport>
+        <duration>3</duration>
+        <price>400</price>
+        <country>Germany</country>
+        <nightTransfer>Y</nightTransfer>
+    </shopping>
+    <excursion>
+        <id>4</id>
+        <typeDesc>Excursion</typeDesc>
+        <food>Dinner</food>
+        <transport>Bus</transport>
+        <duration>14</duration>
+        <price>1400</price>
+        <country>Litva</country>
+        <destination>City centre, Museums</destination>
+    </excursion>
+</tours>

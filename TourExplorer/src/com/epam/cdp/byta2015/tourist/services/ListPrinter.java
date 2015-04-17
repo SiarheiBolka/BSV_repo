@@ -10,17 +10,16 @@ public class ListPrinter implements Printer {
 
     public void print(List<BaseTour> list) {
 
-        try {
-            System.out.println("\nList of available tours:");
-                for(BaseTour baseTour : list){
-                    System.out.println(baseTour.getInfo());
-                }
-            System.out.println("\n");
-        }
-        catch (NullPointerException e) {
-            System.out.println("Error: no tours available!\n");
+        System.out.println("\nList of available tours:");
+        if (list.size() != 0) {
+            for(BaseTour baseTour : list){
+                System.out.println(baseTour.getInfo());
+            }
+        } else {
+            System.out.println("Error: no tours available!");
         }
 
+        System.out.println("\n");
+        list.clear();
     }
-
 }

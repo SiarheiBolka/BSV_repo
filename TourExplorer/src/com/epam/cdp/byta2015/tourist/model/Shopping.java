@@ -3,8 +3,6 @@ package com.epam.cdp.byta2015.tourist.model;
 
 public class Shopping extends BaseTour {
 
-
-
     protected String nightTransfer;
     protected String country;
 
@@ -24,16 +22,12 @@ public class Shopping extends BaseTour {
         this.country = country;
     }
 
-    public String setNightTransfer() {
-        return nightTransfer;
+    public void setNightTransfer(String nightTransfer) {
+        this.nightTransfer = nightTransfer;
     }
 
     public String getNightTransfer() {
         return nightTransfer;
-    }
-
-    public void setNightTransfer(String nightTransfer) {
-        this.nightTransfer = nightTransfer;
     }
 
     @Override

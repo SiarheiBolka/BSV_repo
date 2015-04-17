@@ -5,6 +5,13 @@ import java.util.Comparator;
 
 public class BaseTour {
 
+   // private static String[] searchParameters = {"typeDesc", "food", "transport", "price"};
+
+    private static String[] desctTypeValues = {"Shopping", "Cruise", "Excursion"};
+
+    private static String[] foodValues = {"No_food", "Tea", "AI", "Breakfast"};
+    private static String[] transportValues = {"Bus", "Train", "Plane", "Car", "Aurora", "Azura"};
+
     protected Integer id;
     protected String typeDesc;
     protected String food;
@@ -21,6 +28,15 @@ public class BaseTour {
         this.transport = transport;
         this.duration = duration;
         this.price = price;
+    }
+
+    public String getInfo(){
+        return "Id: " + this.id +
+                ", Type: " + this.typeDesc +
+                ", Food: " + this.food +
+                ", Transport: " + this.transport +
+                ", Duration: " + this.duration  +
+                ", Price: " + this.price;
     }
 
     public Integer getId() {
@@ -71,37 +87,16 @@ public class BaseTour {
         this.price = price;
     }
 
-    public String getInfo(){
-        return "Id: " + this.id +
-                ", Type: " + this.typeDesc +
-                ", Food: " + this.food +
-                ", Transport: " + this.transport +
-                ", Duration: " + this.duration  +
-                ", Price: " + this.price;
+    public static String[] getDesctTypeValues() {
+        return  desctTypeValues;
     }
 
+    public static String[] getFoodValues() {
+        return foodValues;
+    }
 
-    public static Comparator<BaseTour> COMPARE_BY_DESC_TYPE = new Comparator<BaseTour>() {
-        public int compare(BaseTour one, BaseTour other) {
-            return one.getTypeDesc().compareTo(other.getTypeDesc());
-        }
-    };
+    public static String[] getTransportValues() {
+        return transportValues;
+    }
 
-    public static Comparator<BaseTour> COMPARE_BY_FOOD = new Comparator<BaseTour>() {
-        public int compare(BaseTour one, BaseTour other) {
-            return one.getFood().compareTo(other.getFood());
-        }
-    };
-
-    public static Comparator<BaseTour> COMPARE_BY_TRANSPORT = new Comparator<BaseTour>() {
-        public int compare(BaseTour one, BaseTour other) {
-            return one.getTransport().compareTo(other.getTransport());
-        }
-    };
-
-    public static Comparator<BaseTour> COMPARE_BY_PRICE = new Comparator<BaseTour>() {
-        public int compare(BaseTour one, BaseTour other) {
-            return one.getPrice().compareTo(other.getPrice());
-        }
-    };
 }

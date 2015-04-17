@@ -8,19 +8,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+
 public class SearchParameterSelector {
-
-    private String[] searchParameters = {"typeDesc", "food", "transport", "price"};
-
-    private String[] desctTypeValues = {"Shopping", "Cruise", "Excursion"};
-    private String[] foodValues = {"No_food", "Tea", "AI", "Breakfast"};
-    private String[] transportValues = {"Bus", "Train", "Plane", "Car", "Aurora", "Azura"};
-    private Double priceValue;
-
 
     private boolean repeat = true;
 
-    public String[] chooseParameter(Scanner scanner) {
+    public String[] chooseParameter() {
 
         String[] searchParametersValues = new String[4];
 
@@ -31,6 +24,7 @@ public class SearchParameterSelector {
             System.out.println("1 - Select values for searching");
 
             int action;
+            Scanner scanner = new Scanner(System.in);
             action = scanner.nextInt();
 
             switch (action) {
@@ -47,8 +41,8 @@ public class SearchParameterSelector {
                     while (repeat1) {
 
                         System.out.println("0 - Blank");
-                        for (int i = 0; i < desctTypeValues.length; i++) {
-                            System.out.println((i+1) + " - " + desctTypeValues[i]);
+                        for (int i = 0; i < BaseTour.getDesctTypeValues().length; i++) {
+                            System.out.println((i+1) + " - " + BaseTour.getDesctTypeValues()[i]);
                         }
 
                         action = scanner.nextInt();
@@ -56,13 +50,13 @@ public class SearchParameterSelector {
                         if (action == 0) {
                             searchParametersValues[0] ="";
                         } else {
-                            searchParametersValues[0] = desctTypeValues[action - 1];
+                            searchParametersValues[0] = BaseTour.getDesctTypeValues()[action - 1];
                         }
 
                         System.out.println("Select a food value: ");
                         System.out.println("0 - Blank");
-                        for (int i = 0; i < foodValues.length; i++) {
-                            System.out.println((i+1) + " - " + foodValues[i]);
+                        for (int i = 0; i < BaseTour.getFoodValues().length; i++) {
+                            System.out.println((i+1) + " - " + BaseTour.getFoodValues()[i]);
                         }
 
                         action = scanner.nextInt();
@@ -70,13 +64,13 @@ public class SearchParameterSelector {
                         if (action == 0) {
                             searchParametersValues[1] ="";
                         } else {
-                            searchParametersValues[1] = foodValues[action - 1];
+                            searchParametersValues[1] = BaseTour.getFoodValues()[action - 1];
                         }
 
                         System.out.println("Select a transport value: ");
                         System.out.println("0 - Blank");
-                        for (int i = 0; i < transportValues.length; i++) {
-                            System.out.println((i+1) + " - " + transportValues[i]);
+                        for (int i = 0; i < BaseTour.getTransportValues().length; i++) {
+                            System.out.println((i+1) + " - " + BaseTour.getTransportValues()[i]);
                         }
 
                         action = scanner.nextInt();
@@ -84,7 +78,7 @@ public class SearchParameterSelector {
                         if (action == 0) {
                             searchParametersValues[2] ="";
                         } else {
-                            searchParametersValues[2] = transportValues[action - 1];
+                            searchParametersValues[2] = BaseTour.getTransportValues()[action - 1];
                         }
 
                         System.out.println("Select a price value: ");

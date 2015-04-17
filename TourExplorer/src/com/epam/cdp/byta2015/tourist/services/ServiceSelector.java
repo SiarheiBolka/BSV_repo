@@ -1,18 +1,21 @@
 package com.epam.cdp.byta2015.tourist.services;
 
-import com.epam.cdp.byta2015.tourist.adders.AdderToDatabase;
-import com.epam.cdp.byta2015.tourist.model.BaseTour;
-import com.epam.cdp.byta2015.tourist.removers.RemoverFromDatabase;
+import com.epam.cdp.byta2015.tourist.datareaders.ConsoleReader;
+import com.epam.cdp.byta2015.tourist.datareaders.DatabaseWorker;
 import com.epam.cdp.byta2015.tourist.runner.Runner;
 
-import java.util.List;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ServiceSelector {
 
     private boolean repeat = true;
+    Scanner scanner = new Scanner(System.in);
+    Printer pr = new ListPrinter();
 
-    public void selectAction(Scanner scanner) {
+    int action=0;
+
+    public void selectAction( ) {
 
         while (repeat) {
             System.out.println("Menu");
@@ -20,12 +23,15 @@ public class ServiceSelector {
             System.out.println("1 - Print tours");
             System.out.println("2 - Find tours");
             System.out.println("3 - Sort tours");
-            System.out.println("4 - Add tour to database");
-            System.out.println("5 - Delete tours from database");
+            System.out.println("4 - Add tour");
+            System.out.println("5 - Delete tour");
 
-            Printer printer = new ListPrinter();
-            int action;
-            action = scanner.nextInt();
+            try {
+                action = scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Incorrect value entered.\n");
+                break;
+            }
 
             switch (action) {
 
@@ -35,31 +41,30 @@ public class ServiceSelector {
 
                 case 1:
 
-                    printer.print(Runner.getList());
+                    pr.print(Runner.reader.readAll());
                     break;
 
                 case 2:
-                    String[] paramaters = new SearchParameterSelector().chooseParameter(scanner);
-                    new Utils().FindTours(paramaters);
-                    Runner.setList(Utils.getToursListAfterSearch());
+                    String[] paramaters = new SearchParameterSelector().chooseParameter();
+                    pr.print(new Finder().FindTours(paramaters));
                     break;
 
                 case 3:
-                    Sorter.selectSortValue(scanner);
-                    Runner.setList(new Sorter().Sort());
+                    new Sorter().sort();
                     break;
 
                 case 4:
-                    new AdderToDatabase().addNewShopping();
+                    Runner.writer.addNewTour(ConsoleReader.selectTourForAdding());
                     break;
 
                 case 5:
-                    new RemoverFromDatabase().removeShoppingFromDatabase();
+                    new Runner().remover.removeTour(ConsoleReader.selectTourForDeletion());
                     break;
 
                 default:
                     break;
             }
+
         }
     }
 }
