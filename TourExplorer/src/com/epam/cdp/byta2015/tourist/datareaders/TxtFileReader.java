@@ -18,8 +18,6 @@ import java.util.List;
 public class TxtFileReader implements Reader {
 
     private static final String EMPLOYEE_INFO_TXT = "catalog.txt";
-    private List<BaseTour> list;
-    //private String fullPath;
 
     @Override
     public List<BaseTour> readAll(){
@@ -34,10 +32,8 @@ public class TxtFileReader implements Reader {
         try {
             br = new BufferedReader(new FileReader(txtFile));
 
-            int iter = 0;
 
             while ((stringBuffer = br.readLine()) != null) {
-                iter++;
                 String[] info = stringBuffer.split(": ");
 
                 if(info[1].equals("Cruise")) {
