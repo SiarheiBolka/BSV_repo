@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="TourExplorer" />
+        <module name="Pr1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TourExplorer" target="1.7" />
+      <module name="Pr1" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
