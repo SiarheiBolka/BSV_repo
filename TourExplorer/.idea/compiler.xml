@@ -25,7 +25,7 @@
         <module name="TourExplorer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7">
       <module name="TourExplorer" target="1.5" />
     </bytecodeTargetLevel>
   </component>

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.356 sec
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.799 sec <<< FAILURE!
+COMPARE_BY_DESC_TYPE_Test(ServicesTest)  Time elapsed: 0.045 sec  <<< FAILURE!
+java.lang.AssertionError: COMPARE_BY_DESC_TYPE_Test expected [0] but found [-34]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:370)
+	at ServicesTest.COMPARE_BY_DESC_TYPE_Test(ServicesTest.java:22)

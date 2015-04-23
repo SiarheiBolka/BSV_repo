@@ -57,6 +57,7 @@ public class Sorter {
     }
 
     public static Comparator<BaseTour> COMPARE_BY_DESC_TYPE = new Comparator<BaseTour>() {
+
         public int compare(BaseTour one, BaseTour other) {
             return one.getTypeDesc().compareTo(other.getTypeDesc());
         }
