@@ -1,0 +1,83 @@
+[33mcommit ada636016a7b8b25d5d8f6a93e2840869197297f[m
+Author: SergHome <siarhei_bolka@epam.com>
+Date:   Wed Apr 22 23:56:43 2015 +0300
+
+    Convert to Maven + Add testNG
+
+[33mcommit 5c9f834bbb734c4a4564827d4a4b12faca905274[m
+Author: SiarheiMalakhouski <malahovskys@gmail.com>
+Date:   Fri Apr 17 13:25:44 2015 +0300
+
+    [SM] Review
+
+[33mcommit af02ca689e6ad154e99158252c129d9abc6deaae[m
+Author: SiarheiMalakhouski <malahovskys@gmail.com>
+Date:   Fri Apr 17 13:25:27 2015 +0300
+
+    [SM] Review
+
+[33mcommit 74ac63006989a621d5074c2ec11926476ab6d468[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Fri Apr 17 11:48:03 2015 +0300
+
+    Signed-off-by: Siarhei Bolka <Siarhei_Bolka@epam.com>
+
+[33mcommit 2d49a130d1a7f165c3fb93f3adc5d36e3e2c4e14[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Wed Apr 15 14:08:09 2015 +0300
+
+    Signed-off-by: Siarhei Bolka <Siarhei_Bolka@epam.com>
+
+[33mcommit 6099d94752ae00b7a0dba4ab95eae134c7677ccf[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Wed Apr 15 14:04:45 2015 +0300
+
+    Signed-off-by: Siarhei Bolka <Siarhei_Bolka@epam.com>
+
+[33mcommit e5e6d07700a1940e46a9a0d717b3b7fd2e2248ea[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Wed Apr 15 13:55:43 2015 +0300
+
+    Signed-off-by: Siarhei Bolka <Siarhei_Bolka@epam.com>
+
+[33mcommit dcace49f973e3cc4173c67f890c5393d80008f94[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Mon Apr 13 11:08:14 2015 +0300
+
+    monday
+
+[33mcommit a240555823e3eb5ac19349e2bdfc33c35196dea5[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Fri Apr 10 13:32:16 2015 +0300
+
+    Basic tour with search
+
+[33mcommit b5c265295c708322a178703d09fb846381a59b92[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Fri Apr 3 17:51:31 2015 +0300
+
+    Done with the old feature
+
+[33mcommit 8fbf50700391315dcfdbc94108bd8e0bb955b897[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Fri Apr 3 17:31:59 2015 +0300
+
+    Week2 commit
+
+[33mcommit 27b6729e6e54d34fe9aefcd4a5429bf3096c59a3[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Fri Apr 3 17:05:27 2015 +0300
+
+    Week3 commit
+
+[33mcommit 93f9d40913c2c7ebca3e3d6bb9af8301239ec267[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Fri Mar 27 20:07:48 2015 +0300
+
+    Adding Calculator + TouristHelper
+
+[33mcommit c9211dd9015cf7a776e3fa2578de87aa5f94b886[m
+Author: Siarhei Bolka <Siarhei_Bolka@epam.com>
+Date:   Tue Mar 24 12:21:52 2015 +0300
+
+    Initial commit.

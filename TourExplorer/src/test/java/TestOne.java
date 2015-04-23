@@ -1,14 +1,11 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-/**
- * Created by Sergik on 22.04.2015.
- */
 
 public class TestOne {
 
-    @Test
+    @Test(enabled=false)
     public void metOne(){
-        Assert.assertTrue(true);
+        Assert.assertTrue(false);
     }
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="26" passed="26">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="56" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+    <groups>
+    </groups>
+    <test name="Service" duration-ms="26" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+      <class name="ServicesTest">
+        <test-method status="PASS" signature="fifthTest()" name="fifthTest" duration-ms="6" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="1" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="1" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="1" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="1" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="1" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="4" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="4" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="1" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="firstTest()" name="firstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="fourthTest()" name="fourthTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="thirdTest()" name="thirdTest" duration-ms="1" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+        <test-method status="PASS" signature="secondtTest()" name="secondtTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+        </test-method>
+      </class>
+    </test>
+    <test name="FirstTest" duration-ms="0" started-at="2015-04-23T11:43:04Z" finished-at="2015-04-23T11:43:04Z">
+    </test>
+  </suite>
+</testng-results>

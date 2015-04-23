@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mysql-connector-java-5.1.21">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/out/production/TourExplorer/com/epam/cdp/byta2015/tourist/libraries/mysql-connector-java-5.1.2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
