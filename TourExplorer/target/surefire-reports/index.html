@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content failed suite-Command_line_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="ServicesTest" hash-for-method="COMPARE_BY_DESC_TYPE_Test">COMPARE_BY_DESC_TYPE_Test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="ServicesTest" hash-for-method="readAllExceptionTest">readAllExceptionTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="ServicesTest" hash-for-method="readAllTest">readAllTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Command_line_suite -->
@@ -115,7 +120,7 @@
                     <div class="method-list-content passed suite-Command_line_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="ServicesTest" hash-for-method="readAllTest">readAllTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="ServicesTest" hash-for-method="COMPARE_BY_DESC_TYPE_Test">COMPARE_BY_DESC_TYPE_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Command_line_suite -->
@@ -138,12 +143,25 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="COMPARE_BY_DESC_TYPE_Test">
-                  </a> <!-- COMPARE_BY_DESC_TYPE_Test -->
-                  <span class="method-name">COMPARE_BY_DESC_TYPE_Test</span>
-                  <div class="stack-trace">java.lang.AssertionError: COMPARE_BY_DESC_TYPE_Test expected [0] but found [-34]
-	at ServicesTest.COMPARE_BY_DESC_TYPE_Test(ServicesTest.java:22)
-... Removed 38 stack frames
+                  <a name="readAllExceptionTest">
+                  </a> <!-- readAllExceptionTest -->
+                  <span class="method-name">readAllExceptionTest</span>
+                  <div class="stack-trace">org.testng.TestException: 
+Method ServicesTest.readAllExceptionTest()[pri:0, instance:ServicesTest@9fc1696] should have thrown an exception of type class java.lang.IndexOutOfBoundsException
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="readAllTest">
+                  </a> <!-- readAllTest -->
+                  <span class="method-name">readAllTest</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:635)
+	at java.util.ArrayList.get(ArrayList.java:411)
+	at ServicesTest.readAllTest(ServicesTest.java:21)
+... Removed 34 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -157,9 +175,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="readAllTest">
-                  </a> <!-- readAllTest -->
-                  <span class="method-name">readAllTest</span>
+                  <a name="COMPARE_BY_DESC_TYPE_Test">
+                  </a> <!-- COMPARE_BY_DESC_TYPE_Test -->
+                  <span class="method-name">COMPARE_BY_DESC_TYPE_Test</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -217,20 +235,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'COMPARE_BY_DESC_TYPE_Test')
 data.setCell(0, 2, 'ServicesTest')
-data.setCell(0, 3, 29);
+data.setCell(0, 3, 11);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'readAllTest')
+data.setCell(1, 1, 'readAllExceptionTest')
 data.setCell(1, 2, 'ServicesTest')
-data.setCell(1, 3, 5);
+data.setCell(1, 3, 2);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'readAllTest')
+data.setCell(2, 2, 'ServicesTest')
+data.setCell(2, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 ms</span>
+              <span class="suite-total-time">Total running time: 13 ms</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -265,14 +287,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">ServicesTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">COMPARE_BY_DESC_TYPE_Test</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">readAllExceptionTest</span>
+                <span class="method-start">12 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">readAllTest</span>
-                <span class="method-start">56 ms</span>
+                <span class="method-start">17 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

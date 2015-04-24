@@ -5,7 +5,8 @@
     <classes>
       <class name="ServicesTest">
         <methods>
-          <include name="COMPARE_BY_DESC_TYPE_Test"/>
+          <include name="readAllTest"/>
+          <include name="readAllExceptionTest"/>
         </methods>
       </class> <!-- ServicesTest -->
     </classes>
