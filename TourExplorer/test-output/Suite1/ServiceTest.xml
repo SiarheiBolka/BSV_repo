@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="EPBYMINW1906" tests="5" failures="0" timestamp="23 Apr 2015 14:33:34 GMT" time="0.016" errors="0">
-  <testcase name="fifthTest" time="0.006" classname="ServicesTest"/>
-  <testcase name="firstTest" time="0.0" classname="ServicesTest"/>
-  <testcase name="fourthTest" time="0.0" classname="ServicesTest"/>
-  <testcase name="secondtTest" time="0.001" classname="ServicesTest"/>
-  <testcase name="thirdTest" time="0.0" classname="ServicesTest"/>
-</testsuite>

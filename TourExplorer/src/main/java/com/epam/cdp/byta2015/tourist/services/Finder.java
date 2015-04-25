@@ -45,7 +45,7 @@ public class Finder {
     }
 
     //Searching by DescType
-    private static List<BaseTour> findByDescType(List<BaseTour> list, String searchValue) throws FindByTypeException {
+    public static List<BaseTour> findByDescType(List<BaseTour> list, String searchValue) throws FindByTypeException {
 
         List<BaseTour> resultList = new ArrayList<BaseTour>();
 

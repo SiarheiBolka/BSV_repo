@@ -1,13 +1,26 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite1" verbose="1">
-  <test name="Service">
-    <classes>
-       <class name="ServicesTest" />
-    </classes>
-  </test>
-    <test name="FirstTest">
-    <classes>
-       <class name="TestOne" />
-    </classes>
-  </test>
-</suite> 
+<suite name="FileCheckerSuite" verbose="1">
+    <test name="FileChecker" enabled="false">
+        <classes>
+            <class name="FileCheckerTest" />
+        </classes>
+    </test>
+
+    <test name="Reader" enabled="false">
+        <classes>
+            <class name="ReaderTest" />
+        </classes>
+    </test>
+
+    <test name="Sorter" enabled="false">
+        <classes>
+            <class name="SorterTest" />
+        </classes>
+    </test>
+
+    <test name="Finder" enabled="true">
+        <classes>
+            <class name="FinderTest" />
+        </classes>
+    </test>
+</suite>

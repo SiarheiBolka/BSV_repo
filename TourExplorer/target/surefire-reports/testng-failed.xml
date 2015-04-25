@@ -3,12 +3,11 @@
 <suite verbose="0" name="Failed suite [Command line suite]">
   <test name="Command line test(failed)">
     <classes>
-      <class name="ServicesTest">
+      <class name="FinderTest">
         <methods>
-          <include name="readAllTest"/>
-          <include name="readAllExceptionTest"/>
+          <include name="findByPriceExceptionTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- ServicesTest -->
+      </class> <!-- FinderTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

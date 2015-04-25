@@ -1,71 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="28" started-at="2015-04-24T08:44:34Z" finished-at="2015-04-24T08:44:34Z">
+  <suite name="Command line suite" duration-ms="30" started-at="2015-04-25T14:17:46Z" finished-at="2015-04-25T14:17:46Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="28" started-at="2015-04-24T08:44:34Z" finished-at="2015-04-24T08:44:34Z">
-      <class name="ServicesTest">
-        <test-method status="PASS" signature="COMPARE_BY_DESC_TYPE_Test()[pri:0, instance:ServicesTest@9fc1696]" name="COMPARE_BY_DESC_TYPE_Test" duration-ms="11" started-at="2015-04-24T05:44:34Z" finished-at="2015-04-24T05:44:34Z">
+    <test name="Command line test" duration-ms="30" started-at="2015-04-25T14:17:46Z" finished-at="2015-04-25T14:17:46Z">
+      <class name="FinderTest">
+        <test-method status="PASS" signature="findByDescTypeTest(java.util.ArrayList)[pri:0, instance:FinderTest@2b81c482]" name="findByDescTypeTest" duration-ms="8" started-at="2015-04-25T11:17:46Z" data-provider="findByData" finished-at="2015-04-25T11:17:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@3a7109eb, com.epam.cdp.byta2015.tourist.model.Shopping@53424146, com.epam.cdp.byta2015.tourist.model.Cruise@22cb855e, com.epam.cdp.byta2015.tourist.model.Cruise@5fa0f02a, com.epam.cdp.byta2015.tourist.model.Excursion@3ef78672, com.epam.cdp.byta2015.tourist.model.Excursion@6c9bc6a9]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- COMPARE_BY_DESC_TYPE_Test -->
-        <test-method status="FAIL" signature="readAllExceptionTest()[pri:0, instance:ServicesTest@9fc1696]" name="readAllExceptionTest" duration-ms="2" started-at="2015-04-24T05:44:34Z" finished-at="2015-04-24T05:44:34Z">
-          <exception class="org.testng.TestException">
-            <message>
-              <![CDATA[
-Method ServicesTest.readAllExceptionTest()[pri:0, instance:ServicesTest@9fc1696] should have thrown an exception of type class java.lang.IndexOutOfBoundsException]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestException: 
-Method ServicesTest.readAllExceptionTest()[pri:0, instance:ServicesTest@9fc1696] should have thrown an exception of type class java.lang.IndexOutOfBoundsException
-	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1460)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:738)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:70)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:158)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:98)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestException -->
+        </test-method> <!-- findByDescTypeTest -->
+        <test-method status="PASS" signature="findByFoodTest(java.util.ArrayList)[pri:0, instance:FinderTest@2b81c482]" name="findByFoodTest" duration-ms="0" started-at="2015-04-25T11:17:46Z" data-provider="findByData" depends-on-methods="FinderTest.findByDescTypeTest" finished-at="2015-04-25T11:17:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@670fb8f3, com.epam.cdp.byta2015.tourist.model.Shopping@39378e61, com.epam.cdp.byta2015.tourist.model.Cruise@6e649f9f, com.epam.cdp.byta2015.tourist.model.Cruise@102bb858, com.epam.cdp.byta2015.tourist.model.Excursion@2653a1b3, com.epam.cdp.byta2015.tourist.model.Excursion@3c9d026d]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readAllExceptionTest -->
-        <test-method status="FAIL" signature="readAllTest()[pri:0, instance:ServicesTest@9fc1696]" name="readAllTest" duration-ms="0" started-at="2015-04-24T05:44:34Z" finished-at="2015-04-24T05:44:34Z">
-          <exception class="java.lang.IndexOutOfBoundsException">
+        </test-method> <!-- findByFoodTest -->
+        <test-method status="PASS" signature="findByTransportTest(java.util.ArrayList)[pri:0, instance:FinderTest@2b81c482]" name="findByTransportTest" duration-ms="0" started-at="2015-04-25T11:17:46Z" data-provider="findByData" depends-on-methods="FinderTest.findByFoodTest" finished-at="2015-04-25T11:17:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@64cf5b3, com.epam.cdp.byta2015.tourist.model.Shopping@2696be00, com.epam.cdp.byta2015.tourist.model.Cruise@729405ca, com.epam.cdp.byta2015.tourist.model.Cruise@54084b8a, com.epam.cdp.byta2015.tourist.model.Excursion@6c977c1f, com.epam.cdp.byta2015.tourist.model.Excursion@4d560eeb]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findByTransportTest -->
+        <test-method status="PASS" signature="findByPriceTest(java.util.ArrayList)[pri:0, instance:FinderTest@2b81c482]" name="findByPriceTest" duration-ms="0" started-at="2015-04-25T11:17:46Z" data-provider="findByData" depends-on-methods="FinderTest.findByTransportTest" finished-at="2015-04-25T11:17:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@11412a45, com.epam.cdp.byta2015.tourist.model.Shopping@4d3e20dc, com.epam.cdp.byta2015.tourist.model.Cruise@29df7322, com.epam.cdp.byta2015.tourist.model.Cruise@cffd2a8, com.epam.cdp.byta2015.tourist.model.Excursion@6f5f1a42, com.epam.cdp.byta2015.tourist.model.Excursion@4cb51c2d]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findByPriceTest -->
+        <test-method status="PASS" signature="findByPriceExceptionTest(java.util.ArrayList)[pri:0, instance:FinderTest@2b81c482]" name="findByPriceExceptionTest" duration-ms="0" started-at="2015-04-25T11:17:46Z" data-provider="findByData" depends-on-methods="FinderTest.findByPriceTest" finished-at="2015-04-25T11:17:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@680a6131, com.epam.cdp.byta2015.tourist.model.Shopping@1730d54, com.epam.cdp.byta2015.tourist.model.Cruise@2870068a, com.epam.cdp.byta2015.tourist.model.Cruise@52bd62c3, com.epam.cdp.byta2015.tourist.model.Excursion@f9f1aa5, com.epam.cdp.byta2015.tourist.model.Excursion@168e4ea6]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="com.epam.cdp.byta2015.tourist.exceptions.FindByPriceException">
             <message>
-              <![CDATA[Index: 0, Size: 0]]>
+              <![CDATA[[FindByTypeException]: There are not records with price ='777'!]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:635)
-	at java.util.ArrayList.get(ArrayList.java:411)
-	at ServicesTest.readAllTest(ServicesTest.java:21)
+              <![CDATA[com.epam.cdp.byta2015.tourist.exceptions.FindByPriceException: [FindByTypeException]: There are not records with price ='777'!
+	at com.epam.cdp.byta2015.tourist.services.Finder.findByPrice(Finder.java:121)
+	at FinderTest.findByPriceExceptionTest(FinderTest.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,11 +103,11 @@ Method ServicesTest.readAllExceptionTest()[pri:0, instance:ServicesTest@9fc1696]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          </exception> <!-- com.epam.cdp.byta2015.tourist.exceptions.FindByPriceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readAllTest -->
-      </class> <!-- ServicesTest -->
+        </test-method> <!-- findByPriceExceptionTest -->
+      </class> <!-- FinderTest -->
     </test> <!-- Command line test -->
   </suite> <!-- Command line suite -->
 </testng-results>

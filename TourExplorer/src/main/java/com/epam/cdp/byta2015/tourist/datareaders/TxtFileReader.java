@@ -16,7 +16,7 @@ import java.util.List;
 
 public class TxtFileReader implements Reader {
 
-    private static final String EMPLOYEE_INFO_TXT = "cat1alog.txt";
+    private static final String EMPLOYEE_INFO_TXT = "catalog.txt";
 
     @Override
     public List<BaseTour> readAll(){
