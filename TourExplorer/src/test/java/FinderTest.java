@@ -21,7 +21,7 @@ import java.util.List;
 
 public class FinderTest {
 
-    @DataProvider(name = "findByData")
+/*    @DataProvider(name = "findByData")
     public Object[][] findByData() {
 
         List<BaseTour> listOfTestTours = new ArrayList<>();
@@ -87,6 +87,6 @@ public class FinderTest {
 
         System.out.println("findByPriceExceptionTest");
         Assert.assertEquals(Finder.findByPrice(list, "777").size(), expectedResultList.size());
-    }
+    }*/
 
 }

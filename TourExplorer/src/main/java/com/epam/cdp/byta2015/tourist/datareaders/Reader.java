@@ -6,7 +6,8 @@ import java.util.List;
 
 public interface Reader {
 
-    List<BaseTour> readAll();
+    //List<BaseTour> readAll();
 
+    List<BaseTour> readAll(String EMPLOYEE_INFO_TXT);
 }
 

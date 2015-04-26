@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.382 sec
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.918 sec <<< FAILURE!
+readAllTest(ReaderTest)  Time elapsed: 0.033 sec  <<< FAILURE!
+java.lang.AssertionError: readAllTest expected [Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii,Caribbean,Bahamas]] but found [Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii, Caribbean, Bahamas]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at ReaderTest.readAllTest(ReaderTest.java:19)

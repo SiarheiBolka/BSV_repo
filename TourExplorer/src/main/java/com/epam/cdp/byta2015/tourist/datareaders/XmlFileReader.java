@@ -16,7 +16,7 @@ public class XmlFileReader implements Reader{
 
 
     @Override
-    public List<BaseTour> readAll() {
+    public List<BaseTour> readAll(String str) {
 
         List<BaseTour> list = new ArrayList<>();
 
@@ -40,4 +40,9 @@ public class XmlFileReader implements Reader{
 
         return list;
      }
+
+/*    @Override
+    public List<BaseTour> readAll(String EMPLOYEE_INFO_TXT) {
+        return null;
+    }*/
 }

@@ -7,7 +7,11 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.epam.cdp.byta2015.tourist.services.Sorter.selectSortValue;
+
 public class ServiceSelector {
+
+    private static String EMPLOYEE_INFO_TXT = "catalog.txt";
 
     public void selectAction( ) {
 
@@ -40,7 +44,7 @@ public class ServiceSelector {
                     break;
 
                 case 1:
-                    pr.print(Runner.reader.readAll());
+                    pr.print(Runner.reader.readAll(EMPLOYEE_INFO_TXT));
                     break;
 
                 case 2:
@@ -50,7 +54,7 @@ public class ServiceSelector {
                     break;
 
                 case 3:
-                    List<BaseTour> sortToursList = Sorter.sort();
+                    List<BaseTour> sortToursList = Sorter.sort(Sorter.selectSortValue(), EMPLOYEE_INFO_TXT);
                     pr.print(sortToursList);
                     break;
 

@@ -86,7 +86,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
 
 
     @Override
-    public List<BaseTour> readAll() {
+    public List<BaseTour> readAll(String str) {
 
         createConnection();
 
@@ -191,6 +191,11 @@ public class DatabaseWorker implements Reader, Writer, Remover {
         closeConnection();
         return list;
     }
+
+/*    @Override
+    public List<BaseTour> readAll(String EMPLOYEE_INFO_TXT) {
+        return null;
+    }*/
 
     @Override
     public void addNewTour(String[] param){

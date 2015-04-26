@@ -12,9 +12,12 @@ import java.util.List;
 
 public class Finder {
 
+    private static String EMPLOYEE_INFO_TXT = "catalog.txt";
+
     public static List<BaseTour> FindTours(String[] paramaters) {
 
-        List<BaseTour> list = Runner.reader.readAll();
+
+        List<BaseTour> list = Runner.reader.readAll(EMPLOYEE_INFO_TXT);
         List<BaseTour> resultToursList = new ArrayList<>();
 
         try {

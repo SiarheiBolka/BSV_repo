@@ -3,19 +3,15 @@ package com.epam.cdp.byta2015.tourist.services;
 import com.epam.cdp.byta2015.tourist.model.BaseTour;
 import com.epam.cdp.byta2015.tourist.runner.Runner;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Sorter {
 
-    public static List<BaseTour> sort() {
+    public static List<BaseTour> sort(int sortParameter, String txtFile) {
 
-        int sortParam = selectSortValue();
-        List<BaseTour> sortedList = Runner.reader.readAll();
+        List<BaseTour> sortedList = Runner.reader.readAll(txtFile);
 
-        switch (sortParam){
+        switch (sortParameter){
             case 0:
                 break;
             case 1:
@@ -36,7 +32,7 @@ public class Sorter {
         return sortedList;
     }
 
-    private static int selectSortValue() {
+    public static int selectSortValue() {
 
         System.out.println("Select sort value: ");
         boolean repeat = true;
