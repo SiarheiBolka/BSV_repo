@@ -3,11 +3,14 @@
 <suite verbose="0" name="Failed suite [Command line suite]">
   <test name="Command line test(failed)">
     <classes>
-      <class name="ReaderTest">
+      <class name="SorterTest">
         <methods>
-          <include name="readAllTest"/>
+          <include name="sortByPriceTest"/>
+          <include name="sortByTransportTest"/>
+          <include name="sortByFoodTest"/>
+          <include name="sortByDescTypeTest"/>
         </methods>
-      </class> <!-- ReaderTest -->
+      </class> <!-- SorterTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

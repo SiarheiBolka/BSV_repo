@@ -13,9 +13,10 @@ import java.io.File;
  */
 public class FileCheckerTest {
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public static void checkFileTest(){
 
+        System.out.println("checkFileTest");
         String fileName = "new_test_catalog.txt";
 
         FileChecker.checkFile("new_test_catalog.txt");

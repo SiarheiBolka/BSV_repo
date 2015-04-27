@@ -1,26 +1,66 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="FileCheckerSuite" verbose="1">
-    <test name="FileChecker" enabled="false">
+    <test name="FileChecker" enabled="true">
         <classes>
             <class name="FileCheckerTest" />
         </classes>
     </test>
 
-    <test name="Reader" enabled="false">
+    <test name="Reader" enabled="true">
         <classes>
             <class name="ReaderTest" />
         </classes>
     </test>
 
-    <test name="Sorter" enabled="false">
-        <classes>
-            <class name="SorterTest" />
-        </classes>
-    </test>
 
     <test name="Finder" enabled="true">
         <classes>
             <class name="FinderTest" />
+        </classes>
+    </test>
+
+
+    <test name="SortByDescTypeTest" enabled="true">
+        <parameter name="sortParam1" value="1" />
+        <classes>
+            <class name="SorterTest" >
+                <methods>
+                    <include name="sortByDescTypeTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="SortByFoodTest" enabled="true">
+        <parameter name="sortParam1" value="2" />
+        <classes>
+            <class name="SorterTest" >
+                <methods>
+                    <include name="sortByFoodTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="SortByTransportTest" enabled="true">
+        <parameter name="sortParam1" value="3" />
+        <classes>
+            <class name="SorterTest" >
+                <methods>
+                    <include name="sortByTransportTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="SortByPriceTest" enabled="true">
+        <parameter name="sortParam1" value="4" />
+        <classes>
+            <class name="SorterTest" >
+                <methods>
+                    <include name="sortByPriceTest" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

@@ -1,11 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.918 sec <<< FAILURE!
-readAllTest(ReaderTest)  Time elapsed: 0.033 sec  <<< FAILURE!
-java.lang.AssertionError: readAllTest expected [Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii,Caribbean,Bahamas]] but found [Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii, Caribbean, Bahamas]]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at ReaderTest.readAllTest(ReaderTest.java:19)
+Tests run: 11, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.432 sec <<< FAILURE!
+sortByPriceTest(SorterTest)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
+	at SorterTest.sortByPriceTest(SorterTest.java:104)
+sortByTransportTest(SorterTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
+	at SorterTest.sortByTransportTest(SorterTest.java:93)
+sortByDescTypeTest(SorterTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
+	at SorterTest.sortByDescTypeTest(SorterTest.java:71)
+sortByFoodTest(SorterTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
+	at SorterTest.sortByFoodTest(SorterTest.java:82)

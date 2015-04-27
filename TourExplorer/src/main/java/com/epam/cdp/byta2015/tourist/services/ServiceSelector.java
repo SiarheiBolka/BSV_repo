@@ -11,7 +11,7 @@ import static com.epam.cdp.byta2015.tourist.services.Sorter.selectSortValue;
 
 public class ServiceSelector {
 
-    private static String EMPLOYEE_INFO_TXT = "catalog.txt";
+    public static String EMPLOYEE_INFO_TXT = "catalog.txt";
 
     public void selectAction( ) {
 
