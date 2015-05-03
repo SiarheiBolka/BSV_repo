@@ -14,9 +14,8 @@ public class XmlFileReader implements Reader{
 
     private static final String EMPLOYEE_INFO_XML = "catalog.xml";
 
-
     @Override
-    public List<BaseTour> readAll(String str) {
+    public List<BaseTour> readAll() {
 
         List<BaseTour> list = new ArrayList<>();
 

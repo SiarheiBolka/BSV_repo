@@ -16,15 +16,12 @@ import java.util.List;
 
 public class TxtFileReader implements Reader {
 
-/*    @Override
-    public List<BaseTour> readAll() {
-        return null;
-    }*/
+    private static final String EMPLOYEE_INFO_TXT = "catalog.txt";
 
     @Override
-    public List<BaseTour> readAll(String EMPLOYEE_INFO_TXT){
+    public List<BaseTour> readAll(){
 
-        //FileChecker.checkFile(EMPLOYEE_INFO_TXT);
+        FileChecker.checkFile(EMPLOYEE_INFO_TXT);
 
         File txtFile = new File(EMPLOYEE_INFO_TXT);
         BufferedReader br = null;

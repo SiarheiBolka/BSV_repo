@@ -86,7 +86,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
 
 
     @Override
-    public List<BaseTour> readAll(String str) {
+    public List<BaseTour> readAll() {
 
         createConnection();
 

@@ -7,9 +7,9 @@ import java.util.*;
 
 public class Sorter {
 
-    public static List<BaseTour> sort(int sortParameter, String txtFile) {
+    public static List<BaseTour> sort(int sortParameter) {
 
-        List<BaseTour> sortedList = Runner.reader.readAll(txtFile);
+        List<BaseTour> sortedList = Runner.reader.readAll();
 
         switch (sortParameter){
             case 0:

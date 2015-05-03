@@ -23,9 +23,9 @@ public class SorterTest {
 
         String testFile = "test_catalog.txt";
         System.out.println("sortByDescTypeTest");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(0).getTypeDesc(), "Cruise");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(2).getTypeDesc(), "Shopping");
+        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise");
+        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
+        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping");
     }
 
     @Parameters({ "sortParam2" })
@@ -34,9 +34,9 @@ public class SorterTest {
 
         String testFile = "test_catalog.txt";
         System.out.println("sortByFoodTest");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(0).getTypeDesc(), "Cruise");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(2).getTypeDesc(), "Shopping");
+        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise");
+        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
+        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping");
     }
 
     @Parameters({ "sortParam3" })
@@ -45,9 +45,9 @@ public class SorterTest {
 
         String testFile = "test_catalog.txt";
         System.out.println("sortByTransportTest");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(0).getTypeDesc(), "Cruise");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(2).getTypeDesc(), "Shopping");
+        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise");
+        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
+        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping");
     }
 
     @Parameters({ "sortParam4" })
@@ -56,9 +56,9 @@ public class SorterTest {
 
         String testFile = "test_catalog.txt";
         System.out.println("sortByPriceTest");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(0).getTypeDesc(), "Shopping");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam, testFile).get(2).getTypeDesc(), "Cruise");
+        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Shopping");
+        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
+        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Cruise");
     }
 
 }
