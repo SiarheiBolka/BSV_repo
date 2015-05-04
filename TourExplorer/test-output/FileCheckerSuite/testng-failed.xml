@@ -12,6 +12,15 @@
       </class>
     </classes>
   </test>
+  <test name="FileChecker(failed)" preserve-order="false">
+    <classes>
+      <class name="FileCheckerTest">
+        <methods>
+          <include name="prepareFileTest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
   <test name="SortByFoodTest(failed)" preserve-order="false">
     <parameter name="sortParam1" value="2"/>
     <classes>
@@ -36,7 +45,7 @@
     <classes>
       <class name="SorterTest">
         <methods>
-          <include name="sortByDescTypeTest"/>
+          <include name="sortByDescTypeTest" invocation-numbers="0"/>
         </methods>
       </class>
     </classes>

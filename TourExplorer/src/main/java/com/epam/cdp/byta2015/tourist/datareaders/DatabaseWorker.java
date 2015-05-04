@@ -90,7 +90,7 @@ public class DatabaseWorker implements Reader, Writer, Remover {
 
         createConnection();
 
-        FileChecker.checkFile(DATABASE_PROPERTIES);
+        FileChecker.prepareFile(DATABASE_PROPERTIES);
 
         TableNames[] tableNameList = TableNames.values();
         String query;

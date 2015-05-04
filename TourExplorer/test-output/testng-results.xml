@@ -1,109 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="5" total="11" passed="6">
+<testng-results skipped="0" failed="6" total="11" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="FileCheckerSuite" duration-ms="95" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
+  <suite name="FileCheckerSuite" duration-ms="83" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
     <groups>
     </groups>
-    <test name="SortByPriceTest" duration-ms="1" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
+    <test name="SortByPriceTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
       <class name="SorterTest">
-        <test-method status="FAIL" signature="sortByPriceTest()" name="sortByPriceTest" duration-ms="0" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByPriceTest(SorterTest.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
-	at org.testng.TestRunner.privateRun(TestRunner.java:749)
-	at org.testng.TestRunner.run(TestRunner.java:600)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
-	at org.testng.TestNG.run(TestNG.java:900)
-	at TestRunner.main(TestRunner.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
-]]>
-            </full-stacktrace>
-          </exception>
-        </test-method>
-      </class>
-    </test>
-    <test name="FileChecker" duration-ms="15" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-      <class name="FileCheckerTest">
-        <test-method status="PASS" signature="checkFileTest()" name="checkFileTest" duration-ms="9" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-        </test-method>
-      </class>
-    </test>
-    <test name="SortByFoodTest" duration-ms="1" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-      <class name="SorterTest">
-        <test-method status="FAIL" signature="sortByFoodTest()" name="sortByFoodTest" duration-ms="0" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByFoodTest(SorterTest.java:82)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
-	at org.testng.TestRunner.privateRun(TestRunner.java:749)
-	at org.testng.TestRunner.run(TestRunner.java:600)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
-	at org.testng.TestNG.run(TestNG.java:900)
-	at TestRunner.main(TestRunner.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
-]]>
-            </full-stacktrace>
-          </exception>
-        </test-method>
-      </class>
-    </test>
-    <test name="Reader" duration-ms="5" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-      <class name="ReaderTest">
-        <test-method status="FAIL" signature="readAllTest()" name="readAllTest" duration-ms="4" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="sortByPriceTest(int)" name="sortByPriceTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[readAllTest expected:<Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii,Caribbean,Bahamas]> but was:<Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii, Caribbean, Bahamas]>]]>
+              <![CDATA[
+Parameter 'sortParam4' is required by @Test on method sortByPriceTest
+but has not been marked @Optional or defined in D:\workspace\BSV_repo\TourExplorer\testng.xml]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: readAllTest expected:<Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii,Caribbean,Bahamas]> but was:<Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii, Caribbean, Bahamas]>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'sortParam4' is required by @Test on method sortByPriceTest
+but has not been marked @Optional or defined in D:\workspace\BSV_repo\TourExplorer\testng.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:144)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:323)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:414)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1315)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1022)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1122)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at TestRunner.main(TestRunner.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+    </test>
+    <test name="FileChecker" duration-ms="16" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+      <class name="FileCheckerTest">
+        <test-method status="FAIL" signature="prepareFileTest()" name="prepareFileTest" duration-ms="8" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Txt file is changed expected:<181> but was:<180>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Txt file is changed expected:<181> but was:<180>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:480)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:260)
+	at FileCheckerTest.prepareFileTest(FileCheckerTest.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at TestRunner.main(TestRunner.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+    </test>
+    <test name="SortByFoodTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+      <class name="SorterTest">
+        <test-method status="FAIL" signature="sortByFoodTest(int)" name="sortByFoodTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'sortParam2' is required by @Test on method sortByFoodTest
+but has not been marked @Optional or defined in D:\workspace\BSV_repo\TourExplorer\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'sortParam2' is required by @Test on method sortByFoodTest
+but has not been marked @Optional or defined in D:\workspace\BSV_repo\TourExplorer\testng.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:144)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:323)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:414)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1315)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1022)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1122)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at TestRunner.main(TestRunner.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
+]]>
+            </full-stacktrace>
+          </exception>
+        </test-method>
+      </class>
+    </test>
+    <test name="Reader" duration-ms="5" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+      <class name="ReaderTest">
+        <test-method status="FAIL" signature="readAllTest()" name="readAllTest" duration-ms="4" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[readAllTest expected:<Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii,Caribbean,Bahamas]> but was:<Id: 0, Type: Shopping, Food: No_food, Transport: Bus, Duration: 2, Price: 50000.0, Country: Poland, NightTransfer: Y>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: readAllTest expected:<Id: 3, Type: Cruise, Food: Breakfast, Transport: Azura, Duration: 30, Price: 550000.0; Countries: [Hawaii,Caribbean,Bahamas]> but was:<Id: 0, Type: Shopping, Food: No_food, Transport: Bus, Duration: 2, Price: 50000.0, Country: Poland, NightTransfer: Y>
 	at org.testng.Assert.fail(Assert.java:89)
 	at org.testng.Assert.failNotEquals(Assert.java:480)
 	at org.testng.Assert.assertEquals(Assert.java:118)
@@ -143,49 +191,49 @@
         </test-method>
       </class>
     </test>
-    <test name="Finder" duration-ms="9" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
+    <test name="Finder" duration-ms="9" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
       <class name="FinderTest">
-        <test-method status="PASS" signature="findByDescTypeTest(java.util.ArrayList)" name="findByDescTypeTest" duration-ms="0" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
+        <test-method status="PASS" signature="findByDescTypeTest(java.util.ArrayList)" name="findByDescTypeTest" duration-ms="1" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@55816088, com.epam.cdp.byta2015.tourist.model.Shopping@20e8ac93, com.epam.cdp.byta2015.tourist.model.Cruise@b99f7c6, com.epam.cdp.byta2015.tourist.model.Cruise@2959ee1d, com.epam.cdp.byta2015.tourist.model.Excursion@4f1fc720, com.epam.cdp.byta2015.tourist.model.Excursion@2f4a2e75]]]>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@186b282d, com.epam.cdp.byta2015.tourist.model.Shopping@231aaee1, com.epam.cdp.byta2015.tourist.model.Cruise@2ccf47c8, com.epam.cdp.byta2015.tourist.model.Cruise@5c71b273, com.epam.cdp.byta2015.tourist.model.Excursion@2c7acb6f, com.epam.cdp.byta2015.tourist.model.Excursion@31c1fb39]]]>
               </value>
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="findByFoodTest(java.util.ArrayList)" name="findByFoodTest" duration-ms="0" started-at="2015-04-27T06:34:44Z" depends-on-methods="FinderTest.findByDescTypeTest" finished-at="2015-04-27T06:34:44Z">
+        <test-method status="PASS" signature="findByFoodTest(java.util.ArrayList)" name="findByFoodTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" depends-on-methods="FinderTest.findByDescTypeTest" finished-at="2015-05-04T04:36:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@2f301b94, com.epam.cdp.byta2015.tourist.model.Shopping@7f62a9bf, com.epam.cdp.byta2015.tourist.model.Cruise@26767bef, com.epam.cdp.byta2015.tourist.model.Cruise@2cc29ba3, com.epam.cdp.byta2015.tourist.model.Excursion@1c78014a, com.epam.cdp.byta2015.tourist.model.Excursion@a9cafe0]]]>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@365474b4, com.epam.cdp.byta2015.tourist.model.Shopping@62b9f149, com.epam.cdp.byta2015.tourist.model.Cruise@1d902242, com.epam.cdp.byta2015.tourist.model.Cruise@61b92a37, com.epam.cdp.byta2015.tourist.model.Excursion@4382b300, com.epam.cdp.byta2015.tourist.model.Excursion@39b5e7a0]]]>
               </value>
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="findByTransportTest(java.util.ArrayList)" name="findByTransportTest" duration-ms="0" started-at="2015-04-27T06:34:44Z" depends-on-methods="FinderTest.findByFoodTest" finished-at="2015-04-27T06:34:44Z">
+        <test-method status="PASS" signature="findByTransportTest(java.util.ArrayList)" name="findByTransportTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" depends-on-methods="FinderTest.findByFoodTest" finished-at="2015-05-04T04:36:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@1ba5cfae, com.epam.cdp.byta2015.tourist.model.Shopping@22e5b6b0, com.epam.cdp.byta2015.tourist.model.Cruise@173ceeb6, com.epam.cdp.byta2015.tourist.model.Cruise@215bfaa5, com.epam.cdp.byta2015.tourist.model.Excursion@1da477bf, com.epam.cdp.byta2015.tourist.model.Excursion@18b1abcd]]]>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@493b1f1b, com.epam.cdp.byta2015.tourist.model.Shopping@48774b2c, com.epam.cdp.byta2015.tourist.model.Cruise@fe85adf, com.epam.cdp.byta2015.tourist.model.Cruise@5fa5eea1, com.epam.cdp.byta2015.tourist.model.Excursion@6d5bd16, com.epam.cdp.byta2015.tourist.model.Excursion@3a70f2db]]]>
               </value>
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="findByPriceTest(java.util.ArrayList)" name="findByPriceTest" duration-ms="0" started-at="2015-04-27T06:34:44Z" depends-on-methods="FinderTest.findByTransportTest" finished-at="2015-04-27T06:34:44Z">
+        <test-method status="PASS" signature="findByPriceTest(java.util.ArrayList)" name="findByPriceTest" duration-ms="1" started-at="2015-05-04T04:36:31Z" depends-on-methods="FinderTest.findByTransportTest" finished-at="2015-05-04T04:36:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@2439a391, com.epam.cdp.byta2015.tourist.model.Shopping@4421972b, com.epam.cdp.byta2015.tourist.model.Cruise@794baafe, com.epam.cdp.byta2015.tourist.model.Cruise@56c747e8, com.epam.cdp.byta2015.tourist.model.Excursion@3541fcda, com.epam.cdp.byta2015.tourist.model.Excursion@7f3f6786]]]>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@40edec51, com.epam.cdp.byta2015.tourist.model.Shopping@4435db24, com.epam.cdp.byta2015.tourist.model.Cruise@2bc63b78, com.epam.cdp.byta2015.tourist.model.Cruise@636a59bb, com.epam.cdp.byta2015.tourist.model.Excursion@5b2936fa, com.epam.cdp.byta2015.tourist.model.Excursion@6ed885d7]]]>
               </value>
             </param>
           </params>
         </test-method>
-        <test-method status="PASS" signature="findByPriceExceptionTest(java.util.ArrayList)" name="findByPriceExceptionTest" duration-ms="0" started-at="2015-04-27T06:34:44Z" depends-on-methods="FinderTest.findByPriceTest" finished-at="2015-04-27T06:34:44Z">
+        <test-method status="PASS" signature="findByPriceExceptionTest(java.util.ArrayList)" name="findByPriceExceptionTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" depends-on-methods="FinderTest.findByPriceTest" finished-at="2015-05-04T04:36:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@34dea091, com.epam.cdp.byta2015.tourist.model.Shopping@3ffaab5, com.epam.cdp.byta2015.tourist.model.Cruise@6205320, com.epam.cdp.byta2015.tourist.model.Cruise@34315d04, com.epam.cdp.byta2015.tourist.model.Excursion@14d1cc61, com.epam.cdp.byta2015.tourist.model.Excursion@59c0fef4]]]>
+                <![CDATA[[com.epam.cdp.byta2015.tourist.model.Shopping@5579d6f9, com.epam.cdp.byta2015.tourist.model.Shopping@3210a146, com.epam.cdp.byta2015.tourist.model.Cruise@61cc1457, com.epam.cdp.byta2015.tourist.model.Cruise@1d4b8dea, com.epam.cdp.byta2015.tourist.model.Excursion@4b520cac, com.epam.cdp.byta2015.tourist.model.Excursion@77be16d5]]]>
               </value>
             </param>
           </params>
@@ -231,14 +279,21 @@
         </test-method>
       </class>
     </test>
-    <test name="SortByDescTypeTest" duration-ms="4" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
+    <test name="SortByDescTypeTest" duration-ms="4" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
       <class name="SorterTest">
-        <test-method status="FAIL" signature="sortByDescTypeTest()" name="sortByDescTypeTest" duration-ms="3" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
+        <test-method status="FAIL" signature="sortByDescTypeTest(int)" name="sortByDescTypeTest" duration-ms="3" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByDescTypeTest(SorterTest.java:71)
+	at SorterTest.sortByDescTypeTest(SorterTest.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -273,22 +328,25 @@
         </test-method>
       </class>
     </test>
-    <test name="SortByTransportTest" duration-ms="1" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
+    <test name="SortByTransportTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
       <class name="SorterTest">
-        <test-method status="FAIL" signature="sortByTransportTest()" name="sortByTransportTest" duration-ms="1" started-at="2015-04-27T06:34:44Z" finished-at="2015-04-27T06:34:44Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="sortByTransportTest(int)" name="sortByTransportTest" duration-ms="0" started-at="2015-05-04T04:36:31Z" finished-at="2015-05-04T04:36:31Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'sortParam3' is required by @Test on method sortByTransportTest
+but has not been marked @Optional or defined in D:\workspace\BSV_repo\TourExplorer\testng.xml]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByTransportTest(SorterTest.java:93)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'sortParam3' is required by @Test on method sortByTransportTest
+but has not been marked @Optional or defined in D:\workspace\BSV_repo\TourExplorer\testng.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:144)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:323)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:414)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1315)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1022)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1122)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)

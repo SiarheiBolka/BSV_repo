@@ -17,48 +17,20 @@ import java.util.List;
  */
 public class SorterTest {
 
-    @Parameters({ "sortParam1" })
-    @Test
-    public static void sortByDescTypeTest(int sortParam) {
+    @Parameters({ "sortParam" })
+    @Test (enabled = true, groups="sorter", dependsOnGroups="reader")
+    public static void sortByTest(int sortParam) {
 
         String testFile = "test_catalog.txt";
-        System.out.println("sortByDescTypeTest");
-        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise");
-        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping");
-    }
 
-    @Parameters({ "sortParam2" })
-    @Test
-    public static void sortByFoodTest(int sortParam) {
+        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise",
+                "Incorrect first item in list after sorting by " + sortParam + "sort param");
 
-        String testFile = "test_catalog.txt";
-        System.out.println("sortByFoodTest");
-        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise");
-        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping");
-    }
+        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion",
+                "Incorrect second item in list after sorting by " + sortParam + "sort param");
 
-    @Parameters({ "sortParam3" })
-    @Test
-    public static void sortByTransportTest(int sortParam) {
-
-        String testFile = "test_catalog.txt";
-        System.out.println("sortByTransportTest");
-        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise");
-        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping");
-    }
-
-    @Parameters({ "sortParam4" })
-    @Test
-    public static void sortByPriceTest(int sortParam) {
-
-        String testFile = "test_catalog.txt";
-        System.out.println("sortByPriceTest");
-        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Shopping");
-        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion");
-        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Cruise");
+        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping",
+                "Incorrect third item in list after sorting by " + sortParam + "sort param");
     }
 
 }

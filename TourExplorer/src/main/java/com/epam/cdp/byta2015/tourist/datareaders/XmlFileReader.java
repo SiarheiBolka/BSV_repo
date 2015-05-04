@@ -19,7 +19,7 @@ public class XmlFileReader implements Reader{
 
         List<BaseTour> list = new ArrayList<>();
 
-        FileChecker.checkFile(EMPLOYEE_INFO_XML);
+        FileChecker.prepareFile(EMPLOYEE_INFO_XML);
 
         //Create a "parser factory" for creating SAX parsers
         SAXParserFactory spfac = SAXParserFactory.newInstance();

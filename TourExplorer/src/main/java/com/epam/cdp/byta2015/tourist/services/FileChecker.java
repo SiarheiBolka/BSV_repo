@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class FileChecker {
 
-    public static void checkFile(String fileName) {
+    public static void prepareFile(String fileName) {
         try {
             File myDir = new File (".");
             File txtFile = new File (myDir, fileName);

@@ -1,3 +1,3 @@
 3: Cruise: Breakfast: Azura: 30: 550000: Hawaii,Caribbean,Bahamas
-1: Shopping: Tea: Train: 3: 70000: Ukraine: N
-5: Excursion: No_food: Car: 3: 400000: France: Eiffel Tower,Louvre
+1: Shopping: Tea: Train: 3: 700000: Ukraine: N
+5: Excursion: No_food: Car: 3: 600000: France: Eiffel Tower,Louvre

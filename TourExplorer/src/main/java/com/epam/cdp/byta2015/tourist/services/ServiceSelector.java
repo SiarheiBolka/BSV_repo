@@ -9,8 +9,6 @@ import java.util.Scanner;
 
 public class ServiceSelector {
 
-    public static String EMPLOYEE_INFO_TXT = "catalog.txt";
-
     public void selectAction( ) {
 
         int action;

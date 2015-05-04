@@ -12,8 +12,6 @@ import java.util.List;
 
 public class Finder {
 
-    //private static String EMPLOYEE_INFO_TXT = "catalog.txt";
-
     public static List<BaseTour> findTours(String[] paramaters) {
 
 

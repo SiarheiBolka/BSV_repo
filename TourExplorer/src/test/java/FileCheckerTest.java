@@ -1,11 +1,11 @@
-import com.epam.cdp.byta2015.tourist.datareaders.TxtFileReader;
-import com.epam.cdp.byta2015.tourist.model.Shopping;
 import com.epam.cdp.byta2015.tourist.services.FileChecker;
-import com.epam.cdp.byta2015.tourist.services.Sorter;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.security.MessageDigest;
 
 
 /**
@@ -13,44 +13,76 @@ import java.io.File;
  */
 public class FileCheckerTest {
 
-    @Test(enabled = true)
-    public static void checkFileTest(){
+    @Test(enabled = true, groups="checker")
+    public static void prepareFileTest(){
 
-        System.out.println("checkFileTest");
-        String fileName = "new_test_catalog.txt";
+        String notExistingTxtFileName = "new_test_catalog.txt";
+        String existingTxtFileName = "test_catalog.txt";
 
-        FileChecker.checkFile("new_test_catalog.txt");
+        FileChecker.prepareFile("new_test_catalog.txt");
 
         File myDir = new File (".");
-        File txtFile = new File (myDir, fileName);
+        File notExistingTxtFile = new File (myDir, notExistingTxtFileName);
 
-        Assert.assertEquals(true, txtFile.exists());
+        //Check that new file is created if original file doesn't exist
+        Assert.assertEquals(true, notExistingTxtFile.exists(), "Txt file is not created");
 
         try {
-            txtFile.delete();
+            notExistingTxtFile.delete();
         } catch (Exception e){
             System.out.println("Warning: File is not deleted!");
         }
 
+        File existingTxtFile = new File (myDir, existingTxtFileName);
+        String checkSumOfOriginalFile = null;
+
+        try {
+            checkSumOfOriginalFile = getMD5Checksum("test_catalog.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        FileChecker.prepareFile("test_catalog.txt");
+
+        String checkSumOfFileAfterCheck = null;
+        try {
+            checkSumOfFileAfterCheck = getMD5Checksum("test_catalog.txt");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //Check that original file is not deleted
+        Assert.assertEquals(true, existingTxtFile.exists(), "Original txt file doesn't exist");
+
+        //Check that original file has correct checksum
+        Assert.assertEquals(checkSumOfFileAfterCheck, checkSumOfOriginalFile, "Txt file is changed");
     }
 
-/*
+    public static byte[] createChecksum(String filename) throws Exception {
+        InputStream fis =  new FileInputStream(filename);
 
-    @Test (enabled=false)
-    public void COMPARE_BY_DESC_TYPE_Test() {
-        System.out.println("COMPARE_BY_DESC_TYPE_Test");
-        Assert.assertEquals(Sorter.COMPARE_BY_DESC_TYPE.compare(
-                new Shopping(0, "Shopping", "No_food", "Bus", 2, (double) 50000, "Poland", "Y"),
-                new Shopping(0, "Shopping", "No_food", "Bus", 2, (double) 50000, "Poland", "Y")), 0, "COMPARE_BY_DESC_TYPE_Test");
+        byte[] buffer = new byte[1024];
+        MessageDigest complete = MessageDigest.getInstance("MD5");
+        int numRead;
+
+        do {
+            numRead = fis.read(buffer);
+            if (numRead > 0) {
+                complete.update(buffer, 0, numRead);
+            }
+        } while (numRead != -1);
+
+        fis.close();
+        return complete.digest();
     }
 
-    @Test (enabled=false, expectedExceptions = IndexOutOfBoundsException.class)
-    public void readAllExceptionTest() {
-        System.out.println("readAllExceptionTest");
-        TxtFileReader reader = new TxtFileReader();
-        reader.readAll();
+    public static String getMD5Checksum(String filename) throws Exception {
+        byte[] b = createChecksum(filename);
+        String result = "";
 
-    }*/
-
-
+        for (int i=0; i < b.length; i++) {
+            result += Integer.toString( ( b[i] & 0xff ) + 0x100, 16).substring( 1 );
+        }
+        return result;
+    }
 }

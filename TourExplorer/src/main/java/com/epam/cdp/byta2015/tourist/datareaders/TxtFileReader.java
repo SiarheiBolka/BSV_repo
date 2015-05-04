@@ -16,14 +16,19 @@ import java.util.List;
 
 public class TxtFileReader implements Reader {
 
-    private static final String EMPLOYEE_INFO_TXT = "catalog.txt";
+    public TxtFileReader(String txtFileName) {
+
+        fileName = txtFileName;
+    }
+
+    private String fileName;
 
     @Override
     public List<BaseTour> readAll(){
 
-        FileChecker.checkFile(EMPLOYEE_INFO_TXT);
+        FileChecker.prepareFile(fileName);
 
-        File txtFile = new File(EMPLOYEE_INFO_TXT);
+        File txtFile = new File(fileName);
         BufferedReader br = null;
         String stringBuffer = null;
         List<BaseTour> list = new ArrayList<BaseTour>();
@@ -35,25 +40,28 @@ public class TxtFileReader implements Reader {
             while ((stringBuffer = br.readLine()) != null) {
                 String[] info = stringBuffer.split(": ");
 
-                if(info[1].equals("Cruise")) {
+                if("Cruise".equals(info[1])) {
 
                     String[] countries = info[6].split(",");
                     List<String> countriesList = new ArrayList<String>();
 
                     countriesList = Arrays.asList(countries);
-                    Cruise cruise = new Cruise(Integer.parseInt(info[0]), info[1], info[2], info[3], Integer.parseInt(info[4]),Double.parseDouble(info[5]), countriesList);
+                    Cruise cruise = new Cruise(Integer.parseInt(info[0]), info[1], info[2], info[3],
+                            Integer.parseInt(info[4]),Double.parseDouble(info[5]), countriesList);
                     list.add(cruise);
 
-                } else if (info[1].equals("Shopping")) {
-                    Shopping shopping = new Shopping(Integer.parseInt(info[0]), info[1], info[2], info[3], Integer.parseInt(info[4]), Double.parseDouble(info[5]), info[6], info[7]);
+                } else if ("Shopping".equals(info[1])) {
+                    Shopping shopping = new Shopping(Integer.parseInt(info[0]), info[1], info[2], info[3],
+                            Integer.parseInt(info[4]), Double.parseDouble(info[5]), info[6], info[7]);
                     list.add(shopping);
 
-                } else if (info[1].equals("Excursion")) {
+                } else if ("Excursion".equals(info[1])) {
                     String[] destinations = info[7].split(",");
                     List<String> destinationsList = new ArrayList<String>();
 
                     destinationsList = Arrays.asList(destinations);
-                    Excursion excursion = new Excursion(Integer.parseInt(info[0]), info[1], info[2], info[3], Integer.parseInt(info[4]),Double.parseDouble(info[5]), info[6], destinationsList);
+                    Excursion excursion = new Excursion(Integer.parseInt(info[0]), info[1], info[2], info[3],
+                            Integer.parseInt(info[4]),Double.parseDouble(info[5]), info[6], destinationsList);
                     list.add(excursion);
 
                 } else {
@@ -75,4 +83,5 @@ public class TxtFileReader implements Reader {
 
         return list;
     }
+
 }

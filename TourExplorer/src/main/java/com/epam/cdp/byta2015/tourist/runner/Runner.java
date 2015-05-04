@@ -18,6 +18,7 @@ public class Runner {
     public static Reader reader;
     public static Writer writer;
     public static Remover remover;
+    private static final String EMPLOYEE_INFO_TXT = "catalog.txt";
 
     public static void main(String[] args) {
 
@@ -46,7 +47,7 @@ public class Runner {
                         break;
 
                     case 1:
-                        reader = new TxtFileReader();
+                        reader = new TxtFileReader(EMPLOYEE_INFO_TXT);
                         writer = new TxtFileWriter();
                         //remover = new RemoverFromTxtFile();
                         new ServiceSelector().selectAction();
