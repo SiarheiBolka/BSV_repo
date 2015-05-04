@@ -45,12 +45,14 @@ public class ServiceSelector {
 
                 case 2:
                     String[] chooseParameters = SearchParameterSelector.chooseParameter();
-                    List<BaseTour> findToursList = Finder.findTours(chooseParameters);
+                    List<BaseTour> baseTours = Runner.reader.readAll();
+                    List<BaseTour> findToursList = Finder.findTours(baseTours, chooseParameters);
                     pr.print(findToursList);
                     break;
 
                 case 3:
-                    List<BaseTour> sortToursList = Sorter.sort(Sorter.selectSortValue());
+                    List<BaseTour> sortedList = Runner.reader.readAll();
+                    List<BaseTour> sortToursList = Sorter.sort(sortedList, Sorter.selectSortValue());
                     pr.print(sortToursList);
                     break;
 

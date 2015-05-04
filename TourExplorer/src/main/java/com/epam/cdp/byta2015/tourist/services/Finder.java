@@ -12,10 +12,10 @@ import java.util.List;
 
 public class Finder {
 
-    public static List<BaseTour> findTours(String[] paramaters) {
+    public static List<BaseTour> findTours(List<BaseTour> list, String[] paramaters) {
 
 
-        List<BaseTour> list = Runner.reader.readAll();
+        //List<BaseTour> list = Runner.reader.readAll();
         List<BaseTour> resultToursList = new ArrayList<>();
 
         try {

@@ -7,9 +7,9 @@ import java.util.*;
 
 public class Sorter {
 
-    public static List<BaseTour> sort(int sortParameter) {
+    public static List<BaseTour> sort(List<BaseTour> sortedList, int sortParameter) {
 
-        List<BaseTour> sortedList = Runner.reader.readAll();
+        //List<BaseTour> sortedList = Runner.reader.readAll();
 
         switch (sortParameter){
             case 0:

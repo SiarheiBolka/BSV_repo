@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="FileCheckerSuite" verbose="1">
 
+
     <test name="FileChecker" enabled="true">
         <classes>
             <class name="FileCheckerTest" />
@@ -13,22 +14,16 @@
         </classes>
     </test>
 
-
     <test name="Finder" enabled="true">
         <classes>
             <class name="FinderTest" />
         </classes>
     </test>
 
-
     <test name="SortByDescTypeTest" enabled="true">
         <parameter name="sortParam" value="1" />
         <classes>
-            <class name="SorterTest" >
-                <methods>
-                    <include name="sortByTest" />
-                </methods>
-            </class>
+            <class name="SorterTest" />
         </classes>
     </test>
 

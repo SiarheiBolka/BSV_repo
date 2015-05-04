@@ -1,61 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [FileCheckerSuite]">
-  <parameter name="sortParam1" value="4"/>
-  <test name="SortByPriceTest(failed)" preserve-order="false">
-    <parameter name="sortParam1" value="4"/>
+  <parameter name="sortParam" value="4"/>
+  <test name="Finder(failed)" preserve-order="false">
     <classes>
-      <class name="SorterTest">
+      <class name="FinderTest">
         <methods>
-          <include name="sortByPriceTest"/>
+          <include name="findByPriceExceptionTest"/>
         </methods>
       </class>
-    </classes>
-  </test>
-  <test name="FileChecker(failed)" preserve-order="false">
-    <classes>
-      <class name="FileCheckerTest">
-        <methods>
-          <include name="prepareFileTest"/>
-        </methods>
-      </class>
-    </classes>
-  </test>
-  <test name="SortByFoodTest(failed)" preserve-order="false">
-    <parameter name="sortParam1" value="2"/>
-    <classes>
-      <class name="SorterTest">
-        <methods>
-          <include name="sortByFoodTest"/>
-        </methods>
-      </class>
-    </classes>
-  </test>
-  <test name="Reader(failed)" preserve-order="false">
-    <classes>
       <class name="ReaderTest">
         <methods>
           <include name="readAllTest"/>
         </methods>
       </class>
-    </classes>
-  </test>
-  <test name="SortByDescTypeTest(failed)" preserve-order="false">
-    <parameter name="sortParam1" value="1"/>
-    <classes>
-      <class name="SorterTest">
+      <class name="FileCheckerTest">
         <methods>
-          <include name="sortByDescTypeTest" invocation-numbers="0"/>
-        </methods>
-      </class>
-    </classes>
-  </test>
-  <test name="SortByTransportTest(failed)" preserve-order="false">
-    <parameter name="sortParam1" value="3"/>
-    <classes>
-      <class name="SorterTest">
-        <methods>
-          <include name="sortByTransportTest"/>
+          <include name="prepareFileTest"/>
         </methods>
       </class>
     </classes>

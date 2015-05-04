@@ -1,3 +1,5 @@
+import com.epam.cdp.byta2015.tourist.datareaders.Reader;
+import com.epam.cdp.byta2015.tourist.datareaders.TxtFileReader;
 import com.epam.cdp.byta2015.tourist.model.BaseTour;
 import com.epam.cdp.byta2015.tourist.model.Cruise;
 import com.epam.cdp.byta2015.tourist.model.Excursion;
@@ -17,20 +19,26 @@ import java.util.List;
  */
 public class SorterTest {
 
+    @Test
     @Parameters({ "sortParam" })
-    @Test (enabled = true, groups="sorter", dependsOnGroups="reader")
     public static void sortByTest(int sortParam) {
 
         String testFile = "test_catalog.txt";
+        Reader reader = new TxtFileReader(testFile);
 
-        Assert.assertEquals(Sorter.sort(sortParam).get(0).getTypeDesc(), "Cruise",
-                "Incorrect first item in list after sorting by " + sortParam + "sort param");
+        String[] toursDescList = {"Cruise", "Excursion", "Shopping"};
 
-        Assert.assertEquals(Sorter.sort(sortParam).get(1).getTypeDesc(), "Excursion",
-                "Incorrect second item in list after sorting by " + sortParam + "sort param");
+        List<BaseTour> baseTours = reader.readAll();
 
-        Assert.assertEquals(Sorter.sort(sortParam).get(2).getTypeDesc(), "Shopping",
-                "Incorrect third item in list after sorting by " + sortParam + "sort param");
+        List<BaseTour> sortedBaseTours = Sorter.sort(baseTours, sortParam);
+
+        for (int i = 0; i < baseTours.size(); i++) {
+
+            Assert.assertEquals(sortedBaseTours.get(i).getTypeDesc(), toursDescList[i],
+                    "Incorrect first item in list after sorting by " + sortParam + "sortedBaseTours param");
+        }
+
     }
 
 }
+

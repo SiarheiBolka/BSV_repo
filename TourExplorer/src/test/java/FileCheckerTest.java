@@ -1,5 +1,6 @@
 import com.epam.cdp.byta2015.tourist.services.FileChecker;
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -13,8 +14,11 @@ import java.security.MessageDigest;
  */
 public class FileCheckerTest {
 
-    @Test(enabled = true, groups="checker")
+    @Test
+    @BeforeSuite
     public static void prepareFileTest(){
+
+
 
         String notExistingTxtFileName = "new_test_catalog.txt";
         String existingTxtFileName = "test_catalog.txt";
@@ -37,16 +41,16 @@ public class FileCheckerTest {
         String checkSumOfOriginalFile = null;
 
         try {
-            checkSumOfOriginalFile = getMD5Checksum("test_catalog.txt");
+            checkSumOfOriginalFile = getMD5Checksum(existingTxtFileName);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        FileChecker.prepareFile("test_catalog.txt");
+        FileChecker.prepareFile(existingTxtFileName);
 
         String checkSumOfFileAfterCheck = null;
         try {
-            checkSumOfFileAfterCheck = getMD5Checksum("test_catalog.txt");
+            checkSumOfFileAfterCheck = getMD5Checksum(existingTxtFileName);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -86,3 +90,4 @@ public class FileCheckerTest {
         return result;
     }
 }
+

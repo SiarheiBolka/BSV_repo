@@ -3,6 +3,7 @@ import com.epam.cdp.byta2015.tourist.model.Cruise;
 import com.epam.cdp.byta2015.tourist.model.Excursion;
 import com.epam.cdp.byta2015.tourist.model.Shopping;
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -12,7 +13,8 @@ import java.util.Arrays;
  */
 public class ReaderTest {
 
-    @Test(enabled=true, groups="reader", dependsOnGroups="checker")
+    @Test
+    @BeforeSuite
     public void readAllTest() {
 
         String testFile = "test_catalog.txt";
@@ -36,3 +38,4 @@ public class ReaderTest {
 
     }
 }
+
