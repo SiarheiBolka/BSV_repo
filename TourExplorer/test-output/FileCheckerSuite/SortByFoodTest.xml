@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite hostname="EPBYMINW1906" tests="1" failures="0" timestamp="4 May 2015 14:53:56 GMT" time="0.001" errors="0">
-  <testcase name="sortByTest" time="0.0" classname="SorterTest"/>
+<testsuite hostname="EPBYMINW1906" tests="1" failures="0" timestamp="5 May 2015 07:25:14 GMT" time="0.002" errors="0">
+  <testcase name="sortByTest" time="0.001" classname="SorterTest"/>
 </testsuite>

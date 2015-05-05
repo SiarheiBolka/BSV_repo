@@ -14,11 +14,9 @@ import java.security.MessageDigest;
  */
 public class FileCheckerTest {
 
-    @Test
-    @BeforeSuite
+    @Test(groups = { "checker" })
+
     public static void prepareFileTest(){
-
-
 
         String notExistingTxtFileName = "new_test_catalog.txt";
         String existingTxtFileName = "test_catalog.txt";
@@ -60,6 +58,8 @@ public class FileCheckerTest {
 
         //Check that original file has correct checksum
         Assert.assertEquals(checkSumOfFileAfterCheck, checkSumOfOriginalFile, "Txt file is changed");
+
+        //Assert.assertTrue(false);
     }
 
     public static byte[] createChecksum(String filename) throws Exception {

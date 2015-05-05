@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Command_line_suite">
-              <span class="suite-name border-failed">Command line suite</span>
+              <span class="suite-name border-skipped">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Command_line_suite">
-                    <span>0 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,36 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 4 failed,   7 passed</span>
+                    <span class="method-stats">9 methods,  1 skipped,  8 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
-                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods skipped suite-Command_line_suite"> (hide)</a> <!-- hide-methods skipped suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods skipped suite-Command_line_suite"> (show)</a> <!-- show-methods skipped suite-Command_line_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Command_line_suite">
+                    <div class="method-list-content skipped suite-Command_line_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="SorterTest" hash-for-method="sortByDescTypeTest">sortByDescTypeTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="SorterTest" hash-for-method="sortByTest">sortByTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="SorterTest" hash-for-method="sortByFoodTest">sortByFoodTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="SorterTest" hash-for-method="sortByPriceTest">sortByPriceTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="SorterTest" hash-for-method="sortByTransportTest">sortByTransportTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Command_line_suite -->
+                    </div> <!-- method-list-content skipped suite-Command_line_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -130,32 +115,37 @@
                     <div class="method-list-content passed suite-Command_line_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FileCheckerTest" hash-for-method="checkFileTest">checkFileTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@541114e8, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@541114e8, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@28fe2250, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@28fe2250, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@69cb7fc, com.epam.cdp.byta2015.tourist.model.Shopping@...)">findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@69cb7fc, com.epam.cdp.byta2015.tourist.model.Shopping@...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@76757fad, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@76757fad, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@4a1c5fd5, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@4a1c5fd5, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@31e956bd, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@31e956bd, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@71846ce0, com.epam.cdp.byta2015.tourist.model.Shopping...)">findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@71846ce0, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FinderTest" hash-for-method="findTours([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)">findTours([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="FileCheckerTest" hash-for-method="prepareFileTest">prepareFileTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -175,62 +165,26 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
-          <div class="suite-Command_line_suite-class-failed">
+          <div class="suite-Command_line_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">SorterTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sortByDescTypeTest">
-                  </a> <!-- sortByDescTypeTest -->
-                  <span class="method-name">sortByDescTypeTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByDescTypeTest(SorterTest.java:71)
-... Removed 34 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sortByFoodTest">
-                  </a> <!-- sortByFoodTest -->
-                  <span class="method-name">sortByFoodTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByFoodTest(SorterTest.java:82)
-... Removed 34 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sortByPriceTest">
-                  </a> <!-- sortByPriceTest -->
-                  <span class="method-name">sortByPriceTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByPriceTest(SorterTest.java:104)
-... Removed 34 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sortByTransportTest">
-                  </a> <!-- sortByTransportTest -->
-                  <span class="method-name">sortByTransportTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at com.epam.cdp.byta2015.tourist.services.Sorter.sort(Sorter.java:12)
-	at SorterTest.sortByTransportTest(SorterTest.java:93)
-... Removed 34 stack frames
+                  <a name="sortByTest">
+                  </a> <!-- sortByTest -->
+                  <span class="method-name">sortByTest</span>
+                  <div class="stack-trace">org.testng.TestNGException: 
+Parameter &apos;sortParam&apos; is required by @Test on method sortByTest but has not been marked @Optional or defined
+
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-failed -->
+          </div> <!-- suite-Command_line_suite-class-skipped -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -249,14 +203,55 @@
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">FileCheckerTest</span>
+              <span class="class-name">FinderTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkFileTest">
-                  </a> <!-- checkFileTest -->
-                  <span class="method-name">checkFileTest</span>
+                  <a name="findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@541114e8, com.epam.cdp.byta2015.tourist.model.Shopping...)">
+                  </a> <!-- findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@541114e8, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
+                  <span class="method-name">findByDescTypeTest</span>
+                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@541114e8, com.epam.cdp.byta2015.tourist.model.Shopping@2d73b676, com.epam.cdp.byta2015.tourist.model.Cruise@7d0144a, com.epam.cdp.byta2015.tourist.model.Cruise@6de40a47, com.epam.cdp.byta2015.tourist.model.Excursion@165ef3ae, com.epam.cdp.byta2015.tourist.model.Excursion@33d02ffb])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@28fe2250, com.epam.cdp.byta2015.tourist.model.Shopping...)">
+                  </a> <!-- findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@28fe2250, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
+                  <span class="method-name">findByFoodTest</span>
+                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@28fe2250, com.epam.cdp.byta2015.tourist.model.Shopping@447ec736, com.epam.cdp.byta2015.tourist.model.Cruise@5f48cd5b, com.epam.cdp.byta2015.tourist.model.Cruise@24a2423c, com.epam.cdp.byta2015.tourist.model.Excursion@18aa83ee, com.epam.cdp.byta2015.tourist.model.Excursion@62bb8ae8])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@69cb7fc, com.epam.cdp.byta2015.tourist.model.Shopping@...)">
+                  </a> <!-- findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@69cb7fc, com.epam.cdp.byta2015.tourist.model.Shopping@...) -->
+                  <span class="method-name">findByPriceExceptionTest</span>
+                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@69cb7fc, com.epam.cdp.byta2015.tourist.model.Shopping@1af304c8, com.epam.cdp.byta2015.tourist.model.Cruise@48bef44a, com.epam.cdp.byta2015.tourist.model.Cruise@70984b95, com.epam.cdp.byta2015.tourist.model.Excursion@1e8a5cf3, com.epam.cdp.byta2015.tourist.model.Excursion@ddc652f])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@4a1c5fd5, com.epam.cdp.byta2015.tourist.model.Shopping...)">
+                  </a> <!-- findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@4a1c5fd5, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
+                  <span class="method-name">findByPriceTest</span>
+                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@4a1c5fd5, com.epam.cdp.byta2015.tourist.model.Shopping@cd7bef6, com.epam.cdp.byta2015.tourist.model.Cruise@283a0f10, com.epam.cdp.byta2015.tourist.model.Cruise@7bb2f811, com.epam.cdp.byta2015.tourist.model.Excursion@22bc6389, com.epam.cdp.byta2015.tourist.model.Excursion@7e2ac92f])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)">
+                  </a> <!-- findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
+                  <span class="method-name">findByTransportTest</span>
+                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping@25be8e06, com.epam.cdp.byta2015.tourist.model.Cruise@15e3f46, com.epam.cdp.byta2015.tourist.model.Cruise@528c0d5d, com.epam.cdp.byta2015.tourist.model.Excursion@68c17f01, com.epam.cdp.byta2015.tourist.model.Excursion@77795061])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="findTours([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)">
+                  </a> <!-- findTours([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
+                  <span class="method-name">findTours</span>
+                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping@4637c533, com.epam.cdp.byta2015.tourist.model.Cruise@7773bb48, com.epam.cdp.byta2015.tourist.model.Cruise@4f0cb13c, com.epam.cdp.byta2015.tourist.model.Excursion@4a4802af, com.epam.cdp.byta2015.tourist.model.Excursion@3da85542])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -264,47 +259,14 @@
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">FinderTest</span>
+              <span class="class-name">FileCheckerTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)">
-                  </a> <!-- findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
-                  <span class="method-name">findByDescTypeTest</span>
-                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping@25be8e06, com.epam.cdp.byta2015.tourist.model.Cruise@15e3f46, com.epam.cdp.byta2015.tourist.model.Cruise@528c0d5d, com.epam.cdp.byta2015.tourist.model.Excursion@68c17f01, com.epam.cdp.byta2015.tourist.model.Excursion@77795061])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)">
-                  </a> <!-- findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
-                  <span class="method-name">findByFoodTest</span>
-                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping@4637c533, com.epam.cdp.byta2015.tourist.model.Cruise@7773bb48, com.epam.cdp.byta2015.tourist.model.Cruise@4f0cb13c, com.epam.cdp.byta2015.tourist.model.Excursion@4a4802af, com.epam.cdp.byta2015.tourist.model.Excursion@3da85542])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@76757fad, com.epam.cdp.byta2015.tourist.model.Shopping...)">
-                  </a> <!-- findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@76757fad, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
-                  <span class="method-name">findByPriceExceptionTest</span>
-                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@76757fad, com.epam.cdp.byta2015.tourist.model.Shopping@1c11739d, com.epam.cdp.byta2015.tourist.model.Cruise@3dbd56d0, com.epam.cdp.byta2015.tourist.model.Cruise@598e915a, com.epam.cdp.byta2015.tourist.model.Excursion@1ee8d9a5, com.epam.cdp.byta2015.tourist.model.Excursion@4928ef7d])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@31e956bd, com.epam.cdp.byta2015.tourist.model.Shopping...)">
-                  </a> <!-- findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@31e956bd, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
-                  <span class="method-name">findByPriceTest</span>
-                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@31e956bd, com.epam.cdp.byta2015.tourist.model.Shopping@4e3dabe4, com.epam.cdp.byta2015.tourist.model.Cruise@32e02ddd, com.epam.cdp.byta2015.tourist.model.Cruise@1be32243, com.epam.cdp.byta2015.tourist.model.Excursion@5cde6b02, com.epam.cdp.byta2015.tourist.model.Excursion@e437ff0])</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@71846ce0, com.epam.cdp.byta2015.tourist.model.Shopping...)">
-                  </a> <!-- findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@71846ce0, com.epam.cdp.byta2015.tourist.model.Shopping...) -->
-                  <span class="method-name">findByTransportTest</span>
-                  <span class="parameters">([com.epam.cdp.byta2015.tourist.model.Shopping@71846ce0, com.epam.cdp.byta2015.tourist.model.Shopping@2d082059, com.epam.cdp.byta2015.tourist.model.Cruise@7083ca27, com.epam.cdp.byta2015.tourist.model.Cruise@5c4d0026, com.epam.cdp.byta2015.tourist.model.Excursion@4344ee21, com.epam.cdp.byta2015.tourist.model.Excursion@626ddb07])</span>
+                  <a name="prepareFileTest">
+                  </a> <!-- prepareFileTest -->
+                  <span class="method-name">prepareFileTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -348,6 +310,58 @@
             <span class="header-content">Groups for Command line suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">checker</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">prepareFileTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">finder</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">findByDescTypeTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">findByFoodTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">findByPriceExceptionTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">findByPriceTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">findByTransportTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">findTours</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">reader</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">readAllTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">sorter</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">sortByTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Command_line_suite" class="panel">
@@ -364,29 +378,29 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(11);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkFileTest')
+data.setCell(0, 1, 'prepareFileTest')
 data.setCell(0, 2, 'FileCheckerTest')
 data.setCell(0, 3, 10);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'sortByPriceTest')
-data.setCell(1, 2, 'SorterTest')
+data.setCell(1, 1, 'readAllTest')
+data.setCell(1, 2, 'ReaderTest')
 data.setCell(1, 3, 4);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'readAllTest')
-data.setCell(2, 2, 'ReaderTest')
-data.setCell(2, 3, 2);
+data.setCell(2, 1, 'findByDescTypeTest')
+data.setCell(2, 2, 'FinderTest')
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'findByFoodTest')
+data.setCell(3, 1, 'findTours')
 data.setCell(3, 2, 'FinderTest')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'findByPriceExceptionTest')
+data.setCell(4, 1, 'findByFoodTest')
 data.setCell(4, 2, 'FinderTest')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'findByDescTypeTest')
+data.setCell(5, 1, 'findByPriceExceptionTest')
 data.setCell(5, 2, 'FinderTest')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
@@ -398,22 +412,14 @@ data.setCell(7, 1, 'findByTransportTest')
 data.setCell(7, 2, 'FinderTest')
 data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'sortByDescTypeTest')
+data.setCell(8, 1, 'sortByTest')
 data.setCell(8, 2, 'SorterTest')
 data.setCell(8, 3, 0);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'sortByTransportTest')
-data.setCell(9, 2, 'SorterTest')
-data.setCell(9, 3, 0);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'sortByFoodTest')
-data.setCell(10, 2, 'SorterTest')
-data.setCell(10, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 ms</span>
+              <span class="suite-total-time">Total running time: 15 ms</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -441,68 +447,42 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">FileCheckerTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">checkFileTest</span>
+                <span class="method-name">prepareFileTest</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">FinderTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
-                <span class="method-start">15 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">SorterTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">sortByPriceTest</span>
-                <span class="method-start">16 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">sortByTransportTest</span>
-                <span class="method-start">23 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">sortByDescTypeTest</span>
-                <span class="method-start">24 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">sortByFoodTest</span>
-                <span class="method-start">26 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ReaderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">readAllTest</span>
-                <span class="method-start">27 ms</span>
+                <span class="method-start">13 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">FinderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
-                <span class="method-start">33 ms</span>
+                <span class="method-name">findByDescTypeTest([com.epam.cdp.byta2015.tourist.model.Shopping@541114e8, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
+                <span class="method-start">21 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@71846ce0, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
-                <span class="method-start">35 ms</span>
+                <span class="method-name">findByFoodTest([com.epam.cdp.byta2015.tourist.model.Shopping@28fe2250, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
+                <span class="method-start">23 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@31e956bd, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
-                <span class="method-start">37 ms</span>
+                <span class="method-name">findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@69cb7fc, com.epam.cdp.byta2015.tourist.model.Shopping@...)</span>
+                <span class="method-start">26 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">findByPriceExceptionTest([com.epam.cdp.byta2015.tourist.model.Shopping@76757fad, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
-                <span class="method-start">39 ms</span>
+                <span class="method-name">findByPriceTest([com.epam.cdp.byta2015.tourist.model.Shopping@4a1c5fd5, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
+                <span class="method-start">28 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findByTransportTest([com.epam.cdp.byta2015.tourist.model.Shopping@2afe6d5f, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
+                <span class="method-start">30 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">findTours([com.epam.cdp.byta2015.tourist.model.Shopping@3d8c4d8e, com.epam.cdp.byta2015.tourist.model.Shopping...)</span>
+                <span class="method-start">32 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

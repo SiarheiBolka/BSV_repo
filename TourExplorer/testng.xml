@@ -1,62 +1,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="FileCheckerSuite" verbose="1">
+<suite name="FileCheckerSuite" xmlns="http://testng.org/testng-1.0.dtd">
 
+    <test name="TestSet" enabled="true">
+        <groups>
+            <run>
+                <include name="checker"/>
+                <include name="reader"/>
+                <include name="finder"/>
+                <include name="sorter"/>
+            </run>
+        </groups>
 
-    <test name="FileChecker" enabled="true">
         <classes>
-            <class name="FileCheckerTest" />
+            <class name="FileCheckerTest"/>
+            <class name="ReaderTest"/>
+            <class name="FinderTest"/>
+            <class name="SorterTest"/>
         </classes>
     </test>
 
-    <test name="Reader" enabled="true">
-        <classes>
-            <class name="ReaderTest" />
-        </classes>
-    </test>
-
-    <test name="Finder" enabled="true">
-        <classes>
-            <class name="FinderTest" />
-        </classes>
-    </test>
-
-    <test name="SortByDescTypeTest" enabled="true">
-        <parameter name="sortParam" value="1" />
-        <classes>
-            <class name="SorterTest" />
-        </classes>
-    </test>
-
-    <test name="SortByFoodTest" enabled="true">
-        <parameter name="sortParam" value="2" />
-        <classes>
-            <class name="SorterTest" >
-                <methods>
-                    <include name="sortByTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
-
-    <test name="SortByTransportTest" enabled="true">
-        <parameter name="sortParam" value="3" />
-        <classes>
-            <class name="SorterTest" >
-                <methods>
-                    <include name="sortByTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
-
-    <test name="SortByPriceTest" enabled="true">
-        <parameter name="sortParam" value="4" />
-        <classes>
-            <class name="SorterTest" >
-                <methods>
-                    <include name="sortByTest" />
-                </methods>
-            </class>
-        </classes>
-    </test>
 </suite>

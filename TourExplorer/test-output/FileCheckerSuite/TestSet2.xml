@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="EPBYMINW1906" tests="3" failures="0" timestamp="5 May 2015 08:48:13 GMT" time="0.005" errors="0">
+  <testcase name="prepareFileTest" time="0.001" classname="FileCheckerTest"/>
+  <testcase name="readAllTest" time="0.001" classname="ReaderTest"/>
+  <testcase name="sortByTest" time="0.001" classname="SorterTest"/>
+</testsuite>

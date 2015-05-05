@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="EPBYMINW1906" tests="12" failures="0" timestamp="5 May 2015 08:56:44 GMT" time="0.049" errors="0">
+  <testcase name="prepareFileTest" time="0.018" classname="FileCheckerTest"/>
+  <testcase name="readAllTest" time="0.004" classname="ReaderTest"/>
+  <testcase name="findByDescTypeTest" time="0.001" classname="FinderTest"/>
+  <testcase name="findByFoodTest" time="0.0" classname="FinderTest"/>
+  <testcase name="findByPriceExceptionTest" time="0.0" classname="FinderTest"/>
+  <testcase name="findByPriceTest" time="0.0" classname="FinderTest"/>
+  <testcase name="findByTransportTest" time="0.0" classname="FinderTest"/>
+  <testcase name="findTours" time="0.0" classname="FinderTest"/>
+  <testcase name="sortByTest" time="0.003" classname="SorterTest"/>
+  <testcase name="sortByTest" time="0.001" classname="SorterTest"/>
+  <testcase name="sortByTest" time="0.001" classname="SorterTest"/>
+  <testcase name="sortByTest" time="0.0" classname="SorterTest"/>
+</testsuite>

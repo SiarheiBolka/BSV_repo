@@ -41,8 +41,8 @@ public class FinderTest {
         return new Object[][]{new Object[]{listOfTestTours}};
     }
 
-    //@Test(enabled = true, dataProvider = "findByData", groups="finder", dependsOnGroups="reader")
-    @Test(dataProvider = "findByData")
+
+    @Test(dataProvider = "findByData", groups = { "finder" }, dependsOnGroups={"reader"})
     public void findByDescTypeTest(ArrayList<BaseTour> list) throws FindByTypeException {
 
         List<BaseTour> testList = Finder.findByDescType(list, "Cruise");
@@ -76,7 +76,7 @@ public class FinderTest {
 
     }
 
-    @Test(dataProvider = "findByData")
+    @Test(dataProvider = "findByData", groups = { "finder" }, dependsOnGroups={"reader"})
     public void findByFoodTest(ArrayList<BaseTour> list) throws FindByFoodException {
 
         List<BaseTour> testList = Finder.findByFood(list, "No_food");
@@ -126,7 +126,7 @@ public class FinderTest {
                 "findByDescType: NightTransfers are not equals");
     }
 
-    @Test(dataProvider = "findByData")
+    @Test(dataProvider = "findByData", groups = { "finder" }, dependsOnGroups={"reader"})
     public void findByTransportTest(ArrayList<BaseTour> list) throws FindByTransportException {
 
         List<BaseTour> testList = Finder.findByTransport(list, "Bus");
@@ -176,7 +176,7 @@ public class FinderTest {
                 "findByDescType: NightTransfers are not equals");
     }
 
-    @Test(dataProvider = "findByData")
+    @Test(dataProvider = "findByData", groups = { "finder" }, dependsOnGroups={"reader"})
     public void findByPriceTest(ArrayList<BaseTour> list) throws FindByPriceException {
 
         List<BaseTour> testList = Finder.findByPrice(list, "50000");
@@ -205,7 +205,8 @@ public class FinderTest {
                 "findByDescType: NightTransfers are not equals");
     }
 
-    @Test(dataProvider = "findByData", expectedExceptions = FindByPriceException.class)
+    @Test(dataProvider = "findByData", expectedExceptions = FindByPriceException.class, groups = { "finder" },
+            dependsOnGroups={"reader"})
     public void findByPriceExceptionTest(ArrayList<BaseTour> list) throws FindByPriceException {
 
         List<BaseTour> testList = Finder.findByPrice(list, "777");
@@ -213,7 +214,7 @@ public class FinderTest {
         Assert.assertEquals(testList.size(),0, "Exception doesn't appear");
     }
 
-    @Test(dataProvider = "findByData")
+    @Test(dataProvider = "findByData", groups = { "finder" }, dependsOnGroups={"reader"})
     public void findTours(ArrayList<BaseTour> list) {
 
         String[] paramaters = new String[4];

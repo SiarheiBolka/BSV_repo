@@ -19,8 +19,14 @@ import java.util.List;
  */
 public class SorterTest {
 
-    @Test
-    @Parameters({ "sortParam" })
+    @DataProvider(name = "sortByData")
+    public Object[][] sortByData() {
+        return new Object[][]{
+                {1}, {2}, {3}, {4}
+        };
+    }
+
+    @Test(dataProvider = "sortByData", groups = { "sorter" }, dependsOnGroups={"reader"})
     public static void sortByTest(int sortParam) {
 
         String testFile = "test_catalog.txt";

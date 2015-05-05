@@ -13,8 +13,7 @@ import java.util.Arrays;
  */
 public class ReaderTest {
 
-    @Test
-    @BeforeSuite
+    @Test(groups = { "reader" },  dependsOnGroups={"checker"})
     public void readAllTest() {
 
         String testFile = "test_catalog.txt";
@@ -35,7 +34,7 @@ public class ReaderTest {
                         new Excursion(5, "Excursion", "No_food", "Car", 3, (double) 600000,
                         "France", Arrays.asList("Eiffel Tower, Louvre")).getInfo(),
                         "readAllTest failed: Excursions are not equals");
-
+        //Assert.assertTrue(false);
     }
 }
 
