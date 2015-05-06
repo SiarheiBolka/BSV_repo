@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FileCheckerSuite" xmlns="http://testng.org/testng-1.0.dtd">
+
+    <test name="TestSet" enabled="true">
+        <groups>
+            <run>
+                <include name="login"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="Login"/>
+        </classes>
+    </test>
+
+</suite>
