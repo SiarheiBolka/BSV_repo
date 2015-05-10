@@ -2,7 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -53,12 +53,102 @@ public class Login {
         categoryBathing = driver.findElement(By.linkText("Bathing"));
         categoryBathing.click();
 
-
-        //Actions action = new Actions(driver);
-        //action.moveToElement(product,250,340).click(product);
         WebElement product;
-        product = driver.findElement(By.xpath("id('form60083074')/x:a/x:div[2]/x:div/x:h3"));
+        product = driver.findElement(By.id("60083074"));
         product.click();
+
+        WebElement addToBasketButton;
+        addToBasketButton = driver.findElement(By.id("cartbtn"));
+        addToBasketButton.click();
+
+        WebElement viewBasketLink;
+        viewBasketLink = driver.findElement(By.linkText("View basket"));
+        Assert.assertEquals(viewBasketLink.isDisplayed(), true, "Error: Basket is not opened");
+        viewBasketLink.click();
+
+        WebElement checkoutButton;
+        checkoutButton = driver.findElement(By.name("checkout"));
+        checkoutButton.click();
+
+        WebElement deliveryButton;
+        deliveryButton = driver.findElement(By.className("delivery-method-delivery button"));
+        deliveryButton.click();
+
+        WebElement deliverToThisAddressButton;
+        deliverToThisAddressButton = driver.findElement(By.id("save-shipping-address-metapack"));
+        deliverToThisAddressButton.click();
+
+        WebElement selectAnAvailableDeliveryOptionSection;
+        selectAnAvailableDeliveryOptionSection = driver.findElement(By.id("select-delivery-option"));
+        Assert.assertEquals(selectAnAvailableDeliveryOptionSection.isDisplayed(), true,
+                "Error: 'Select an available Delivery option' section is not displayed");
+
+        WebElement deliveryMtshodRadiobutton;
+        deliveryMtshodRadiobutton = driver.findElement(By.id("NEXTDAY"));
+        deliveryMtshodRadiobutton.click();
+
+        WebElement selectAPaymentMethodSection;
+        selectAPaymentMethodSection = driver.findElement(By.id("checkout-payment"));
+        Assert.assertEquals(selectAPaymentMethodSection.isDisplayed(), true,
+                "Error: 'Select a payment method' section is not displayed");
+
+        WebElement payByCardRadiobutton;
+        payByCardRadiobutton = driver.findElement(By.className("l-table-cell radio-cell no-border"));
+        payByCardRadiobutton.click();
+
+        WebElement billingDetailsSection;
+        billingDetailsSection = driver.findElement(By.id("checkout_form_use_delivery"));
+        Assert.assertEquals(billingDetailsSection.isDisplayed(), true,
+                "Error: 'Billing details' section is not displayed");
+
+        WebElement useDeliveryAddressCheckbox;
+        useDeliveryAddressCheckbox = driver.findElement(By.id("checkout_form_use_delivery"));
+        useDeliveryAddressCheckbox.click();
+
+        WebElement saveAddressButton;
+        saveAddressButton = driver.findElement(By.className("button save-address address-vis"));
+        saveAddressButton.click();
+
+        WebElement addYourCardDetailsSection;
+        addYourCardDetailsSection = driver.findElement(By.id("cardType"));
+        Assert.assertEquals(addYourCardDetailsSection.isDisplayed(), true,
+                "Error: 'Add your card details' section is not displayed");
+
+        WebElement selectYourCardTypeDropdown;
+        selectYourCardTypeDropdown = driver.findElement(By.className("selectBox selectBox-dropdown selectBox-menuShowing"));
+        selectYourCardTypeDropdown.click();
+
+        WebElement enterPaymentDetailsSection;
+        enterPaymentDetailsSection = driver.findElement(By.id("paymentDetailsPanel"));
+        Assert.assertEquals(enterPaymentDetailsSection.isDisplayed(), true,
+                "Error: 'Enter Payment Details' section is not displayed");
+
+        WebElement CardNumberField;
+        CardNumberField = driver.findElement(By.id("cardNumber"));
+        CardNumberField.sendKeys("4444333322221145");
+
+        WebElement expiryMonthDropdown;
+        expiryMonthDropdown = driver.findElement(By.id("expiryMonth"));
+        expiryMonthDropdown.click();
+
+        Select expiryMonth = new Select(expiryMonthDropdown);
+        expiryMonth.selectByValue("05");
+
+        WebElement expiryYearDropdown;
+        expiryYearDropdown = driver.findElement(By.id("expiryMonth"));
+        expiryYearDropdown.click();
+
+        Select expiryYear = new Select(expiryYearDropdown);
+        expiryYear.selectByValue("2018");
+
+        WebElement cardSecurityCodeField;
+        cardSecurityCodeField = driver.findElement(By.id("csc"));
+        cardSecurityCodeField.sendKeys("123");
+
+        WebElement payNowButton;
+        payNowButton = driver.findElement(By.id("btnSubmit"));
+        payNowButton.click();
+
 
         //127.0.0.1 app.yieldify.com cloudfront.net
     }
