@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FileCheckerSuite]">
+  <parameter name="sortParam" value="1"/>
+  <test name="TestSet(failed)" preserve-order="false">
+    <parameter name="sortParam" value="1"/>
+    <groups>
+      <run>
+        <include name="checker"/>
+        <include name="reader"/>
+        <include name="finder"/>
+        <include name="sorter"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="FinderTest">
+        <methods>
+          <include name="findByDescTypeTest" invocation-numbers="0"/>
+        </methods>
+      </class>
+      <class name="ReaderTest">
+        <methods>
+          <include name="readAllTest"/>
+        </methods>
+      </class>
+      <class name="FileCheckerTest">
+        <methods>
+          <include name="prepareFileTest"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="FileCheckerSuite" xmlns="http://testng.org/testng-1.0.dtd">
+
+    <test name="TestSet" enabled="true">
+        <groups>
+            <run>
+                <include name="checker"/>
+                <include name="reader"/>
+                <include name="finder"/>
+                <include name="sorter"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="FileCheckerTest"/>
+            <class name="ReaderTest"/>
+            <class name="FinderTest"/>
+            <class name="SorterTest"/>
+        </classes>
+    </test>
+
+</suite>

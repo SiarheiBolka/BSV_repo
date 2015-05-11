@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="SorterTest">
+        <methods>
+          <include name="sortByTest"/>
+        </methods>
+      </class> <!-- SorterTest -->
+      <class name="ReaderTest">
+        <methods>
+          <include name="readAllTest"/>
+        </methods>
+      </class> <!-- ReaderTest -->
+      <class name="FileCheckerTest">
+        <methods>
+          <include name="prepareFileTest"/>
+        </methods>
+      </class> <!-- FileCheckerTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

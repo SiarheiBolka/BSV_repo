@@ -1,0 +1,6 @@
+0: Shopping: No_food: Bus: 2: 50000: Poland: Y
+1: Shopping: Tea: Train: 3: 700000: Ukraine: N
+2: Cruise: AI: Aurora: 30: 750000: Italy,Spain,Egipt
+3: Cruise: Breakfast: Azura: 30: 550000: Hawaii,Caribbean,Bahamas
+4: Excursion: Breakfast: Bus: 2: 350000: Italy: Roma,Venice
+5: Excursion: No_food: Car: 3: 600000: France: Eiffel Tower,Louvre

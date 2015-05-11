@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="EPBYMINW1906" tests="6" failures="0" timestamp="5 May 2015 07:25:14 GMT" time="0.014" errors="0">
+  <testcase name="findByDescTypeTest" time="0.001" classname="FinderTest"/>
+  <testcase name="findByFoodTest" time="0.001" classname="FinderTest"/>
+  <testcase name="findByPriceExceptionTest" time="0.0" classname="FinderTest"/>
+  <testcase name="findByPriceTest" time="0.001" classname="FinderTest"/>
+  <testcase name="findByTransportTest" time="0.0" classname="FinderTest"/>
+  <testcase name="findTours" time="0.001" classname="FinderTest"/>
+</testsuite>
