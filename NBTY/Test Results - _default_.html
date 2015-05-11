@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Test Results &mdash; D:/workspace/BSV_repo/NBTY/testng.xml</title>
+<title>Test Results &mdash; &lt;default&gt;</title>
 <style type="text/css">
           html {
             height: 100%
@@ -572,8 +572,8 @@ jQuery.cookie = function(name, value, options) {
 <body>
 <div id="container">
 <div id="header">
-<div class="time">15.73 s</div>
-<h1>D:/workspace/BSV_repo/NBTY/testng.xml: <strong><span class="total">1 total, </span><span class="passed">1 passed</span></strong>
+<div class="time">1 m 1 s</div>
+<h1>&lt;default&gt;: <strong><span class="total">2 total, </span><span class="failed">1 failed, </span><span class="passed">1 passed</span></strong>
 </h1>
 <div id="treecontrol">
 <ul>
@@ -589,23 +589,40 @@ jQuery.cookie = function(name, value, options) {
 </div>
 <div id="content">
 <ul id="tree">
-<li xmlns="" class="level top open">
+<li xmlns="" class="level top failed open">
 <span><em class="time">
-<div class="time">15.73 s</div>
+<div class="time">1 m 1 s</div>
 </em>No Package</span>
 <ul>
+<li class="level suite failed open">
+<span><em class="time">
+<div class="time">40.07 s</div>
+</em>Checkout</span>
+<ul>
+<li class="level test failed open">
+<span><em class="time">
+<div class="time">40.07 s</div>
+</em><em class="status">failed</em>loginByUser</span>
+<ul>
+<li class="text">
+<span class="stderr">org.openqa.selenium.InvalidSelectorException: The given selector delivery-method-delivery button is either invalid or does not result in a WebElement. The following error occurred:<br/>InvalidSelectorError: Compound class names not permitted<br/>Command duration or timeout: 1.39 seconds<br/>For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html<br/>Build info: version: &#39;2.45.0&#39;, revision: &#39;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&#39;, time: &#39;2015-02-27 09:10:26&#39;<br/>System info: host: &#39;EPBYMINW1906&#39;, ip: &#39;10.6.208.84&#39;, os.name: &#39;Windows 7&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;6.1&#39;, java.version: &#39;1.7.0_75&#39;<br/>*** Element info: {Using=class name, value=delivery-method-delivery button}<br/>Session ID: 0d346fc7-36a9-446f-9534-556b86a27c41<br/>Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]<br/>	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)<br/>	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)<br/>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)<br/>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:433)<br/>	at org.openqa.selenium.By$ByClassName.findElement(By.java:387)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)<br/>	at Checkout.loginByUser(Checkout.java:79)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.lang.reflect.Method.invoke(Method.java:606)<br/>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br/>	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)<br/>	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)<br/>	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)<br/>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)<br/>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br/>	at org.testng.TestRunner.privateRun(TestRunner.java:767)<br/>	at org.testng.TestRunner.run(TestRunner.java:617)<br/>	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)<br/>	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)<br/>	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)<br/>	at org.testng.SuiteRunner.run(SuiteRunner.java:254)<br/>	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br/>	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)<br/>	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)<br/>	at org.testng.TestNG.run(TestNG.java:1057)<br/>	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)<br/>	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)<br/>	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)<br/>	at org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:125)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.lang.reflect.Method.invoke(Method.java:606)<br/>	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)<br/>Caused by: org.openqa.selenium.InvalidSelectorException: The given selector delivery-method-delivery button is either invalid or does not result in a WebElement. The following error occurred:<br/>InvalidSelectorError: Compound class names not permitted<br/>For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html<br/>Build info: version: &#39;2.45.0&#39;, revision: &#39;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&#39;, time: &#39;2015-02-27 09:10:26&#39;<br/>System info: host: &#39;EPBYMINW1906&#39;, ip: &#39;10.6.208.84&#39;, os.name: &#39;Windows 7&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;6.1&#39;, java.version: &#39;1.7.0_75&#39;<br/>Driver info: driver.version: unknown<br/>	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous3117348068031361054webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10245)<br/>	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous3117348068031361054webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10276)<br/>	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous3117348068031361054webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10280)<br/>	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous3117348068031361054webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)<br/>	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous3117348068031361054webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12279)<br/>	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous3117348068031361054webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12221)<br/></span>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="level suite open">
 <span><em class="time">
-<div class="time">15.73 s</div>
+<div class="time">20.73 s</div>
 </em>Login</span>
 <ul>
 <li class="level test">
 <span><em class="time">
-<div class="time">15.73 s</div>
-</em><em class="status">passed</em>TestSet [loginByUser]</span>
+<div class="time">20.73 s</div>
+</em><em class="status">passed</em>loginByUser</span>
 <ul>
 <li class="text">
-<span class="stdout">===============================================<br/>FileCheckerSuite<br/>Total tests run: 1, Failures: 0, Skips: 0<br/>===============================================<br/></span>
+<span class="stdout">===============================================<br/>Custom suite<br/>Total tests run: 2, Failures: 1, Skips: 0<br/>===============================================<br/></span>
 </li>
 </ul>
 </li>
@@ -617,7 +634,7 @@ jQuery.cookie = function(name, value, options) {
 </div>
 </div>
 <div id="footer">
-<p>Generated by IntelliJ IDEA on 5/6/15 7:45 PM</p>
+<p>Generated by IntelliJ IDEA on 5/11/15 1:30 PM</p>
 </div>
 </body>
 </html>

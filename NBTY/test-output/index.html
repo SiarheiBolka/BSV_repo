@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-FileCheckerSuite">
-              <span class="suite-name border-failed">FileCheckerSuite</span>
+            <a href="#" class="navigator-link" panel-name="suite-SmokeTest">
+              <span class="suite-name border-failed">SmokeTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-FileCheckerSuite">
-                    <span>D:\ws\BSV_repo\NBTY\testng.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-SmokeTest">
+                    <span>D:\workspace\BSV_repo\NBTY\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-FileCheckerSuite">
+                  <a href="#" class="navigator-link " panel-name="testlist-SmokeTest">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-FileCheckerSuite">
+                  <a href="#" class="navigator-link " panel-name="group-SmokeTest">
                     <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-FileCheckerSuite">
+                  <a href="#" class="navigator-link " panel-name="times-SmokeTest">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-FileCheckerSuite">
+                  <a href="#" class="navigator-link " panel-name="reporter-SmokeTest">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-FileCheckerSuite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-SmokeTest">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-FileCheckerSuite">
+                  <a href="#" class="navigator-link " panel-name="chronological-SmokeTest">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -95,16 +95,16 @@
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-FileCheckerSuite" class="hide-methods failed suite-FileCheckerSuite"> (hide)</a> <!-- hide-methods failed suite-FileCheckerSuite -->
-                      <a href="#" panel-name="suite-FileCheckerSuite" class="show-methods failed suite-FileCheckerSuite"> (show)</a> <!-- show-methods failed suite-FileCheckerSuite -->
+                      <a href="#" panel-name="suite-SmokeTest" class="hide-methods failed suite-SmokeTest"> (hide)</a> <!-- hide-methods failed suite-SmokeTest -->
+                      <a href="#" panel-name="suite-SmokeTest" class="show-methods failed suite-SmokeTest"> (show)</a> <!-- show-methods failed suite-SmokeTest -->
                     </span>
-                    <div class="method-list-content failed suite-FileCheckerSuite">
+                    <div class="method-list-content failed suite-SmokeTest">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-FileCheckerSuite" title="Login" hash-for-method="loginByUser">loginByUser</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="Checkout" hash-for-method="loginByUser">loginByUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-FileCheckerSuite -->
+                    </div> <!-- method-list-content failed suite-SmokeTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -115,11 +115,11 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-FileCheckerSuite" class="panel FileCheckerSuite">
-          <div class="suite-FileCheckerSuite-class-failed">
+        <div panel-name="suite-SmokeTest" class="panel SmokeTest">
+          <div class="suite-SmokeTest-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Login</span>
+              <span class="class-name">Checkout</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -127,71 +127,65 @@
                   <a name="loginByUser">
                   </a> <!-- loginByUser -->
                   <span class="method-name">loginByUser</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: The given selector delivery-method-delivery button is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: Compound class names not permitted
-Command duration or timeout: 6.64 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(), &apos;Enter your Card Number&apos;)]&quot;}
+Command duration or timeout: 20.09 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;Serg&apos;, ip: &apos;192.168.100.31&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
-*** Element info: {Using=class name, value=delivery-method-delivery button}
-Session ID: 094abb12-4cad-4bad-8bf4-52c1617ae9e0
+System info: host: &apos;EPBYMINW1906&apos;, ip: &apos;10.6.208.84&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
+*** Element info: {Using=xpath, value=//*[contains(text(), &apos;Enter your Card Number&apos;)]}
+Session ID: 2ddef7af-4f6f-4301-81af-276bf80923c2
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=37.0.2}]
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:433)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at Login.loginByUser(Login.java:74)
+	at Checkout.loginByUser(Checkout.java:161)
 	at TestRunner.main(TestRunner.java:22)
 	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:140)
-Caused by: org.openqa.selenium.InvalidSelectorException: The given selector delivery-method-delivery button is either invalid or does not result in a WebElement. The following error occurred:
-InvalidSelectorError: Compound class names not permitted
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(), &apos;Enter your Card Number&apos;)]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;Serg&apos;, ip: &apos;192.168.100.31&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
+System info: host: &apos;EPBYMINW1906&apos;, ip: &apos;10.6.208.84&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_75&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.annotateInvalidSelectorError_(file:///C:/Users/Sergik/AppData/Local/Temp/anonymous795389530458574414webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10245)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/Sergik/AppData/Local/Temp/anonymous795389530458574414webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10276)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/Sergik/AppData/Local/Temp/anonymous795389530458574414webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10280)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/Sergik/AppData/Local/Temp/anonymous795389530458574414webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/Sergik/AppData/Local/Temp/anonymous795389530458574414webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12279)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/Sergik/AppData/Local/Temp/anonymous795389530458574414webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12221)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous2239418412385352980webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10271)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/SIARHE~1/AppData/Local/Temp/anonymous2239418412385352980webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:603)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FileCheckerSuite-class-failed -->
-        </div> <!-- panel FileCheckerSuite -->
-        <div panel-name="test-xml-FileCheckerSuite" class="panel">
+          </div> <!-- suite-SmokeTest-class-failed -->
+        </div> <!-- panel SmokeTest -->
+        <div panel-name="test-xml-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\ws\BSV_repo\NBTY\testng.xml</span>
+            <span class="header-content">D:\workspace\BSV_repo\NBTY\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;FileCheckerSuite&quot;&gt;
+&lt;suite name=&quot;SmokeTest&quot;&gt;
   &lt;test name=&quot;TestSet&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;login&quot;/&gt;
+        &lt;include name=&quot;checkout&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Login&quot;/&gt;
+      &lt;class name=&quot;Checkout&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestSet --&gt;
-&lt;/suite&gt; &lt;!-- FileCheckerSuite --&gt;
+&lt;/suite&gt; &lt;!-- SmokeTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-FileCheckerSuite" class="panel">
+        <div panel-name="testlist-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for FileCheckerSuite</span>
+            <span class="header-content">Tests for SmokeTest</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
@@ -201,13 +195,13 @@ Driver info: driver.version: unknown
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-FileCheckerSuite" class="panel">
+        <div panel-name="group-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for FileCheckerSuite</span>
+            <span class="header-content">Groups for SmokeTest</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">login</span>
+              <span class="test-group-name">checkout</span>
               <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">loginByUser</span>
@@ -216,15 +210,15 @@ Driver info: driver.version: unknown
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-FileCheckerSuite" class="panel">
+        <div panel-name="times-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for FileCheckerSuite</span>
+            <span class="header-content">Times for SmokeTest</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_FileCheckerSuite');
-function tableData_FileCheckerSuite() {
+suiteTableInitFunctions.push('tableData_SmokeTest');
+function tableData_SmokeTest() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -233,39 +227,39 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginByUser')
-data.setCell(0, 2, 'Login')
-data.setCell(0, 3, 94693);
-window.suiteTableData['FileCheckerSuite']= { tableData: data, tableDiv: 'times-div-FileCheckerSuite'}
+data.setCell(0, 2, 'Checkout')
+data.setCell(0, 3, 78265);
+window.suiteTableData['SmokeTest']= { tableData: data, tableDiv: 'times-div-SmokeTest'}
 return data;
 }
               </script>
               <span class="suite-total-time">Total running time: 1 minutes</span>
-              <div id="times-div-FileCheckerSuite">
-              </div> <!-- times-div-FileCheckerSuite -->
+              <div id="times-div-SmokeTest">
+              </div> <!-- times-div-SmokeTest -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-FileCheckerSuite" class="panel">
+        <div panel-name="reporter-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for FileCheckerSuite</span>
+            <span class="header-content">Reporter output for SmokeTest</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-FileCheckerSuite" class="panel">
+        <div panel-name="ignored-methods-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-FileCheckerSuite" class="panel">
+        <div panel-name="chronological-SmokeTest" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Checkout</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
