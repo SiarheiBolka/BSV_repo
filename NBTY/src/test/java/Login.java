@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -11,11 +12,19 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Siarhei Bolka on 5/6/2015.
  */
+
+@Test(groups = { "login" })
 public class Login {
-    
-    @Test(groups = { "login" })
-    public static void loginByUser() {
-        WebDriver driver = new FirefoxDriver();
+
+    WebDriver driver;
+
+    @AfterTest
+    public void closeBrowser(){
+        driver.quit();
+    }
+
+    public void loginByUser() {
+        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get("http://hb-preprod.oracleoutsourcing.com/");
