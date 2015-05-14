@@ -7,9 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.NoSuchElementException;
@@ -24,10 +22,10 @@ public class Checkout {
 
     WebDriver driver;
 
-/*    @AfterTest
+    @AfterTest
     public void closeBrowser(){
         driver.quit();
-    }*/
+    }
 
     public void checkout() {
         driver = new FirefoxDriver();
@@ -200,8 +198,6 @@ public class Checkout {
         Assert.assertEquals(creditCardTypeVisa.isDisplayed(), true,
                 "Error: Visa Credit Card is not displayed");
         creditCardTypeVisa.click();
-
-//wait
 
         WebElement payPageFrame;
         payPageFrame = driver.findElement(By.xpath("//iframe[@class='checkout-iframe']"));
