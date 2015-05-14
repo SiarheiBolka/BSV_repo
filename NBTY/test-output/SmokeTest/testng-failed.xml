@@ -4,16 +4,15 @@
   <test name="TestSet(failed)">
     <groups>
       <run>
-        <include name="checkout"/>
+        <include name="checkouttest"/>
       </run>
     </groups>
     <classes>
-      <class name="Checkout">
+      <class name="CheckoutTest">
         <methods>
-          <include name="closeBrowser"/>
           <include name="checkout"/>
         </methods>
-      </class> <!-- Checkout -->
+      </class> <!-- CheckoutTest -->
     </classes>
   </test> <!-- TestSet(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

@@ -2,12 +2,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -19,32 +24,32 @@ public class Checkout {
 
     WebDriver driver;
 
-    @AfterTest
+/*    @AfterTest
     public void closeBrowser(){
         driver.quit();
-    }
+    }*/
 
     public void checkout() {
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+                .withTimeout(15, TimeUnit.SECONDS)
+                .pollingEvery(5, TimeUnit.SECONDS)
+                .ignoring(NoSuchElementException.class);
 
         driver.get("http://hb-preprod.oracleoutsourcing.com/");
 
         WebElement categoryPersonalCare;
         categoryPersonalCare = driver.findElement(By.linkText("Personal Care"));
+        new Actions(driver).moveToElement(categoryPersonalCare).build().perform();
+
         Assert.assertEquals(categoryPersonalCare.isDisplayed(), true,
                 "Error: Category 'Personal Care' is not displayed in Flyout menu");
-        categoryPersonalCare.click();
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        categoryPersonalCare.click();
 
         WebElement categoryBathing;
         categoryBathing = driver.findElement(By.linkText("Bathing"));
+        wait.until(ExpectedConditions.visibilityOf(categoryBathing));
         Assert.assertEquals(categoryBathing.isDisplayed(), true,
                 "Error: category 'Bathing' is not displayed");
         categoryBathing.click();
@@ -130,11 +135,9 @@ public class Checkout {
                 "Error: Shipping address value is not displayed");
         addressValue.click();
 
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        WebElement addressValueAfterSelection;
+        addressValueAfterSelection = driver.findElement(By.xpath("//li[contains(@class,'data_attr_value selectBox-selected')]"));
+        wait.until(ExpectedConditions.visibilityOf(addressValueAfterSelection));
 
         WebElement saveAddressButton;
         saveAddressButton = driver.findElement(By.id("mpDeliverButtonId"));
@@ -145,7 +148,6 @@ public class Checkout {
         WebElement selectAnAvailableDeliveryOptionSection;
         selectAnAvailableDeliveryOptionSection = driver.findElement(By.xpath(
                 "//label[@class='radio clearfix ']"));
-        //selectAnAvailableDeliveryOptionSection = driver.findElement(By.xpath("//label[@for='STANDARD']"));
         Assert.assertEquals(selectAnAvailableDeliveryOptionSection.isDisplayed(), true,
                 "Error: 'Select an available Delivery option' section is not displayed");
 
@@ -194,18 +196,16 @@ public class Checkout {
 
         WebElement creditCardTypeVisa;
         creditCardTypeVisa = driver.findElement(By.xpath("//a[@rel='Visa']"));
+        wait.until(ExpectedConditions.visibilityOf(creditCardTypeVisa));
         Assert.assertEquals(creditCardTypeVisa.isDisplayed(), true,
                 "Error: Visa Credit Card is not displayed");
         creditCardTypeVisa.click();
 
-        try {
-            Thread.sleep(6000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//wait
 
         WebElement payPageFrame;
         payPageFrame = driver.findElement(By.xpath("//iframe[@class='checkout-iframe']"));
+        wait.until(ExpectedConditions.visibilityOf(payPageFrame));
         Assert.assertEquals(payPageFrame.isDisplayed(), true,
                 "Error: TLG frame is not displayed");
         driver.switchTo().frame(payPageFrame);
@@ -234,12 +234,6 @@ public class Checkout {
                 "Error: 'Card Security Code' field is not displayed");
         cardSecurityCodeField.sendKeys("123");
 
-        try {
-            Thread.sleep(6000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
         WebElement payNowButton;
         payNowButton = driver.findElement(By.id("btnSubmit"));
         Assert.assertEquals(payNowButton.isDisplayed(), true,
@@ -259,7 +253,8 @@ public class Checkout {
         submitButton.click();
 
         WebElement orderConfirmationPage;
-        orderConfirmationPage = driver.findElement(By.xpath("//span[contains(text(),' Your order has been received. ')]"));
+        orderConfirmationPage = driver.findElement(By.xpath("//span[contains(.,' Your order has been received. ')]"));
+        wait.until(ExpectedConditions.visibilityOf(orderConfirmationPage));
         Assert.assertEquals(orderConfirmationPage.isDisplayed(), true,
                 "Error: 'Order confirmation' page is not opened");
 
