@@ -8,10 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by Siarhei Bolka on 5/14/2015.
  */
-public class HomePage{
+public class HomePage /*extends AbstractPage*/{
 
-    private final String BASE_URL = "http://hb-preprod.oracleoutsourcing.com/";
-    private WebDriver driver;
+    //private WebDriver driver;
 
     @FindBy(linkText = "Personal Care")
     private WebElement categoryPersonalCare;
@@ -21,13 +20,7 @@ public class HomePage{
 
     public HomePage(WebDriver driver)
     {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
-    }
-
-    public void openPage()
-    {
-        this.driver.get(BASE_URL);
+        PageFactory.initElements(driver, this);
     }
 
     public void clickOnCategoryPersonalCare()

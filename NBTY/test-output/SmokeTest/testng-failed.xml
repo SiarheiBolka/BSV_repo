@@ -10,7 +10,9 @@
     <classes>
       <class name="CheckoutTest">
         <methods>
-          <include name="checkout"/>
+          <include name="checkoutTest"/>
+          <include name="setup"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- CheckoutTest -->
     </classes>

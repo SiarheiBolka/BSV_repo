@@ -13,16 +13,23 @@ public class LandingPage {
 
     private WebDriver driver;
 
-    public WebElement getProduct() {
-        return product;
-    }
-
     @FindBy(id = "60083074")
     private WebElement product;
 
-    public LandingPage(WebDriver driver) {
+    public LandingPage(WebDriver driver)
+    {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
+    }
+
+    private WebElement getProduct()
+    {
+        return product;
+    }
+
+    public void clickProduct()
+    {
+        getProduct().click();
     }
 
     public Boolean isElementPresent(By locator)

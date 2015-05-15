@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -9,12 +10,21 @@ import org.openqa.selenium.WebDriver;
 public abstract class AbstractPage
 {
 
-    protected WebDriver driver;
-
-    //public abstract void openPage();
+    protected final WebDriver driver;
 
     public AbstractPage(WebDriver driver)
     {
         this.driver = driver;
     }
+
+    public WebDriver getDriver()
+    {
+        return this.driver;
+    }
+
+    public Boolean isElementPresent(By locator)
+    {
+        return driver.findElements(locator).size() > 0;
+    }
+
 }
