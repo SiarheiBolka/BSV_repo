@@ -57,7 +57,6 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(id = "submitBillingAddress")
     private WebElement buttonContinueInBillingAddressSection;
 
-    //@FindBy(xpath = "//select[@id='checkout_card_type']")
     @FindBy(xpath = "//a[@class='selectBox selectBox-dropdown']")
     private  WebElement dropdownSelectYourCardType;
 

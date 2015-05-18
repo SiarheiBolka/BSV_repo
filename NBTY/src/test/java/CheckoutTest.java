@@ -43,13 +43,10 @@ public class CheckoutTest {
     public void checkoutTest() {
 
         HomePage homePage = new HomePage(driver);
-        homePage.clickOnCategoryPersonalCare();
-        homePage.clickOnCategoryPersonalCare();
-        homePage.clickOnCategoryBathing();
-        System.out.println(driver.getTitle());
+        homePage.openSubcategoryBathing();
 
         LandingPage landingPage = new LandingPage(driver);
-        landingPage.clickProduct();
+        landingPage.clickProduct(60083074);
 
         ProductDetailsPage productDetailsPage = new ProductDetailsPage(driver);
         productDetailsPage.clickButtonAddToBasket();

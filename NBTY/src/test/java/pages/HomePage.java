@@ -10,13 +10,14 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class HomePage /*extends AbstractPage*/{
 
-    //private WebDriver driver;
+    private WebDriver driver;
+    private String cat, subcat;
 
-    @FindBy(linkText = "Personal Care")
+    @FindBy(linkText = "Persnal Care")
     private WebElement categoryPersonalCare;
 
     @FindBy(linkText = "Bathing")
-    private WebElement categoryBathing;
+    private WebElement subcategoryBathing;
 
     public HomePage(WebDriver driver)
     {
@@ -28,10 +29,18 @@ public class HomePage /*extends AbstractPage*/{
         categoryPersonalCare.click();
     }
 
-    public void clickOnCategoryBathing()
+    public void clickOnSubcategoryBathing()
     {
-        categoryBathing.click();
-//        return new LandingPage(this.driver);
+        subcategoryBathing.click();
+    }
+
+    public LandingPage openSubcategoryBathing()
+
+    {
+        clickOnCategoryPersonalCare();
+        clickOnSubcategoryBathing();
+        clickOnSubcategoryBathing();
+        return new LandingPage(driver);
     }
 
 }

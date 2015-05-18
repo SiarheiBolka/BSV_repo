@@ -27,14 +27,14 @@ public class LandingPage {
         return product;
     }
 
-    public void clickProduct()
+    public void clickProduct(int productId)
     {
         getProduct().click();
     }
 
-    public Boolean isElementPresent(By locator)
+/*    public Boolean isElementPresent(By locator)
     {
         return driver.findElements(locator).size() > 0;
-    }
+    }*/
 
 }
