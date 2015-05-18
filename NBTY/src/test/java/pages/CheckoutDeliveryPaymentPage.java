@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
@@ -24,9 +27,6 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(linkText = "Delivery")
     private WebElement buttonDelivery;
 
-    @FindBy(linkText = "Collection")
-    private WebElement buttonCollection;
-
     @FindBy(id = "frm_registration-rfl_postcode-lookup")
     private WebElement fieldPostcode;
 
@@ -36,7 +36,7 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(xpath = "//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")
     private WebElement valueAddressSearchResult;
 
-    @FindBy(xpath = "//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")
+    @FindBy(xpath = "//li[@class='data_attr_value selectBox-selected'")
     private WebElement valueSelectedAddressSearchResult;
 
     @FindBy(id = "mpDeliverButtonId")
@@ -59,6 +59,9 @@ public class CheckoutDeliveryPaymentPage {
 
     @FindBy(xpath = "//a[@class='selectBox selectBox-dropdown']")
     private  WebElement dropdownSelectYourCardType;
+
+    @FindBy(xpath = "//a[@rel='Visa']")
+    private  WebElement cardVisa;
 
     @FindBy(xpath = "//iframe[@class='checkout-iframe']")
     private  WebElement framePayPage;
@@ -95,13 +98,9 @@ public class CheckoutDeliveryPaymentPage {
                 .ignoring(NoSuchElementException.class);
     }
 
-    public void selectDeliveryMethod (String method)
+    public void selectDeliveryMethod()
     {
-        if (method == "delivery") {
-            buttonDelivery.click();
-        } else if (method == "collection") {
-            buttonCollection.click();
-        }
+        buttonDelivery.click();
     }
 
     public void setPostcode()
@@ -119,14 +118,10 @@ public class CheckoutDeliveryPaymentPage {
         valueAddressSearchResult.click();
     }
 
-/*    public WebElement getValueSelectedAddressSearchResult()
-    {
-        return valueSelectedAddressSearchResult;
-    }*/
-
     public void submitDeliveryAddress()
     {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")));
         buttonContinueInDeliveryDetailsSection.click();
     }
 
@@ -160,52 +155,42 @@ public class CheckoutDeliveryPaymentPage {
         buttonContinueInBillingAddressSection.click();
     }
 
-    public void selectCardType(String cardType) {
-        Assert.assertEquals(dropdownSelectYourCardType.isDisplayed(), true, "Error: Card Type dropdown is not displayed");
-        dropdownSelectYourCardType.click();
-
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        //TODO @FindBy
-        driver.findElement(By.xpath("//a[@rel='" + cardType + "']")).click();
+    public void selectCardVisa()
+    {
+        new Actions(driver).moveToElement(dropdownSelectYourCardType).build().perform();
+        new Actions(driver).clickAndHold(dropdownSelectYourCardType).build().perform();
+        wait.until(ExpectedConditions.visibilityOf(cardVisa));
+        cardVisa.click();
     }
 
-    public void setCardNumber()
+    public void setCardNumber(String cardNum)
     {
-        cardNumber.sendKeys("4444333322221145");
+        cardNumber.sendKeys(cardNum);
     }
 
-    public void setExpiryMonth()
+    public void setExpiryMonth(String expiryMonth)
     {
-        dropdownExpiryMonth.sendKeys("05");
+        dropdownExpiryMonth.sendKeys(expiryMonth);
     }
 
-    public void setExpiryYear()
+    public void setExpiryYear(String expiryYear)
     {
-        dropdownExpiryYear.sendKeys("18");
+        dropdownExpiryYear.sendKeys(expiryYear);
     }
 
-    public void setCardSecurityCode()
+    public void setCardSecurityCode(String cardSecCode)
     {
-        cardSecurityCode.sendKeys("123");
+        cardSecurityCode.sendKeys(cardSecCode);
     }
 
-    public void fillPaymentDetails()
+    public void clickButtonPayNow()
     {
-        driver.switchTo().frame(framePayPage);
-        setCardNumber();
-        setExpiryMonth();
-        setExpiryYear();
-        setCardSecurityCode();
         buttonPayNow.click();
     }
 
-    public void setFieldPassword()
+    public void setFieldPassword(String password)
     {
-        fieldPassword.sendKeys("password");
+        fieldPassword.sendKeys(password);
     }
 
     public void clickButtonSubmit()
@@ -213,4 +198,39 @@ public class CheckoutDeliveryPaymentPage {
         buttonSubmit.click();
     }
 
+    public OrderConfirmationPage setPaymentDetails(Map paymentDetails)
+    {
+        selectDeliveryMethod();
+        setPostcode();
+        clickButtonLookUpAddress();
+        SelectValueAddressSearchResult();
+
+        //PageFactory.initElements(driver, this);
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //wait.until(ExpectedConditions.visibilityOf(valueSelectedAddressSearchResult));
+
+        submitDeliveryAddress();
+        selectDeliveryOption();
+        selectPaymentMethod(((String) paymentDetails.get("paymentType")).charAt(0));
+        selectCheckboxUseDeliveryAddress();
+        submitBillingAddress();
+        selectCardVisa();
+        driver.switchTo().frame(framePayPage);
+        setCardNumber((String) paymentDetails.get("cardNumber"));
+        setExpiryMonth((String) paymentDetails.get("expiryMonth"));
+        setExpiryYear((String) paymentDetails.get("expiryYear"));
+        setCardSecurityCode((String) paymentDetails.get("cardSecurityCode"));
+        clickButtonPayNow();
+        setFieldPassword((String) paymentDetails.get("password"));
+        clickButtonSubmit();
+        return new OrderConfirmationPage(driver);
+    }
+
 }
+

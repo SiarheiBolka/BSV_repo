@@ -32,14 +32,14 @@ public class CheckoutAboutYouPage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public void setFirstName()
+    public void setFirstName(String fName)
     {
-        firstName.sendKeys("fname");
+        firstName.sendKeys(fName);
     }
 
-    public void setLastName()
+    public void setLastName(String lName)
     {
-        lastName.sendKeys("lname");
+        lastName.sendKeys(lName);
     }
 
     public void selectCheckboxNoThanks()
@@ -50,5 +50,14 @@ public class CheckoutAboutYouPage {
     public void clickButtonContinue()
     {
         buttonContinue.click();
+    }
+
+    public CheckoutDeliveryPaymentPage setFNameAndLName(String firstName, String lastName)
+    {
+        setFirstName(firstName);
+        setLastName(lastName);
+        selectCheckboxNoThanks();
+        clickButtonContinue();
+        return new CheckoutDeliveryPaymentPage(driver);
     }
 }

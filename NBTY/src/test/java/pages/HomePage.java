@@ -2,8 +2,11 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 
 /**
  * Created by Siarhei Bolka on 5/14/2015.
@@ -11,35 +14,31 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage /*extends AbstractPage*/{
 
     private WebDriver driver;
+    Wait<WebDriver> wait;
     private String cat, subcat;
 
-    @FindBy(linkText = "Persnal Care")
+    @FindBy(linkText = "Personal Care")
     private WebElement categoryPersonalCare;
 
-    @FindBy(linkText = "Bathing")
+    @FindBy(xpath = "//a[@href=\"/shop/personal-care/bathing/\"]")
     private WebElement subcategoryBathing;
 
     public HomePage(WebDriver driver)
     {
-        PageFactory.initElements(driver, this);
+        this.driver = driver;
+        PageFactory.initElements(this.driver, this);
     }
 
-    public void clickOnCategoryPersonalCare()
+    public void openCategoryPersonalCare()
     {
         categoryPersonalCare.click();
     }
 
-    public void clickOnSubcategoryBathing()
-    {
-        subcategoryBathing.click();
-    }
-
     public LandingPage openSubcategoryBathing()
-
     {
-        clickOnCategoryPersonalCare();
-        clickOnSubcategoryBathing();
-        clickOnSubcategoryBathing();
+        new Actions(driver).moveToElement(categoryPersonalCare).build().perform();
+        new Actions(driver).moveToElement(subcategoryBathing).build().perform();
+        new Actions(driver).click(subcategoryBathing).build().perform();
         return new LandingPage(driver);
     }
 

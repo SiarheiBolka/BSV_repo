@@ -21,8 +21,9 @@ public class BasketPage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public void clickButtonCheckout ()
+    public CheckoutWelcomePage clickButtonCheckout ()
     {
         buttonCheckout.click();
+        return new CheckoutWelcomePage(driver);
     }
 }

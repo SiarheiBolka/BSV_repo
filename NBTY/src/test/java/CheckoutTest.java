@@ -1,8 +1,5 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -10,7 +7,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.*;
 
-import java.util.NoSuchElementException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,83 +19,52 @@ import java.util.concurrent.TimeUnit;
 public class CheckoutTest {
 
     WebDriver driver;
-    Wait<WebDriver> wait;
+
+    HomePage homePage;
+    LandingPage landingPage;
+    ProductDetailsPage productDetailsPage;
+    BasketPage basketPage;
+    CheckoutWelcomePage checkoutWelcomePage;
+    CheckoutAboutYouPage checkoutAboutYouPage;
+    CheckoutDeliveryPaymentPage checkoutDeliveryPaymentPage;
+    OrderConfirmationPage orderConfirmationPage;
+
+    Map<String, String> paymentDetails = new HashMap<String, String>();
 
     @BeforeTest
-    public void setup(){
+    public void setup()
+    {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://hb-preprod.oracleoutsourcing.com/");
-
-        /*Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-                .withTimeout(15, TimeUnit.SECONDS)
-                .pollingEvery(5, TimeUnit.SECONDS)
-                .ignoring(NoSuchElementException.class);*/
     }
 
     @AfterTest
-    public void closeBrowser(){
+    public void closeBrowser()
+    {
         driver.quit();
     }
 
-    public void checkoutTest() {
+    public void checkoutTest()
+    {
+        paymentDetails.put("paymentType", "c");
+        paymentDetails.put("cardNumber", "4444333322221145");
+        paymentDetails.put("expiryMonth", "05");
+        paymentDetails.put("expiryYear", "18");
+        paymentDetails.put("cardSecurityCode", "123");
+        paymentDetails.put("password", "password");
 
-        HomePage homePage = new HomePage(driver);
-        homePage.openSubcategoryBathing();
+        homePage = new HomePage(driver);
+        landingPage = homePage.openSubcategoryBathing();
+        productDetailsPage = landingPage.openPDP();
+        basketPage = productDetailsPage.addProductToBasketFromPDP();
+        checkoutWelcomePage = basketPage.clickButtonCheckout();
+        checkoutAboutYouPage = checkoutWelcomePage.setEmail("testmailbsv@mailinator.com");
+        checkoutDeliveryPaymentPage = checkoutAboutYouPage.setFNameAndLName("userFirstName", "userLastName");
+        orderConfirmationPage = checkoutDeliveryPaymentPage.setPaymentDetails(paymentDetails);
 
-        LandingPage landingPage = new LandingPage(driver);
-        landingPage.clickProduct(60083074);
-
-        ProductDetailsPage productDetailsPage = new ProductDetailsPage(driver);
-        productDetailsPage.clickButtonAddToBasket();
-        productDetailsPage.clickLinkViewBasket();
-
-        BasketPage basketPage = new BasketPage(driver);
-        basketPage.clickButtonCheckout();
-
-        CheckoutWelcomePage checkoutWelcomePage = new CheckoutWelcomePage(driver);
-        checkoutWelcomePage.setEmail();
-        checkoutWelcomePage.clickButtonContinue();
-
-        CheckoutAboutYouPage checkoutAboutYouPage = new CheckoutAboutYouPage(driver);
-        checkoutAboutYouPage.setFirstName();
-        checkoutAboutYouPage.setLastName();
-        checkoutAboutYouPage.selectCheckboxNoThanks();
-        checkoutAboutYouPage.clickButtonContinue();
-        
-        CheckoutDeliveryPaymentPage checkoutDeliveryPaymentPage = new CheckoutDeliveryPaymentPage(driver);
-        checkoutDeliveryPaymentPage.selectDeliveryMethod("delivery");
-        checkoutDeliveryPaymentPage.setPostcode();
-        checkoutDeliveryPaymentPage.clickButtonLookUpAddress();
-        checkoutDeliveryPaymentPage.SelectValueAddressSearchResult();
-
-/*        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
-
-        checkoutDeliveryPaymentPage.submitDeliveryAddress();
-        checkoutDeliveryPaymentPage.selectDeliveryOption();
-        checkoutDeliveryPaymentPage.selectPaymentMethod('c'); //c=PayByCard, p = PayWithPayPal
-        checkoutDeliveryPaymentPage.selectCheckboxUseDeliveryAddress();
-        checkoutDeliveryPaymentPage.submitBillingAddress();
-        checkoutDeliveryPaymentPage.selectCardType("Visa");
-
-        try {
-            Thread.sleep(6000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        checkoutDeliveryPaymentPage.fillPaymentDetails();
-        checkoutDeliveryPaymentPage.setFieldPassword();
-        checkoutDeliveryPaymentPage.clickButtonSubmit();
-
-        OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage(driver);
         Assert.assertEquals(orderConfirmationPage.getElementOnOrderConfirmationPage().isDisplayed(), true,
                 "Error: 'Order confirmation' page is not opened");
-
     }
 
 }

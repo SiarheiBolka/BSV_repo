@@ -21,15 +21,11 @@ public class CheckoutWelcomePage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public void setEmail ()
+    public CheckoutAboutYouPage setEmail (String mail)
     {
-        driver.findElement(email).sendKeys("testmailbsv@mailinator.com");
-    }
-
-    public void clickButtonContinue ()
-    {
+        driver.findElement(email).sendKeys(mail);
         driver.findElement(buttonContinue).click();
+        return new CheckoutAboutYouPage(driver);
     }
-
 
 }

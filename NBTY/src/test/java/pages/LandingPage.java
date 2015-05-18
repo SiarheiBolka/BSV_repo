@@ -22,19 +22,11 @@ public class LandingPage {
         PageFactory.initElements(this.driver, this);
     }
 
-    private WebElement getProduct()
-    {
-        return product;
-    }
 
-    public void clickProduct(int productId)
+    public ProductDetailsPage openPDP()
     {
-        getProduct().click();
+        product.click();
+        return new ProductDetailsPage(driver);
     }
-
-/*    public Boolean isElementPresent(By locator)
-    {
-        return driver.findElements(locator).size() > 0;
-    }*/
 
 }
