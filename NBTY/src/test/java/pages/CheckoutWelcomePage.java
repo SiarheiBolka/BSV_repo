@@ -12,8 +12,15 @@ import org.openqa.selenium.support.PageFactory;
 public class CheckoutWelcomePage {
 
     private WebDriver driver;
-    By email = By.id("checkout_form_email");
-    By buttonContinue = By.name("/atg/userprofiling/ProfileFormHandler.continue");
+
+    @FindBy(id = "checkout_form_email")
+    private WebElement email;
+
+    //By email = By.id("checkout_form_email");
+
+    @FindBy(name = "/atg/userprofiling/ProfileFormHandler.continue")
+    private WebElement buttonContinue;
+    //By buttonContinue = By.name("/atg/userprofiling/ProfileFormHandler.continue");
 
     public CheckoutWelcomePage(WebDriver driver)
     {
@@ -23,9 +30,9 @@ public class CheckoutWelcomePage {
 
     public CheckoutAboutYouPage setEmail (String mail)
     {
-        //TODO Remove findElements
-        driver.findElement(email).sendKeys(mail);
-        driver.findElement(buttonContinue).click();
+        //TODO Remove findElements - done
+        email.sendKeys(mail);
+        buttonContinue.click();
         return new CheckoutAboutYouPage(driver);
     }
 

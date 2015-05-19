@@ -48,16 +48,16 @@ public class CheckoutTest {
     public void checkoutTest()
     {
         //TODO use enum
-        paymentDetails.put(PaymentDetails.PAYMENT_TYPE, "c");
+        paymentDetails.put(PaymentDetails.PAYMENT_TYPE, "card");
         paymentDetails.put(PaymentDetails.CARD_NUMBER, "4444333322221145");
-        paymentDetails.put(PaymentDetails.expiryMonth, "05");
-        paymentDetails.put(PaymentDetails.expiryYear, "18");
-        paymentDetails.put(PaymentDetails.cardSecurityCode, "123");
-        paymentDetails.put(PaymentDetails.password, "password");
+        paymentDetails.put(PaymentDetails.EXPIRY_MONTH, "05");
+        paymentDetails.put(PaymentDetails.EXPIRY_YEAR, "18");
+        paymentDetails.put(PaymentDetails.CARD_SECURITY_CODE, "123");
+        paymentDetails.put(PaymentDetails.PASSWORD, "password");
 
         homePage = new HomePage(driver);
         landingPage = homePage.openSubcategoryBathing();
-        productDetailsPage = landingPage.openPDP("123");
+        productDetailsPage = landingPage.openPDPOfProduct(60083074);
         basketPage = productDetailsPage.addProductToBasket();
         checkoutWelcomePage = basketPage.clickButtonCheckout();
         checkoutAboutYouPage = checkoutWelcomePage.setEmail("testmailbsv@mailinator.com");

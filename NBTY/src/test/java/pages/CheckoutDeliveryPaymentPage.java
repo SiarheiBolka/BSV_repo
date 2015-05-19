@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class CheckoutDeliveryPaymentPage {
 
     public enum PaymentDetails{
-        PAYMENT_TYPE, CARD_NUMBER,  expiryMonth, expiryYear, cardSecurityCode, password;
+        PAYMENT_TYPE, CARD_NUMBER, EXPIRY_MONTH, EXPIRY_YEAR, CARD_SECURITY_CODE, PASSWORD;
     }
 
     public enum PaymentType{
@@ -53,8 +53,10 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(xpath = "//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")
     private WebElement valueAddressSearchResult;
 
-    //TODO use contains
-    @FindBy(xpath = "//li[@class='data_attr_value selectBox-selected'")
+    //TODO use contains - done
+    //@FindBy(xpath = "//li[@class='data_attr_value selectBox-selected'")
+    @FindBy(xpath = "xpath = \"//li[contains(@class,'selectBox-selected')]\"")
+
     private WebElement valueSelectedAddressSearchResult;
 
     @FindBy(id = "mpDeliverButtonId")
@@ -87,10 +89,10 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(xpath = "//input[contains(@placeholder,'Enter your Card Number')]")
     private  WebElement cardNumber;
 
-    @FindBy(id = "expiryMonth")
+    @FindBy(id = "EXPIRY_MONTH")
     private  WebElement dropdownExpiryMonth;
 
-    @FindBy(id = "expiryYear")
+    @FindBy(id = "EXPIRY_YEAR")
     private  WebElement dropdownExpiryYear;
 
     @FindBy(id = "csc")
@@ -149,15 +151,15 @@ public class CheckoutDeliveryPaymentPage {
         radiobuttonDeliveryOption.click();
     }
 
-    public void selectPaymentMethod (char method)
+    //TODO use enum
+    public void selectPaymentMethod (PaymentType paymentType)
     {
-        //TODO use enum
-        switch (method)
+        switch (paymentType)
         {
-            case 'c':
+            case CARD:
                 radiobuttonPayByCard.click();
                 break;
-            case 'p':
+            case PAYPAL:
                 radiobuttonPayWithPaypal.click();
                 break;
             default:
@@ -226,36 +228,31 @@ public class CheckoutDeliveryPaymentPage {
         clickButtonLookUpAddress();
         selectValueAddressSearchResult();
 
-//        PageFactory.initElements(driver, this);
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        //TODO use wait
-        //wait.until(ExpectedConditions.visibilityOf(valueSelectedAddressSearchResult));
+        //TODO use wait - done
+        PageFactory.initElements(driver, this);
+        wait.until(ExpectedConditions.visibilityOf(valueSelectedAddressSearchResult));
 
         submitDeliveryAddress();
         selectDeliveryOption();
 
 
-        selectPaymentMethod((paymentDetails.get("paymentType")).charAt(0));
+        //TODO first
+        //selectPaymentMethod("card");
 
 
         selectCheckboxUseDeliveryAddress();
         submitBillingAddress();
+
         //TODO use List of elements
         selectCardVisa();
 
         driver.switchTo().frame(framePayPage);
-        setCardNumber(paymentDetails.get("cardNumber"));
-        setExpiryMonth(paymentDetails.get("expiryMonth"));
-        setExpiryYear(paymentDetails.get("expiryYear"));
-        setCardSecurityCode(paymentDetails.get("cardSecurityCode"));
+        setCardNumber(paymentDetails.get("CARD_NUMBER"));
+        setExpiryMonth(paymentDetails.get("EXPIRY_MONTH"));
+        setExpiryYear(paymentDetails.get("EXPIRY_YEAR"));
+        setCardSecurityCode(paymentDetails.get("CARD_SECURITY_CODE"));
         clickButtonPayNow();
-        setFieldPassword(paymentDetails.get("password"));
+        setFieldPassword(paymentDetails.get("PASSWORD"));
         clickButtonSubmit();
         return new OrderConfirmationPage(driver);
     }
