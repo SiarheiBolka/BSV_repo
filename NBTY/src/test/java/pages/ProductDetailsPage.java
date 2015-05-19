@@ -34,7 +34,7 @@ public class ProductDetailsPage {
         linkViewBasket.click();
     }
 
-    public BasketPage addProductToBasketFromPDP()
+    public BasketPage addProductToBasket()
     {
         clickButtonAddToBasket();
         clickLinkViewBasket();

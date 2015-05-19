@@ -1,6 +1,5 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -8,8 +7,9 @@ import org.testng.annotations.Test;
 import pages.*;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
+import static pages.CheckoutDeliveryPaymentPage.PaymentDetails;
 
 /**
  * Created by Siarhei Bolka on 5/14/2015.
@@ -29,7 +29,7 @@ public class CheckoutTest {
     CheckoutDeliveryPaymentPage checkoutDeliveryPaymentPage;
     OrderConfirmationPage orderConfirmationPage;
 
-    Map<String, String> paymentDetails = new HashMap<String, String>();
+    HashMap<PaymentDetails, String> paymentDetails = new HashMap<PaymentDetails, String>();
 
     @BeforeTest
     public void setup()
@@ -40,31 +40,33 @@ public class CheckoutTest {
     }
 
     @AfterTest
-    public void closeBrowser()
+    public void clean()
     {
         driver.quit();
     }
 
     public void checkoutTest()
     {
-        paymentDetails.put("paymentType", "c");
-        paymentDetails.put("cardNumber", "4444333322221145");
-        paymentDetails.put("expiryMonth", "05");
-        paymentDetails.put("expiryYear", "18");
-        paymentDetails.put("cardSecurityCode", "123");
-        paymentDetails.put("password", "password");
+        //TODO use enum
+        paymentDetails.put(PaymentDetails.PAYMENT_TYPE, "c");
+        paymentDetails.put(PaymentDetails.CARD_NUMBER, "4444333322221145");
+        paymentDetails.put(PaymentDetails.expiryMonth, "05");
+        paymentDetails.put(PaymentDetails.expiryYear, "18");
+        paymentDetails.put(PaymentDetails.cardSecurityCode, "123");
+        paymentDetails.put(PaymentDetails.password, "password");
 
         homePage = new HomePage(driver);
         landingPage = homePage.openSubcategoryBathing();
-        productDetailsPage = landingPage.openPDP();
-        basketPage = productDetailsPage.addProductToBasketFromPDP();
+        productDetailsPage = landingPage.openPDP("123");
+        basketPage = productDetailsPage.addProductToBasket();
         checkoutWelcomePage = basketPage.clickButtonCheckout();
         checkoutAboutYouPage = checkoutWelcomePage.setEmail("testmailbsv@mailinator.com");
         checkoutDeliveryPaymentPage = checkoutAboutYouPage.setFNameAndLName("userFirstName", "userLastName");
         orderConfirmationPage = checkoutDeliveryPaymentPage.setPaymentDetails(paymentDetails);
 
-        Assert.assertEquals(orderConfirmationPage.getElementOnOrderConfirmationPage().isDisplayed(), true,
+        Assert.assertEquals(orderConfirmationPage.isOrderConfirmationMessagePresent(), true,
                 "Error: 'Order confirmation' page is not opened");
     }
 
 }
+

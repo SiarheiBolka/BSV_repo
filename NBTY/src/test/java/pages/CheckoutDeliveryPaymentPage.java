@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.testng.Assert;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,6 +19,24 @@ import java.util.concurrent.TimeUnit;
  * Created by Siarhei Bolka on 5/14/2015.
  */
 public class CheckoutDeliveryPaymentPage {
+
+    public enum PaymentDetails{
+        PAYMENT_TYPE, CARD_NUMBER,  expiryMonth, expiryYear, cardSecurityCode, password;
+    }
+
+    public enum PaymentType{
+        CARD("card"), PAYPAL("paypal");
+
+        String type;
+
+        PaymentType(String type){
+            this.type = type;
+        }
+
+        public String getType() {
+            return type;
+        }
+    }
 
     private WebDriver driver;
     Wait<WebDriver> wait;
@@ -36,6 +53,7 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(xpath = "//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")
     private WebElement valueAddressSearchResult;
 
+    //TODO use contains
     @FindBy(xpath = "//li[@class='data_attr_value selectBox-selected'")
     private WebElement valueSelectedAddressSearchResult;
 
@@ -105,6 +123,7 @@ public class CheckoutDeliveryPaymentPage {
 
     public void setPostcode()
     {
+        //TODO Add input parameters
         fieldPostcode.sendKeys("2");
     }
 
@@ -113,7 +132,7 @@ public class CheckoutDeliveryPaymentPage {
         buttonLookUpAddress.click();
     }
 
-    public void SelectValueAddressSearchResult()
+    public void selectValueAddressSearchResult()
     {
         valueAddressSearchResult.click();
     }
@@ -132,6 +151,7 @@ public class CheckoutDeliveryPaymentPage {
 
     public void selectPaymentMethod (char method)
     {
+        //TODO use enum
         switch (method)
         {
             case 'c':
@@ -198,14 +218,15 @@ public class CheckoutDeliveryPaymentPage {
         buttonSubmit.click();
     }
 
-    public OrderConfirmationPage setPaymentDetails(Map paymentDetails)
+    //TODO Add input parameters (delivery type, delivery details)
+    public OrderConfirmationPage setPaymentDetails(HashMap<PaymentDetails, String> paymentDetails)
     {
         selectDeliveryMethod();
         setPostcode();
         clickButtonLookUpAddress();
-        SelectValueAddressSearchResult();
+        selectValueAddressSearchResult();
 
-        //PageFactory.initElements(driver, this);
+//        PageFactory.initElements(driver, this);
 
         try {
             Thread.sleep(3000);
@@ -213,21 +234,28 @@ public class CheckoutDeliveryPaymentPage {
             e.printStackTrace();
         }
 
+        //TODO use wait
         //wait.until(ExpectedConditions.visibilityOf(valueSelectedAddressSearchResult));
 
         submitDeliveryAddress();
         selectDeliveryOption();
-        selectPaymentMethod(((String) paymentDetails.get("paymentType")).charAt(0));
+
+
+        selectPaymentMethod((paymentDetails.get("paymentType")).charAt(0));
+
+
         selectCheckboxUseDeliveryAddress();
         submitBillingAddress();
+        //TODO use List of elements
         selectCardVisa();
+
         driver.switchTo().frame(framePayPage);
-        setCardNumber((String) paymentDetails.get("cardNumber"));
-        setExpiryMonth((String) paymentDetails.get("expiryMonth"));
-        setExpiryYear((String) paymentDetails.get("expiryYear"));
-        setCardSecurityCode((String) paymentDetails.get("cardSecurityCode"));
+        setCardNumber(paymentDetails.get("cardNumber"));
+        setExpiryMonth(paymentDetails.get("expiryMonth"));
+        setExpiryYear(paymentDetails.get("expiryYear"));
+        setCardSecurityCode(paymentDetails.get("cardSecurityCode"));
         clickButtonPayNow();
-        setFieldPassword((String) paymentDetails.get("password"));
+        setFieldPassword(paymentDetails.get("password"));
         clickButtonSubmit();
         return new OrderConfirmationPage(driver);
     }

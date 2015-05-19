@@ -23,8 +23,9 @@ public class LandingPage {
     }
 
 
-    public ProductDetailsPage openPDP()
+    public ProductDetailsPage openPDP(String productId)
     {
+        //TODO add list of products
         product.click();
         return new ProductDetailsPage(driver);
     }

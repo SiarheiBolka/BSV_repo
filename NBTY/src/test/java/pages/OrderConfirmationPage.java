@@ -21,8 +21,8 @@ public class OrderConfirmationPage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public WebElement getElementOnOrderConfirmationPage()
+    public boolean isOrderConfirmationMessagePresent()
     {
-        return elementOnOrderConfirmationPage;
+        return elementOnOrderConfirmationPage.isDisplayed();
     }
 }

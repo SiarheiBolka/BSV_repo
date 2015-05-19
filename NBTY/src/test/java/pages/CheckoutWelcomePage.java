@@ -23,6 +23,7 @@ public class CheckoutWelcomePage {
 
     public CheckoutAboutYouPage setEmail (String mail)
     {
+        //TODO Remove findElements
         driver.findElement(email).sendKeys(mail);
         driver.findElement(buttonContinue).click();
         return new CheckoutAboutYouPage(driver);
