@@ -36,14 +36,14 @@ public class CheckoutTest {
     {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://hb-preprod.oracleoutsourcing.com/");
+        driver.get("http://hb-dev3.oracleoutsourcing.com/");
     }
 
-    @AfterTest
+/*    @AfterTest
     public void clean()
     {
         driver.quit();
-    }
+    }*/
 
     public void checkoutTest()
     {
@@ -57,7 +57,7 @@ public class CheckoutTest {
 
         homePage = new HomePage(driver);
         landingPage = homePage.openSubcategoryBathing();
-        productDetailsPage = landingPage.openPDPOfProduct(60083074);
+        productDetailsPage = landingPage.openPDPOfProduct("60038772");
         basketPage = productDetailsPage.addProductToBasket();
         checkoutWelcomePage = basketPage.clickButtonCheckout();
         checkoutAboutYouPage = checkoutWelcomePage.setEmail("testmailbsv@mailinator.com");

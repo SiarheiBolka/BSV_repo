@@ -12,7 +12,6 @@
         <methods>
           <include name="checkoutTest"/>
           <include name="setup"/>
-          <include name="closeBrowser"/>
         </methods>
       </class> <!-- CheckoutTest -->
     </classes>

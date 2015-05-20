@@ -18,7 +18,7 @@ public class LandingPage {
 /*    @FindBy(id = "60083074")
     private WebElement product;*/
 
-    @FindBy(xpath = "//li[contains(@class, 'main-nav-item')]")
+    @FindBy(xpath = "//div[contains(@class, 'prod-list-item')]")
     List<WebElement> productList;
 
     public LandingPage(WebDriver driver)
@@ -36,9 +36,9 @@ public class LandingPage {
     }*/
 
 
-    public ProductDetailsPage openPDPOfProduct(int productId){
+    public ProductDetailsPage openPDPOfProduct(String productId){
         for(WebElement element : productList){
-            if(element.getAttribute("id").equals(productId)){
+            if(element.getAttribute("id").toString().equals(productId)){
                 element.click();
                 return new ProductDetailsPage(driver);
             }

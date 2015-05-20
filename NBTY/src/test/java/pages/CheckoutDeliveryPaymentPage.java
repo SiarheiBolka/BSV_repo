@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
@@ -50,20 +52,30 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(id = "shippingLookupButton")
     private WebElement buttonLookUpAddress;
 
-    @FindBy(xpath = "//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")
+    @FindBy(xpath = "//a[contains(text(), 'The 1, 71 Lee Lane, Horwich, BOLTON BL6 7AU ')]")
     private WebElement valueAddressSearchResult;
+
+    @FindBy(id = "checkout_form_town")
+    private WebElement fieldTown;
+
 
     //TODO use contains - done
     //@FindBy(xpath = "//li[@class='data_attr_value selectBox-selected'")
-    @FindBy(xpath = "xpath = \"//li[contains(@class,'selectBox-selected')]\"")
+/*    @FindBy(xpath = "//li[contains(@class,'selectBox-selected')]")
+    private WebElement valueSelectedAddressSearchResult;*/
 
-    private WebElement valueSelectedAddressSearchResult;
+    @FindBy(xpath = "//li[@class='selectBox-disabled']")
+    private WebElement elementPleaseSelect;
 
     @FindBy(id = "mpDeliverButtonId")
     private WebElement buttonContinueInDeliveryDetailsSection;
 
     @FindBy(xpath = "//label[@class='radio clearfix ']")
     private WebElement radiobuttonDeliveryOption;
+
+/*    @FindBy(xpath = "//span[contains(@class,'l-table-cell card-name-cell no-border')]")
+    List<WebElement> radiobuttonPayBy;*/
+
 
     @FindBy(xpath = "//span[contains(.,' Pay by card ')]")
     private WebElement radiobuttonPayByCard;
@@ -126,7 +138,7 @@ public class CheckoutDeliveryPaymentPage {
     public void setPostcode()
     {
         //TODO Add input parameters
-        fieldPostcode.sendKeys("2");
+        fieldPostcode.sendKeys("1");
     }
 
     public void clickButtonLookUpAddress()
@@ -142,7 +154,8 @@ public class CheckoutDeliveryPaymentPage {
     public void submitDeliveryAddress()
     {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-                "//a[contains(text(), 'Signtech, 2, Clarendon Road, St. Helier, JERSEY JE2 3YS')]")));
+                "//a[contains(text(), 'The 1, 71 Lee Lane, Horwich, BOLTON BL6 7AU ')]")));
+
         buttonContinueInDeliveryDetailsSection.click();
     }
 
@@ -150,6 +163,8 @@ public class CheckoutDeliveryPaymentPage {
     {
         radiobuttonDeliveryOption.click();
     }
+
+
 
     //TODO use enum
     public void selectPaymentMethod (PaymentType paymentType)
@@ -228,17 +243,23 @@ public class CheckoutDeliveryPaymentPage {
         clickButtonLookUpAddress();
         selectValueAddressSearchResult();
 
-        //TODO use wait - done
-        PageFactory.initElements(driver, this);
-        wait.until(ExpectedConditions.visibilityOf(valueSelectedAddressSearchResult));
+        //System.out.println("Postcode field value is: " + fieldPostcode.getCssValue("Value"));
+        //((JavascriptExecutor) driver).executeScript("alert('hello world');");
+
+        //TODO use wait
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        wait.until(ExpectedConditions.visibilityOf(elementPleaseSelect));
 
         submitDeliveryAddress();
         selectDeliveryOption();
 
-
         //TODO first
-        //selectPaymentMethod("card");
-
+        selectPaymentMethod(PaymentType.CARD);
 
         selectCheckboxUseDeliveryAddress();
         submitBillingAddress();
@@ -251,6 +272,7 @@ public class CheckoutDeliveryPaymentPage {
         setExpiryMonth(paymentDetails.get("EXPIRY_MONTH"));
         setExpiryYear(paymentDetails.get("EXPIRY_YEAR"));
         setCardSecurityCode(paymentDetails.get("CARD_SECURITY_CODE"));
+
         clickButtonPayNow();
         setFieldPassword(paymentDetails.get("PASSWORD"));
         clickButtonSubmit();
