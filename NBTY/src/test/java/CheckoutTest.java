@@ -39,16 +39,19 @@ public class CheckoutTest {
         driver.get("http://hb-dev3.oracleoutsourcing.com/");
     }
 
-/*    @AfterTest
+    @AfterTest
     public void clean()
     {
         driver.quit();
-    }*/
+    }
 
     public void checkoutTest()
     {
         //TODO use enum
-        paymentDetails.put(PaymentDetails.PAYMENT_TYPE, "card");
+        paymentDetails.put(PaymentDetails.DELIVERY_TYPE, CheckoutDeliveryPaymentPage.DeliveryType.DELIVERY.getType());
+        paymentDetails.put(PaymentDetails.POST_CODE, "1");
+        paymentDetails.put(PaymentDetails.PAYMENT_TYPE, CheckoutDeliveryPaymentPage.PaymentType.CARD.getType());
+        paymentDetails.put(PaymentDetails.CARD_TYPE, CheckoutDeliveryPaymentPage.CardType.VISA.getType());
         paymentDetails.put(PaymentDetails.CARD_NUMBER, "4444333322221145");
         paymentDetails.put(PaymentDetails.EXPIRY_MONTH, "05");
         paymentDetails.put(PaymentDetails.EXPIRY_YEAR, "18");

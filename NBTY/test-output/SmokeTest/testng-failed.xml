@@ -12,6 +12,7 @@
         <methods>
           <include name="checkoutTest"/>
           <include name="setup"/>
+          <include name="clean"/>
         </methods>
       </class> <!-- CheckoutTest -->
     </classes>
