@@ -45,9 +45,7 @@ public class CheckoutTest {
         driver.quit();
     }
 
-    public void checkoutTest()
-    {
-        //TODO use enum
+    public void checkoutTest() {
         paymentDetails.put(PaymentDetails.DELIVERY_TYPE, CheckoutDeliveryPaymentPage.DeliveryType.DELIVERY.getType());
         paymentDetails.put(PaymentDetails.POST_CODE, "1");
         paymentDetails.put(PaymentDetails.PAYMENT_TYPE, CheckoutDeliveryPaymentPage.PaymentType.CARD.getType());

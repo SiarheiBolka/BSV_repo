@@ -1,7 +1,6 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -13,7 +12,6 @@ import org.openqa.selenium.support.ui.Wait;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
@@ -73,96 +71,74 @@ public class CheckoutDeliveryPaymentPage {
         }
     }
 
-    private WebDriver driver;
+    WebDriver driver;
     Wait<WebDriver> wait;
 
     @FindBy(linkText = "Delivery")
-    private WebElement buttonDelivery;
+    WebElement buttonDelivery;
 
     @FindBy(linkText = "Collection")
-    private WebElement buttonCollection;
+    WebElement buttonCollection;
 
     @FindBy(id = "frm_registration-rfl_postcode-lookup")
-    private WebElement fieldPostcode;
+    WebElement fieldPostcode;
 
     @FindBy(id = "shippingLookupButton")
-    private WebElement buttonLookUpAddress;
+    WebElement buttonLookUpAddress;
 
     @FindBy(xpath = "//a[contains(text(), 'The 1, 71 Lee Lane, Horwich, BOLTON BL6 7AU ')]")
-    private WebElement valueAddressSearchResult;
-
-    @FindBy(id = "checkout_form_town")
-    private WebElement fieldTown;
-
-    //TODO use contains - done
-
-    @FindBy(xpath = "//li[@class='selectBox-disabled']")
-    private WebElement elementPleaseSelect;
+    WebElement valueAddressSearchResult;
 
     @FindBy(id = "mpDeliverButtonId")
-    private WebElement buttonContinueInDeliveryDetailsSection;
+    WebElement buttonContinueInDeliveryDetailsSection;
 
     @FindBy(xpath = "//label[@class='radio clearfix ']")
-    private WebElement radiobuttonDeliveryOption;
+    WebElement deliveryOptionRadioButton;
 
     @FindBy(xpath = "//span[contains(.,' Pay by card ')]")
-    private WebElement radiobuttonPayByCard;
+    WebElement payByCardRadioButton;
 
     @FindBy(xpath = "//span[contains(.,' Pay with PayPal ')]")
-    private WebElement radiobuttonPayWithPaypal;
+    WebElement radioButtonPayWithPaypal;
 
     @FindBy(id = "checkout_form_use_delivery")
-    private WebElement checkboxUseDeliveryAddress;
+    WebElement checkboxUseDeliveryAddress;
 
     @FindBy(id = "submitBillingAddress")
-    private WebElement buttonContinueInBillingAddressSection;
+    WebElement buttonContinueInBillingAddressSection;
 
     @FindBy(linkText = "Select your card type")
-    private  WebElement dropdownSelectYourCardType;
-
-
-    @FindBy(xpath = "//a[@rel='Master Card']")
-    private  WebElement cardMasterCard;
-
-    @FindBy(xpath = "//a[@rel='Master Card Debit']")
-    private  WebElement cardMasterCardDebit;
-
-    @FindBy(xpath = "//a[@rel='Visa']")
-    private  WebElement cardVisa;
-
-    @FindBy(xpath = "//a[@rel='Visa Debit']")
-    private  WebElement cardVisaDebit;
-
-    @FindBy(xpath = "//a[@rel='Maestro']")
-    private  WebElement cardMaestro;
-
-    @FindBy(xpath = "//a[@rel='American Express']")
-    private  WebElement cardAmericanExpress;
-
+    WebElement dropdownSelectYourCardType;
 
     @FindBy(xpath = "//iframe[@class='checkout-iframe']")
-    private  WebElement framePayPage;
+    WebElement framePayPage;
 
     @FindBy(xpath = "//input[contains(@placeholder,'Enter your Card Number')]")
-    private  WebElement cardNumber;
+    WebElement cardNumber;
 
     @FindBy(id = "expiryMonth")
-    private  WebElement dropdownExpiryMonth;
+    WebElement dropdownExpiryMonth;
 
     @FindBy(id = "expiryYear")
-    private  WebElement dropdownExpiryYear;
+    WebElement dropdownExpiryYear;
 
     @FindBy(id = "csc")
-    private  WebElement cardSecurityCode;
+    WebElement cardSecurityCode;
 
     @FindBy(xpath = "//input[@value='Pay Now']")
-    private  WebElement buttonPayNow;
+    WebElement buttonPayNow;
 
     @FindBy(xpath = "//input[@name='acsPassword']")
-    private  WebElement fieldPassword;
+    WebElement fieldPassword;
 
     @FindBy(xpath = "//input[@value='Submit']")
-    private  WebElement buttonSubmit;
+    WebElement buttonSubmit;
+
+    @FindBy(xpath = "//ul[contains(@class,'selectBox-dropdown-menu')][contains(.,'Select your card type')]//a")
+    List<WebElement> cardTypeSelectOptionsList;
+
+    @FindBy(xpath = "//ul[contains(@class,'selectBox-dropdown-menu')][contains(.,'Select your card type')]")
+    WebElement cardTypeSelect;
 
     public CheckoutDeliveryPaymentPage(WebDriver driver)
     {
@@ -189,13 +165,7 @@ public class CheckoutDeliveryPaymentPage {
         }
     }
 
-/*    public void selectDeliveryMethod() {
-        buttonDelivery.click();
-    }*/
-
-    public void setPostcode(String postcode)
-    {
-        //TODO Add input parameters - done
+    public void setPostcode(String postcode)    {
         fieldPostcode.sendKeys(postcode);
     }
 
@@ -211,30 +181,30 @@ public class CheckoutDeliveryPaymentPage {
 
     public void submitDeliveryAddress()
     {
+        //TODO
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-                "//a[contains(text(), 'The 1, 71 Lee Lane, Horwich, BOLTON BL6 7AU ')]")));
+                "//a[contains(text(), 'The 1, 71 Lee Lane, Horwich, BOLTON BL6 7AU')]")));
 
         buttonContinueInDeliveryDetailsSection.click();
     }
 
     public void selectDeliveryOption()
     {
-        radiobuttonDeliveryOption.click();
+        deliveryOptionRadioButton.click();
     }
 
-    //TODO use enum - done
     public void selectPaymentMethod (PaymentType paymentType)
     {
         switch (paymentType)
         {
             case CARD:
-                radiobuttonPayByCard.click();
-                break;
+                payByCardRadioButton.click();
+                return;
             case PAYPAL:
-                radiobuttonPayWithPaypal.click();
-                break;
+                radioButtonPayWithPaypal.click();
+                return;
             default:
-                break;
+                throw new RuntimeException("This payment type '"+ paymentType.getType() +"' is NOT supported.");
         }
     }
 
@@ -253,35 +223,16 @@ public class CheckoutDeliveryPaymentPage {
         new Actions(driver).moveToElement(dropdownSelectYourCardType).build().perform();
         new Actions(driver).clickAndHold(dropdownSelectYourCardType).build().perform();
 
-        switch (cardType)
-        {
-            case MASTER_CARD:
-                wait.until(ExpectedConditions.visibilityOf(cardMasterCard));
-                cardMasterCard.click();
-                break;
-            case MASTER_CARD_DEBIT:
-                wait.until(ExpectedConditions.visibilityOf(cardMasterCardDebit));
-                cardMasterCardDebit.click();
-                break;
-            case VISA:
-                wait.until(ExpectedConditions.visibilityOf(cardVisa));
-                cardVisa.click();
-                break;
-            case VISA_DEBIT:
-                wait.until(ExpectedConditions.visibilityOf(cardVisaDebit));
-                cardVisaDebit.click();
-                break;
-            case MAESTRO:
-                wait.until(ExpectedConditions.visibilityOf(cardVisaDebit));
-                cardVisaDebit.click();
-                break;
-            case AMERICAN_EXPRESS:
-                wait.until(ExpectedConditions.visibilityOf(cardAmericanExpress));
-                cardAmericanExpress.click();
-                break;
-            default:
-                break;
+        wait.until(ExpectedConditions.visibilityOf(cardTypeSelect));
+
+        for(WebElement element : cardTypeSelectOptionsList){
+            if(element.getAttribute("rel").equals(cardType.getType())){
+                element.click();
+                return;
+            }
         }
+        throw new RuntimeException("");
+
     }
 
     public void setCardNumber(String cardNum)
@@ -319,27 +270,23 @@ public class CheckoutDeliveryPaymentPage {
         buttonSubmit.click();
     }
 
-    //TODO Add input parameters (deliveryType, deliveryDetails) - done
-    public OrderConfirmationPage setPaymentDetails(HashMap<PaymentDetails, String> paymentDetails)
-    {
+    public OrderConfirmationPage setPaymentDetails(HashMap<PaymentDetails, String> paymentDetails){
+
         selectDeliveryMethod(getDeliveryType((paymentDetails.get(PaymentDetails.DELIVERY_TYPE))));
         setPostcode(paymentDetails.get(PaymentDetails.POST_CODE));
         clickButtonLookUpAddress();
         selectValueAddressSearchResult();
 
-        //TODO use wait - done
         waitForElementIsNotEmpty(fieldPostcode, paymentDetails.get(PaymentDetails.POST_CODE));
 
         submitDeliveryAddress();
         selectDeliveryOption();
 
-        //TODO first - done
         selectPaymentMethod(getPaymentType(paymentDetails.get(PaymentDetails.PAYMENT_TYPE)));
 
         selectCheckboxUseDeliveryAddress();
         submitBillingAddress();
 
-        //TODO use List of elements
         selectCardTypeMethod(getCardType(paymentDetails.get(PaymentDetails.CARD_TYPE)));
 
         driver.switchTo().frame(framePayPage);
@@ -380,7 +327,6 @@ public class CheckoutDeliveryPaymentPage {
         }
         throw new RuntimeException("Error: Card type is not found");
     }
-
 
     public void waitForElementIsNotEmpty (WebElement element, String textNotToBeDisplayed){
         long timeout = System.currentTimeMillis() + 15000;

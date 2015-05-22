@@ -15,9 +15,6 @@ public class LandingPage {
 
     private WebDriver driver;
 
-/*    @FindBy(id = "60083074")
-    private WebElement product;*/
-
     @FindBy(xpath = "//div[contains(@class, 'prod-list-item')]")
     List<WebElement> productList;
 
@@ -26,15 +23,6 @@ public class LandingPage {
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
     }
-
-
-/*    public ProductDetailsPage openPDP(String productId)
-    {
-        //TODO add list of products - done
-        product.click();
-        return new ProductDetailsPage(driver);
-    }*/
-
 
     public ProductDetailsPage openPDPOfProduct(String productId){
         for(WebElement element : productList){

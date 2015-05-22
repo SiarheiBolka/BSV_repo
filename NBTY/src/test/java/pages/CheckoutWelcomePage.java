@@ -16,11 +16,8 @@ public class CheckoutWelcomePage {
     @FindBy(id = "checkout_form_email")
     private WebElement email;
 
-    //By email = By.id("checkout_form_email");
-
     @FindBy(name = "/atg/userprofiling/ProfileFormHandler.continue")
     private WebElement buttonContinue;
-    //By buttonContinue = By.name("/atg/userprofiling/ProfileFormHandler.continue");
 
     public CheckoutWelcomePage(WebDriver driver)
     {
@@ -28,9 +25,7 @@ public class CheckoutWelcomePage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public CheckoutAboutYouPage setEmail (String mail)
-    {
-        //TODO Remove findElements - done
+    public CheckoutAboutYouPage setEmail (String mail) {
         email.sendKeys(mail);
         buttonContinue.click();
         return new CheckoutAboutYouPage(driver);

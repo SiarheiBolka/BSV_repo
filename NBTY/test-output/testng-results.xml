@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTest" duration-ms="69143" started-at="2015-05-21T17:13:11Z" finished-at="2015-05-21T17:14:20Z">
+  <suite name="SmokeTest" duration-ms="133210" started-at="2015-05-22T06:52:55Z" finished-at="2015-05-22T06:55:08Z">
     <groups>
       <group name="checkouttest">
-        <method signature="CheckoutTest.checkoutTest()[pri:0, instance:CheckoutTest@6ea0fbf0]" name="checkoutTest" class="CheckoutTest"/>
+        <method signature="CheckoutTest.checkoutTest()[pri:0, instance:CheckoutTest@afc824e]" name="checkoutTest" class="CheckoutTest"/>
       </group> <!-- checkouttest -->
     </groups>
-    <test name="TestSet" duration-ms="69143" started-at="2015-05-21T17:13:11Z" finished-at="2015-05-21T17:14:20Z">
+    <test name="TestSet" duration-ms="133210" started-at="2015-05-22T06:52:55Z" finished-at="2015-05-22T06:55:08Z">
       <class name="CheckoutTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:CheckoutTest@6ea0fbf0]" name="setup" is-config="true" duration-ms="12339" started-at="2015-05-21T14:13:11Z" finished-at="2015-05-21T14:13:23Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:CheckoutTest@afc824e]" name="setup" is-config="true" duration-ms="11610" started-at="2015-05-22T03:52:55Z" finished-at="2015-05-22T03:53:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkoutTest()[pri:0, instance:CheckoutTest@6ea0fbf0]" name="checkoutTest" duration-ms="56452" started-at="2015-05-21T14:13:23Z" finished-at="2015-05-21T14:14:20Z">
+        <test-method status="PASS" signature="checkoutTest()[pri:0, instance:CheckoutTest@afc824e]" name="checkoutTest" duration-ms="121056" started-at="2015-05-22T03:53:07Z" finished-at="2015-05-22T03:55:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutTest -->
-        <test-method status="PASS" signature="clean()[pri:0, instance:CheckoutTest@6ea0fbf0]" name="clean" is-config="true" duration-ms="343" started-at="2015-05-21T14:14:20Z" finished-at="2015-05-21T14:14:20Z">
+        <test-method status="PASS" signature="clean()[pri:0, instance:CheckoutTest@afc824e]" name="clean" is-config="true" duration-ms="534" started-at="2015-05-22T03:55:08Z" finished-at="2015-05-22T03:55:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clean -->
