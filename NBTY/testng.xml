@@ -1,7 +1,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="SmokeTest" xmlns="http://testng.org/testng-1.0.dtd">
 
-    <test name="TestSet" enabled="true">
+    <test name="TestSet_Firefox" enabled="true">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <include name="checkouttest"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="CheckoutTest"/>
+        </classes>
+    </test>
+
+    <test name="TestSet_Chrome" enabled="true">
+        <parameter name="browser" value="chrome"/>
         <groups>
             <run>
                 <include name="checkouttest"/>

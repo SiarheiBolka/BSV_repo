@@ -1,11 +1,17 @@
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.*;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -15,8 +21,11 @@ import static pages.CheckoutDeliveryPaymentPage.PaymentDetails;
  * Created by Siarhei Bolka on 5/14/2015.
  */
 
-@Test(groups = { "checkouttest" })
+@Test(threadPoolSize = 2, invocationCount = 4, timeOut = 30 * 10000, groups = { "checkouttest" })
 public class CheckoutTest {
+
+    private final String HUB = "http://localhost:4444/wd/hub";
+    private final String ENV = "http://hb-dev3.oracleoutsourcing.com/";
 
     WebDriver driver;
 
@@ -32,11 +41,19 @@ public class CheckoutTest {
     HashMap<PaymentDetails, String> paymentDetails = new HashMap<PaymentDetails, String>();
 
     @BeforeTest
-    public void setup()
-    {
-        driver = new FirefoxDriver();
+    public void setup() throws MalformedURLException {
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setBrowserName("chrome");
+        dc.setPlatform(Platform.WINDOWS);
+        driver = new RemoteWebDriver(new URL(HUB), dc);
+
+        //driver = new FirefoxDriver();
+/*        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\drivers\\chromedriver.exe");
+        driver = new ChromeDriver();*/
+
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://hb-dev3.oracleoutsourcing.com/");
+        driver.get(ENV);
     }
 
     @AfterTest
@@ -58,6 +75,7 @@ public class CheckoutTest {
 
         homePage = new HomePage(driver);
         landingPage = homePage.openSubcategoryBathing();
+
         productDetailsPage = landingPage.openPDPOfProduct("60038772");
         basketPage = productDetailsPage.addProductToBasket();
         checkoutWelcomePage = basketPage.clickButtonCheckout();
