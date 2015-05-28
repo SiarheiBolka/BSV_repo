@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SmokeTest]">
-  <test name="TestSet(failed)">
+  <test name="TestSet_Firefox(failed)">
     <groups>
       <run>
         <include name="checkouttest"/>
@@ -11,10 +11,8 @@
       <class name="CheckoutTest">
         <methods>
           <include name="checkoutTest"/>
-          <include name="setup"/>
-          <include name="clean"/>
         </methods>
       </class> <!-- CheckoutTest -->
     </classes>
-  </test> <!-- TestSet(failed) -->
+  </test> <!-- TestSet_Firefox(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

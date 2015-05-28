@@ -21,7 +21,7 @@ import static pages.CheckoutDeliveryPaymentPage.PaymentDetails;
  * Created by Siarhei Bolka on 5/14/2015.
  */
 
-@Test(threadPoolSize = 2, invocationCount = 4, timeOut = 30 * 10000, groups = { "checkouttest" })
+@Test(threadPoolSize = 1, invocationCount = 2, timeOut = 30 * 10000, groups = { "checkouttest" })
 public class CheckoutTest {
 
     private final String HUB = "http://localhost:4444/wd/hub";
@@ -42,12 +42,13 @@ public class CheckoutTest {
 
     @BeforeTest
     public void setup() throws MalformedURLException {
-        DesiredCapabilities dc = new DesiredCapabilities();
-        dc.setBrowserName("chrome");
+/*        DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setBrowserName("firefox");
         dc.setPlatform(Platform.WINDOWS);
-        driver = new RemoteWebDriver(new URL(HUB), dc);
+        driver = new RemoteWebDriver(new URL(HUB), dc);*/
 
         //driver = new FirefoxDriver();
+        driver = WebDriverSingleton.getWebDriverInstance();
 /*        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();*/
 
@@ -59,8 +60,10 @@ public class CheckoutTest {
     @AfterTest
     public void clean()
     {
-        driver.quit();
+       // driver.quit();
+        WebDriverSingleton.closeWebBrowser();
     }
+
 
     public void checkoutTest() {
         paymentDetails.put(PaymentDetails.DELIVERY_TYPE, CheckoutDeliveryPaymentPage.DeliveryType.DELIVERY.getType());
