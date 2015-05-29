@@ -2,21 +2,27 @@
 <testng-results skipped="0" failed="2" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTest" duration-ms="57" started-at="2015-05-28T12:25:55Z" finished-at="2015-05-28T12:25:55Z">
+  <suite name="SmokeTest" duration-ms="11968" started-at="2015-05-29T14:12:51Z" finished-at="2015-05-29T14:13:03Z">
     <groups>
       <group name="checkouttest">
-        <method signature="CheckoutTest.checkoutTest()[pri:0, instance:CheckoutTest@31dc2ffd]" name="checkoutTest" class="CheckoutTest"/>
+        <method signature="CheckoutTest.checkoutTest()[pri:0, instance:tests.CheckoutTest@7dd9578a]" name="checkoutTest" class="tests.CheckoutTest"/>
       </group> <!-- checkouttest -->
     </groups>
-    <test name="TestSet_Firefox" duration-ms="57" started-at="2015-05-28T12:25:55Z" finished-at="2015-05-28T12:25:55Z">
-      <class name="CheckoutTest">
-        <test-method status="FAIL" signature="checkoutTest()[pri:0, instance:CheckoutTest@31dc2ffd]" name="checkoutTest" duration-ms="42" started-at="2015-05-28T09:25:55Z" finished-at="2015-05-28T09:25:55Z">
-          <exception class="java.lang.NullPointerException">
+    <test name="TestSet" duration-ms="11968" started-at="2015-05-29T14:12:51Z" finished-at="2015-05-29T14:13:03Z">
+      <class name="tests.CheckoutTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.CheckoutTest@7dd9578a]" name="setup" is-config="true" duration-ms="9402" started-at="2015-05-29T11:12:51Z" finished-at="2015-05-29T11:13:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="checkoutTest()[pri:0, instance:tests.CheckoutTest@7dd9578a]" name="checkoutTest" duration-ms="1206" started-at="2015-05-29T11:13:00Z" finished-at="2015-05-29T11:13:02Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Product '60038772' is NOT found.]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.openqa.selenium.interactions.Actions.<init>(Actions.java:41)
-	at pages.HomePage.openSubcategoryBathing(HomePage.java:39)
-	at CheckoutTest.checkoutTest(CheckoutTest.java:77)
+              <![CDATA[java.lang.RuntimeException: Product '60038772' is NOT found.
+	at pages.LandingPage.openPDPOfProduct(LandingPage.java:33)
+	at tests.CheckoutTest.checkoutTest(CheckoutTest.java:82)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -31,17 +37,19 @@
 	at java.lang.Thread.run(Thread.java:745)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutTest -->
-        <test-method status="FAIL" signature="checkoutTest()[pri:0, instance:CheckoutTest@31dc2ffd]" name="checkoutTest" duration-ms="0" started-at="2015-05-28T09:25:55Z" finished-at="2015-05-28T09:25:55Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="checkoutTest()[pri:0, instance:tests.CheckoutTest@7dd9578a]" name="checkoutTest" duration-ms="191" started-at="2015-05-29T11:13:02Z" finished-at="2015-05-29T11:13:02Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Product '60038772' is NOT found.]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.openqa.selenium.interactions.Actions.<init>(Actions.java:41)
-	at pages.HomePage.openSubcategoryBathing(HomePage.java:39)
-	at CheckoutTest.checkoutTest(CheckoutTest.java:77)
+              <![CDATA[java.lang.RuntimeException: Product '60038772' is NOT found.
+	at pages.LandingPage.openPDPOfProduct(LandingPage.java:33)
+	at tests.CheckoutTest.checkoutTest(CheckoutTest.java:82)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,11 +64,15 @@
 	at java.lang.Thread.run(Thread.java:745)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutTest -->
-      </class> <!-- CheckoutTest -->
-    </test> <!-- TestSet_Firefox -->
+        <test-method status="PASS" signature="clean()[pri:0, instance:tests.CheckoutTest@7dd9578a]" name="clean" is-config="true" duration-ms="1159" started-at="2015-05-29T11:13:02Z" finished-at="2015-05-29T11:13:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clean -->
+      </class> <!-- tests.CheckoutTest -->
+    </test> <!-- TestSet -->
   </suite> <!-- SmokeTest -->
 </testng-results>

@@ -1,3 +1,5 @@
+package tests;
+
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**

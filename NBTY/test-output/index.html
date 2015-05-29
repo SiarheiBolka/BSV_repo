@@ -101,12 +101,12 @@
                     <div class="method-list-content failed suite-SmokeTest">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="CheckoutTest" hash-for-method="checkoutTest">checkoutTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="tests.CheckoutTest" hash-for-method="checkoutTest">checkoutTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="CheckoutTest" hash-for-method="checkoutTest">checkoutTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="tests.CheckoutTest" hash-for-method="checkoutTest">checkoutTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-SmokeTest -->
@@ -124,7 +124,7 @@
           <div class="suite-SmokeTest-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">CheckoutTest</span>
+              <span class="class-name">tests.CheckoutTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -132,10 +132,9 @@
                   <a name="checkoutTest">
                   </a> <!-- checkoutTest -->
                   <span class="method-name">checkoutTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:41)
-	at pages.HomePage.openSubcategoryBathing(HomePage.java:39)
-	at CheckoutTest.checkoutTest(CheckoutTest.java:77)
+                  <div class="stack-trace">java.lang.RuntimeException: Product &apos;60038772&apos; is NOT found.
+	at pages.LandingPage.openPDPOfProduct(LandingPage.java:33)
+	at tests.CheckoutTest.checkoutTest(CheckoutTest.java:82)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
@@ -150,10 +149,9 @@
                   <a name="checkoutTest">
                   </a> <!-- checkoutTest -->
                   <span class="method-name">checkoutTest</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:41)
-	at pages.HomePage.openSubcategoryBathing(HomePage.java:39)
-	at CheckoutTest.checkoutTest(CheckoutTest.java:77)
+                  <div class="stack-trace">java.lang.RuntimeException: Product &apos;60038772&apos; is NOT found.
+	at pages.LandingPage.openPDPOfProduct(LandingPage.java:33)
+	at tests.CheckoutTest.checkoutTest(CheckoutTest.java:82)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
@@ -175,16 +173,16 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;SmokeTest&quot;&gt;
-  &lt;test name=&quot;TestSet_Firefox&quot;&gt;
+  &lt;test name=&quot;TestSet&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
         &lt;include name=&quot;checkouttest&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;CheckoutTest&quot;/&gt;
+      &lt;class name=&quot;tests.CheckoutTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- TestSet_Firefox --&gt;
+  &lt;/test&gt; &lt;!-- TestSet --&gt;
 &lt;/suite&gt; &lt;!-- SmokeTest --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -196,7 +194,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">TestSet_Firefox (1 class)</span>
+                <span class="test-name">TestSet (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,17 +231,17 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkoutTest')
-data.setCell(0, 2, 'CheckoutTest')
-data.setCell(0, 3, 42);
+data.setCell(0, 2, 'tests.CheckoutTest')
+data.setCell(0, 3, 1206);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'checkoutTest')
-data.setCell(1, 2, 'CheckoutTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 2, 'tests.CheckoutTest')
+data.setCell(1, 3, 191);
 window.suiteTableData['SmokeTest']= { tableData: data, tableDiv: 'times-div-SmokeTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 42 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-SmokeTest">
               </div> <!-- times-div-SmokeTest -->
             </div> <!-- times-div -->
@@ -269,19 +267,27 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">CheckoutTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">checkoutTest</span>
+              <div class="chronological-class-name">tests.CheckoutTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkoutTest</span>
+                <span class="method-start">9409 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">checkoutTest</span>
-                <span class="method-start">44 ms</span>
+                <span class="method-start">10616 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">clean</span>
+                <span class="method-start">10808 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

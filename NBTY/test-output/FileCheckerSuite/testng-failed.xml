@@ -12,7 +12,7 @@
         <methods>
           <include name="loginByUser"/>
         </methods>
-      </class> <!-- Login -->
+      </class> <!-- tests.old.Login_old -->
     </classes>
   </test> <!-- TestSet(failed) -->
 </suite> <!-- Failed suite [FileCheckerSuite] -->

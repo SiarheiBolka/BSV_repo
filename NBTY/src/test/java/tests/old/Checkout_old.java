@@ -1,3 +1,5 @@
+package tests.old;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +20,7 @@ import java.util.concurrent.TimeUnit;
  */
 
 @Test(groups = { "checkout" })
-public class Checkout {
+public class Checkout_old {
 
     WebDriver driver;
 

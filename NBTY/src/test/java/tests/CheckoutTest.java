@@ -1,3 +1,5 @@
+package tests;
+
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -47,7 +49,6 @@ public class CheckoutTest {
         dc.setPlatform(Platform.WINDOWS);
         driver = new RemoteWebDriver(new URL(HUB), dc);*/
 
-        //driver = new FirefoxDriver();
         driver = WebDriverSingleton.getWebDriverInstance();
 /*        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();*/
@@ -63,7 +64,6 @@ public class CheckoutTest {
        // driver.quit();
         WebDriverSingleton.closeWebBrowser();
     }
-
 
     public void checkoutTest() {
         paymentDetails.put(PaymentDetails.DELIVERY_TYPE, CheckoutDeliveryPaymentPage.DeliveryType.DELIVERY.getType());

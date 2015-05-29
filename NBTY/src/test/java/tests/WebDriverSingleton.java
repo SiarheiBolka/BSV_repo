@@ -1,3 +1,5 @@
+package tests;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -12,7 +14,8 @@ public class  WebDriverSingleton {
 
     public static WebDriver getWebDriverInstance() {
         if(null == driver) {
-            driver = new FirefoxDriver();
+            WebDriverCreator creator = new ChromeDriverCreator();
+            driver = creator.factoryMethod();
         }
         return driver;
     }
