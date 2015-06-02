@@ -23,11 +23,11 @@ import static pages.CheckoutDeliveryPaymentPage.PaymentDetails;
  * Created by Siarhei Bolka on 5/14/2015.
  */
 
-@Test(threadPoolSize = 1, invocationCount = 2, timeOut = 30 * 10000, groups = { "checkouttest" })
+@Test(threadPoolSize = 1, invocationCount = 1, timeOut = 30 * 10000, groups = { "checkouttest" })
 public class CheckoutTest {
 
     private final String HUB = "http://localhost:4444/wd/hub";
-    private final String ENV = "http://hb-dev3.oracleoutsourcing.com/";
+    private final String ENV = "http://hb-preprod.oracleoutsourcing.com/";
 
     WebDriver driver;
 

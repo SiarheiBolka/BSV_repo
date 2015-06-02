@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -99,11 +99,6 @@
                       <a href="#" panel-name="suite-SmokeTest" class="show-methods failed suite-SmokeTest"> (show)</a> <!-- show-methods failed suite-SmokeTest -->
                     </span>
                     <div class="method-list-content failed suite-SmokeTest">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="tests.CheckoutTest" hash-for-method="checkoutTest">checkoutTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-SmokeTest" title="tests.CheckoutTest" hash-for-method="checkoutTest">checkoutTest</a> <!-- method navigator-link -->
@@ -132,26 +127,10 @@
                   <a name="checkoutTest">
                   </a> <!-- checkoutTest -->
                   <span class="method-name">checkoutTest</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Product &apos;60038772&apos; is NOT found.
-	at pages.LandingPage.openPDPOfProduct(LandingPage.java:33)
-	at tests.CheckoutTest.checkoutTest(CheckoutTest.java:82)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:745)
-... Removed 7 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="checkoutTest">
-                  </a> <!-- checkoutTest -->
-                  <span class="method-name">checkoutTest</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Product &apos;60038772&apos; is NOT found.
-	at pages.LandingPage.openPDPOfProduct(LandingPage.java:33)
-	at tests.CheckoutTest.checkoutTest(CheckoutTest.java:82)
+                  <div class="stack-trace">java.lang.ClassCastException: decorator.Decorator cannot be cast to org.openqa.selenium.interactions.HasInputDevices
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:41)
+	at pages.HomePage.openSubcategoryBathing(HomePage.java:39)
+	at tests.CheckoutTest.checkoutTest(CheckoutTest.java:80)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
@@ -228,20 +207,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkoutTest')
 data.setCell(0, 2, 'tests.CheckoutTest')
-data.setCell(0, 3, 1206);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkoutTest')
-data.setCell(1, 2, 'tests.CheckoutTest')
-data.setCell(1, 3, 191);
+data.setCell(0, 3, 33);
 window.suiteTableData['SmokeTest']= { tableData: data, tableDiv: 'times-div-SmokeTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 33 ms</span>
               <div id="times-div-SmokeTest">
               </div> <!-- times-div-SmokeTest -->
             </div> <!-- times-div -->
@@ -276,17 +251,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">checkoutTest</span>
-                <span class="method-start">9409 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">checkoutTest</span>
-                <span class="method-start">10616 ms</span>
+                <span class="method-start">9207 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">clean</span>
-                <span class="method-start">10808 ms</span>
+                <span class="method-start">9241 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

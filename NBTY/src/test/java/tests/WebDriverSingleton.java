@@ -14,7 +14,7 @@ public class  WebDriverSingleton {
 
     public static WebDriver getWebDriverInstance() {
         if(null == driver) {
-            WebDriverCreator creator = new ChromeDriverCreator();
+            WebDriverCreator creator = new FirefoxDriverCreator();
             driver = creator.factoryMethod();
         }
         return driver;

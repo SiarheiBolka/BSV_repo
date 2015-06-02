@@ -2,69 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99a20e42-81d9-489a-8ea9-7455b5fa7f08" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/tests/WebDriverCreator.java" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\Test Results - StackOverFlowTest_and_1_more.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\GithubTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\StackOverFlowTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\Checkout.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\CheckoutTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\GithubTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\Login.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\RemoteDriverTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\RemoteWebDriverSingleton.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\StackOverFlowTest.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\TestRunner.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\WebDriverSingleton.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\bullet_point.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\collapseall.gif" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\emailable-report.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\failed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\jquery-1.7.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\navigator-bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\passed.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\skipped.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\testng-failed.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\testng-reports.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\testng-reports.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\testng-results.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\workspace\BSV_repo\NBTY\test-output\testng.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-Checkout.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-Checkout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-CheckoutTest.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-CheckoutTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-Login.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-Login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/FileCheckerSuite/TestSet.html" afterPath="$PROJECT_DIR$/test-output/FileCheckerSuite/TestSet.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/decorator/Decorator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/AbstractPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/AbstractPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/BasketPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/BasketPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutAboutYouPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutAboutYouPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$1.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$CardType.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$CardType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$DeliveryType.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$DeliveryType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$PaymentDetails.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$PaymentDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$PaymentType.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage$PaymentType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutDeliveryPaymentPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/CheckoutTest.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/CheckoutTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/CheckoutWelcomePage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/CheckoutWelcomePage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/old/Checkout_old.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/old/Checkout_old.class" />
+      <change type="MODIFICATION" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\tests\ChromeDriverCreator.class" afterPath="D:\workspace\BSV_repo\NBTY\target\test-classes\tests\ChromeDriverCreator.class" />
+      <change type="MODIFICATION" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\tests\FirefoxDriverCreator.class" afterPath="D:\workspace\BSV_repo\NBTY\target\test-classes\tests\FirefoxDriverCreator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/LandingPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/LandingPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/old/Login_old.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/old/Login_old.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/OrderConfirmationPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/OrderConfirmationPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/pages/ProductDetailsPage.class" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProductDetailsPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/RemoteDriverTest.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/RemoteDriverTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/RemoteWebDriverSingleton.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/RemoteWebDriverSingleton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/TestRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/TestRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/tests/WebDriverCreator.class" afterPath="$PROJECT_DIR$/target/test-classes/tests/WebDriverCreator.class" />
+      <change type="MODIFICATION" beforePath="D:\workspace\BSV_repo\NBTY\target\test-classes\tests\WebDriverSingleton.class" afterPath="D:\workspace\BSV_repo\NBTY\target\test-classes\tests\WebDriverSingleton.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BSVartifactId.iml" afterPath="$PROJECT_DIR$/BSVartifactId.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java" afterPath="$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java" afterPath="$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-tests.CheckoutTest.xml" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-tests.CheckoutTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/SmokeTest/TestSet.html" afterPath="$PROJECT_DIR$/test-output/SmokeTest/TestSet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/FileCheckerSuite/TestSet.xml" afterPath="$PROJECT_DIR$/test-output/FileCheckerSuite/TestSet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/SmokeTest/TestSet.xml" afterPath="$PROJECT_DIR$/test-output/SmokeTest/TestSet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Chrome.html" afterPath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Chrome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Chrome.xml" afterPath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Chrome.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Firefox.html" afterPath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Firefox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Firefox.xml" afterPath="$PROJECT_DIR$/test-output/SmokeTest/TestSet_Firefox.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/classes.html" afterPath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/SmokeTest/classes.html" afterPath="$PROJECT_DIR$/test-output/old/SmokeTest/classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/groups.html" afterPath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/groups.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/tests/WebDriverSingleton.java" afterPath="$PROJECT_DIR$/src/test/java/tests/WebDriverSingleton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/SmokeTest/groups.html" afterPath="$PROJECT_DIR$/test-output/old/SmokeTest/groups.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/methods-alphabetical.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/index.html" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/SmokeTest/methods-alphabetical.html" afterPath="$PROJECT_DIR$/test-output/old/SmokeTest/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/methods.html" afterPath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/methods.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/SmokeTest/methods.html" afterPath="$PROJECT_DIR$/test-output/old/SmokeTest/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/FileCheckerSuite/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/FileCheckerSuite/testng-failed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/SmokeTest/testng-failed.xml" afterPath="$PROJECT_DIR$/test-output/SmokeTest/testng-failed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/testng.xml.html" afterPath="$PROJECT_DIR$/test-output/old/FileCheckerSuite/testng.xml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/SmokeTest/testng.xml.html" afterPath="$PROJECT_DIR$/test-output/old/SmokeTest/testng.xml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng.xml" afterPath="$PROJECT_DIR$/testng.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/old/SmokeTest/toc.html" afterPath="$PROJECT_DIR$/test-output/old/SmokeTest/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\Checkout.java" afterPath="$PROJECT_DIR$/src/test/java/tests/old/Checkout_old.java" />
-      <change type="MOVED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\CheckoutTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\Login.java" afterPath="$PROJECT_DIR$/src/test/java/tests/old/Login_old.java" />
-      <change type="MOVED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\RemoteDriverTest.java" afterPath="$PROJECT_DIR$/src/test/java/tests/RemoteDriverTest.java" />
-      <change type="MOVED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\RemoteWebDriverSingleton.java" afterPath="$PROJECT_DIR$/src/test/java/tests/RemoteWebDriverSingleton.java" />
-      <change type="MOVED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\TestRunner.java" afterPath="$PROJECT_DIR$/src/test/java/tests/TestRunner.java" />
-      <change type="MOVED" beforePath="D:\workspace\BSV_repo\NBTY\src\test\java\WebDriverSingleton.java" afterPath="$PROJECT_DIR$/src/test/java/tests/WebDriverSingleton.java" />
     </list>
     <ignored path="BSVartifactId.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,7 +71,17 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebDriverSingleton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChromeDriverCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,14 +89,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChromeDriverCreator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java">
+      <file leaf-file-name="Decorator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/decorator/Decorator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5816485">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.33180252">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#554#555#0" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#919#920#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
+                <element signature="e#1015#1016#0" expanded="true" />
+                <element signature="e#1056#1057#0" expanded="true" />
+                <element signature="e#1086#1087#0" expanded="true" />
+                <element signature="e#1126#1127#0" expanded="true" />
+                <element signature="e#1155#1156#0" expanded="true" />
+                <element signature="e#1214#1215#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
+                <element signature="e#1415#1416#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="e#1545#1546#0" expanded="true" />
+                <element signature="e#1590#1591#0" expanded="true" />
+                <element signature="e#1628#1629#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirefoxDriverCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,13 +188,14 @@
         <option value="$PROJECT_DIR$/src/test/java/WebDriverSingleton.java" />
         <option value="$PROJECT_DIR$/src/test/java/GithubTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Checkout_old.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" />
         <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/java/tests/WebDriverCreator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/WebDriverSingleton.java" />
-        <option value="$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java" />
         <option value="$PROJECT_DIR$/test-output/SmokeTest/TestSet.html" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/WebDriverSingleton.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/decorator/Decorator.java" />
       </list>
     </option>
   </component>
@@ -224,7 +261,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -253,7 +290,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,30 +369,58 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="decorator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BSVartifactId" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NBTY" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="D:/Automation CDP/Module 6 - Automation Framework/2 week/code" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\BSV_repo\NBTY\src\driver" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestRunner (1)">
+  <component name="RunManager" selected="TestNG.CheckoutTest">
     <configuration default="false" name="CheckoutTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="BSVartifactId" />
@@ -757,10 +821,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestRunner (1)" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.StackOverFlowTest and 1 more" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.StackOverFlowTest" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.CheckoutTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.CheckoutTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestRunner (1)" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.StackOverFlowTest and 1 more" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.StackOverFlowTest" />
       </list>
     </recent_temporary>
   </component>
@@ -787,22 +851,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2502781" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12124583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34593993" sideWeight="0.5042644" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25361514" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33259177" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16311301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1663113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -812,8 +877,32 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2502781" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12124583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34593993" sideWeight="0.5042644" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33259177" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1663113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38375974" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -830,18 +919,26 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java</url>
-          <line>18</line>
+          <url>file://$PROJECT_DIR$/src/test/java/decorator/Decorator.java</url>
           <properties />
-          <option name="timeStamp" value="58" />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pages/HomePage.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.45.0/selenium-support-2.45.0-sources.jar!/org/openqa/selenium/support/pagefactory/internal/LocatingElementHandler.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="59" />
+      <option name="time" value="80" />
     </breakpoint-manager>
     <watches-manager>
-      <configuration name="TestNG">
-        <watch expression="paymentDetails" language="JAVA" custom="" />
-      </configuration>
       <configuration name="Application">
         <watch expression="service" language="JAVA" custom="" />
         <watch expression="reference" language="JAVA" custom="" />
@@ -853,78 +950,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/WebElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3619456">
-          <caret line="104" column="13" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.45.0/selenium-remote-driver-2.45.0-sources.jar!/org/openqa/selenium/remote/RemoteWebElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.7.0_75/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24107143">
-          <caret line="973" column="19" selection-start-line="973" selection-start-column="19" selection-end-line="973" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.45.0/selenium-support-2.45.0-sources.jar!/org/openqa/selenium/support/ui/Wait.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/By.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="356" column="0" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.45.0/selenium-remote-driver-2.45.0-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.45.0/selenium-support-2.45.0-sources.jar!/org/openqa/selenium/support/pagefactory/internal/LocatingElementHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.45.0/selenium-support-2.45.0-sources.jar!/org/openqa/selenium/support/pagefactory/DefaultElementLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/SuiteRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="226" column="0" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/TestRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="491" column="0" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8.21/testng-6.8.21.jar!/org/testng/internal/TestMethodWorker.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -978,10 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33269963">
           <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding>
-            <element signature="e#2976#2977#0" expanded="false" />
-            <element signature="e#3040#3041#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1014,21 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/interactions/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21441442">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/remote/CapabilityType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3437014">
@@ -1040,10 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3592535">
           <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-          <folding>
-            <element signature="e#3017#3018#0" expanded="false" />
-            <element signature="e#3067#3068#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,39 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebDriverCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0-sources.jar!/com/google/common/collect/ImmutableBiMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#1914#1915#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1158,9 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-          <folding>
-            <element signature="e#3355#3356#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1168,7 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1176,11 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#777#778#0" expanded="false" />
-            <element signature="e#799#800#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1188,7 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,7 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33269963">
           <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,9 +1173,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33269963">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#2826#2827#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,11 +1180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="199" column="0" selection-start-line="199" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding>
-            <element signature="e#3764#3765#0" expanded="false" />
-            <element signature="e#3791#3792#0" expanded="false" />
-            <element signature="e#4419#4420#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1246,22 +1199,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AbstractPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5374376">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#425#426#0" expanded="false" />
+            <element signature="e#487#488#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.9.4/testng-6.9.4-sources.jar!/org/testng/internal/InvokeMethodRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#1840#1841#0" expanded="false" />
+            <element signature="e#1870#1871#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/CheckoutTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1590909">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebDriverCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32692307">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/interactions/HasInputDevices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38368055">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/SearchContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/WebDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32692307">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-chrome-driver/2.45.0/selenium-chrome-driver-2.45.0-sources.jar!/org/openqa/selenium/chrome/ChromeDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33216783">
+          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.45.0/selenium-api-2.45.0-sources.jar!/org/openqa/selenium/interactions/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4296578">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/2.45.0/selenium-support-2.45.0-sources.jar!/org/openqa/selenium/support/pagefactory/internal/LocatingElementHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77376425">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.45.0/selenium-remote-driver-2.45.0-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7534965">
+          <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-firefox-driver/2.45.0/selenium-firefox-driver-2.45.0-sources.jar!/org/openqa/selenium/firefox/FirefoxDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1136365">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tests/WebDriverSingleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/tests/ChromeDriverCreator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/tests/FirefoxDriverCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5816485">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/decorator/Decorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33180252">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1126#1127#0" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#1628#1629#0" expanded="true" />
           </folding>
         </state>
       </provider>

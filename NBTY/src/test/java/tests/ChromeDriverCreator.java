@@ -1,5 +1,6 @@
 package tests;
 
+import decorator.Decorator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -25,6 +26,7 @@ public class ChromeDriverCreator extends  WebDriverCreator{
         }
 
         driver = new ChromeDriver(service);
+        driver = new Decorator(driver); //decorator pattern
         return driver;
     }
 }

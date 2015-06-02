@@ -1,5 +1,6 @@
 package tests;
 
+import decorator.Decorator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +18,7 @@ public class FirefoxDriverCreator extends WebDriverCreator{
         FirefoxBinary binary = new FirefoxBinary(new File("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"));
         FirefoxProfile profile = new FirefoxProfile();
         WebDriver driver = new FirefoxDriver(binary, profile);
+        driver = new Decorator(driver); //decorator pattern
         return driver;
     }
 
