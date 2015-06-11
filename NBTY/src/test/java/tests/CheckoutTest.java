@@ -76,7 +76,7 @@ public class CheckoutTest {
         paymentDetails.put(PaymentDetails.CARD_SECURITY_CODE, "123");
         paymentDetails.put(PaymentDetails.PASSWORD, "password");
 
-        homePage = new HomePage(driver);
+        homePage = new HomePage();
         landingPage = homePage.openSubcategoryBathing();
 
         productDetailsPage = landingPage.openPDPOfProduct("60038772");

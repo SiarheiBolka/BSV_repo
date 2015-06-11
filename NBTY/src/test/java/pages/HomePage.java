@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
+import tests.WebDriverSingleton;
 
 import java.util.List;
 
@@ -26,8 +27,8 @@ public class HomePage /*extends AbstractPage*/{
     @FindBy(xpath = "//a[@href=\"/shop/personal-care/bathing/\"]")
     private WebElement subcategoryBathing;
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
+    public HomePage() {
+        this.driver = WebDriverSingleton.getWebDriverInstance();
         PageFactory.initElements(this.driver, this);
     }
 

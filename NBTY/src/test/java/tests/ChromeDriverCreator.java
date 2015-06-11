@@ -16,7 +16,7 @@ public class ChromeDriverCreator extends  WebDriverCreator{
     public  static final String PATH_TO_CHROMEDRIVER = "c:\\chromedriver.exe";
 
     @Override
-    public WebDriver factoryMethod() {
+    public WebDriver createDriver() {
         ChromeDriverService service = new ChromeDriverService.Builder().usingDriverExecutable(
                 new File(PATH_TO_CHROMEDRIVER)).build();
         try {

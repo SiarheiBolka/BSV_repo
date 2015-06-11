@@ -7,20 +7,20 @@ import org.openqa.selenium.remote.RemoteWebDriver;
  */
 public class RemoteWebDriverSingleton {
 
-    private static RemoteWebDriver driver;
+    private static RemoteWebDriverSingleton driver;
 
     private RemoteWebDriverSingleton() {}
 
-    public static RemoteWebDriver getRemoteWebDriverInstance() {
+    public static RemoteWebDriverSingleton getRemoteWebDriverInstance() {
         if(null == driver) {
-            //driver = new RemoteWebDriver();
+            driver = new RemoteWebDriverSingleton();
         }
         return driver;
     }
 
     public static void closeWebBrowser(){
-        driver.quit();
-        driver = null;
+//        driver.quit();
+//        driver = null;
     }
 }
 

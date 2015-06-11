@@ -3,6 +3,9 @@ package decorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.HasInputDevices;
+import org.openqa.selenium.interactions.Keyboard;
+import org.openqa.selenium.interactions.Mouse;
 
 import java.util.List;
 import java.util.Set;
@@ -10,7 +13,7 @@ import java.util.Set;
 /**
  * Created by Siarhei Bolka on 6/2/2015.
  */
-public class Decorator implements WebDriver{
+public class Decorator implements WebDriver, HasInputDevices {
 
     protected WebDriver driver;
 
@@ -84,4 +87,13 @@ public class Decorator implements WebDriver{
         return driver.manage();
     }
 
+    @Override
+    public Keyboard getKeyboard() {
+        return driver.;
+    }
+
+    @Override
+    public Mouse getMouse() {
+        return null;
+    }
 }
