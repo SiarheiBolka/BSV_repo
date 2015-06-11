@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SmokeTest]">
-  <test name="TestSet(failed)">
+  <parameter name="browsername" value="chrome"/>
+  <test name="TestSet_Chrome(failed)">
+    <parameter name="browsername" value="chrome"/>
     <groups>
       <run>
         <include name="checkouttest"/>
@@ -10,11 +12,9 @@
     <classes>
       <class name="CheckoutTest">
         <methods>
-          <include name="checkoutTest"/>
-          <include name="setup"/>
-          <include name="clean"/>
+          <include name="checkoutTest" invocation-numbers="0"/>
         </methods>
       </class> <!-- CheckoutTest -->
     </classes>
-  </test> <!-- TestSet(failed) -->
+  </test> <!-- TestSet_Chrome(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

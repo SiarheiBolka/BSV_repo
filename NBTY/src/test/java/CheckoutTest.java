@@ -1,12 +1,11 @@
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.*;
 
@@ -21,8 +20,9 @@ import static pages.CheckoutDeliveryPaymentPage.PaymentDetails;
  * Created by Siarhei Bolka on 5/14/2015.
  */
 
-@Test(threadPoolSize = 2, invocationCount = 4, timeOut = 30 * 10000, groups = { "checkouttest" })
 public class CheckoutTest {
+
+
 
     private final String HUB = "http://localhost:4444/wd/hub";
     private final String ENV = "http://hb-dev3.oracleoutsourcing.com/";
@@ -40,20 +40,11 @@ public class CheckoutTest {
 
     HashMap<PaymentDetails, String> paymentDetails = new HashMap<PaymentDetails, String>();
 
-    @BeforeTest
-    public void setup() throws MalformedURLException {
-        DesiredCapabilities dc = new DesiredCapabilities();
-        dc.setBrowserName("chrome");
-        dc.setPlatform(Platform.WINDOWS);
-        driver = new RemoteWebDriver(new URL(HUB), dc);
-
-        //driver = new FirefoxDriver();
-/*        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\drivers\\chromedriver.exe");
-        driver = new ChromeDriver();*/
-
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get(ENV);
+    @DataProvider(name = "browserNameData")
+    public Object[][] sortByData() {
+        return new Object[][]{
+                {"firefox"}, {"chrome"}
+        };
     }
 
     @AfterTest
@@ -62,7 +53,17 @@ public class CheckoutTest {
         driver.quit();
     }
 
-    public void checkoutTest() {
+    @Test(dataProvider = "browserNameData", threadPoolSize = 1, invocationCount = 1, timeOut = 30 * 10000, groups = { "checkouttest" })
+    public void checkoutTest(String browserName) throws MalformedURLException{
+
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setBrowserName(browserName);
+        dc.setPlatform(Platform.WINDOWS);
+        driver = new RemoteWebDriver(new URL(HUB), dc);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get(ENV);
+
         paymentDetails.put(PaymentDetails.DELIVERY_TYPE, CheckoutDeliveryPaymentPage.DeliveryType.DELIVERY.getType());
         paymentDetails.put(PaymentDetails.POST_CODE, "1");
         paymentDetails.put(PaymentDetails.PAYMENT_TYPE, CheckoutDeliveryPaymentPage.PaymentType.CARD.getType());

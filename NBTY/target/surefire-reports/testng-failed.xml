@@ -5,15 +5,10 @@
     <classes>
       <class name="CheckoutTest">
         <methods>
-          <include name="checkoutTest"/>
-          <include name="setup"/>
+          <include name="checkoutTest" invocation-numbers="1"/>
+          <include name="clean"/>
         </methods>
       </class> <!-- CheckoutTest -->
-      <class name="RemoteDriverTest">
-        <methods>
-          <include name="oneCanExecuteRemoteTest"/>
-        </methods>
-      </class> <!-- RemoteDriverTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

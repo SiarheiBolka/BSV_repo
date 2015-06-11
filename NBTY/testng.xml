@@ -2,7 +2,7 @@
 <suite name="SmokeTest" xmlns="http://testng.org/testng-1.0.dtd">
 
     <test name="TestSet_Firefox" enabled="true">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browsername" value="firefox"/>
         <groups>
             <run>
                 <include name="checkouttest"/>
@@ -15,7 +15,7 @@
     </test>
 
     <test name="TestSet_Chrome" enabled="true">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browsername" value="chrome"/>
         <groups>
             <run>
                 <include name="checkouttest"/>
