@@ -15,7 +15,7 @@ public class TestRunner {
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
 
         TestNG testng = new TestNG();
-        for (XmlSuite suite: new Parser("./testng.xml").parseToList()) {
+        for (XmlSuite suite: new Parser("./" + args[0] + "").parseToList()) {
             testng.setCommandLineSuite(suite);
         }
 

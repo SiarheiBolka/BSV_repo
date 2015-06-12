@@ -1,5 +1,8 @@
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
@@ -9,6 +12,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -22,10 +27,8 @@ import static pages.CheckoutDeliveryPaymentPage.PaymentDetails;
 
 public class CheckoutTest {
 
-
-
-    private final String HUB = "http://localhost:4444/wd/hub";
-    private final String ENV = "http://hb-dev3.oracleoutsourcing.com/";
+    private final String HUB = PropertyFileReader.loadPropertiesFile().getProperty("HUB");
+    private final String ENV = PropertyFileReader.loadPropertiesFile().getProperty("URL");
 
     WebDriver driver;
 
@@ -40,20 +43,14 @@ public class CheckoutTest {
 
     HashMap<PaymentDetails, String> paymentDetails = new HashMap<PaymentDetails, String>();
 
-    @DataProvider(name = "browserNameData")
-    public Object[][] sortByData() {
-        return new Object[][]{
-                {"firefox"}, {"chrome"}
-        };
-    }
-
     @AfterTest
     public void clean()
     {
         driver.quit();
     }
 
-    @Test(dataProvider = "browserNameData", threadPoolSize = 1, invocationCount = 1, timeOut = 30 * 10000, groups = { "checkouttest" })
+    @Parameters({ "browserName" })
+    @Test(threadPoolSize = 1, invocationCount = 1, timeOut = 30 * 10000, groups = { "checkouttest" })
     public void checkoutTest(String browserName) throws MalformedURLException{
 
         DesiredCapabilities dc = new DesiredCapabilities();
