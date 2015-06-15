@@ -1,8 +1,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="SmokeTest" xmlns="http://testng.org/testng-1.0.dtd">
 
-    <test name="TestSet_Chrome" enabled="true">
-        <parameter name="browserName" value="chrome"/>
+
+    <test name="TestSet_Search" enabled="true">
+        <parameter name="browserName" value="firefox"/>
+        <groups>
+            <run>
+                <include name="searchtest"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="TestSet_Login" enabled="true">
+        <parameter name="browserName" value="firefox"/>
+        <groups>
+            <run>
+                <include name="logintest"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="LoginTest"/>
+        </classes>
+    </test>
+
+    <!--test name="TestSet_Checkout" enabled="true">
+        <parameter name="browserName" value="firefox"/>
         <groups>
             <run>
                 <include name="checkouttest"/>
@@ -12,6 +39,6 @@
         <classes>
             <class name="CheckoutTest"/>
         </classes>
-    </test>
+    </test-->
 
 </suite>

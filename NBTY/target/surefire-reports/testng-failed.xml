@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [SmokeTest]">
-  <parameter name="browserName" value="chrome"/>
-  <test name="TestSet_Firefox(failed)">
+  <parameter name="browserName" value="firefox"/>
+  <test name="TestSet_Search(failed)">
     <parameter name="browserName" value="firefox"/>
     <groups>
       <run>
-        <include name="checkouttest"/>
+        <include name="searchtest"/>
       </run>
     </groups>
     <classes>
-      <class name="CheckoutTest">
+      <class name="SearchTest">
         <methods>
           <include name="checkoutTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- CheckoutTest -->
+      </class> <!-- SearchTest -->
     </classes>
-  </test> <!-- TestSet_Firefox(failed) -->
-  <test name="TestSet_Chrome(failed)">
-    <parameter name="browserName" value="chrome"/>
+  </test> <!-- TestSet_Search(failed) -->
+  <test name="TestSet_Login(failed)">
+    <parameter name="browserName" value="firefox"/>
     <groups>
       <run>
-        <include name="checkouttest"/>
+        <include name="logintest"/>
       </run>
     </groups>
     <classes>
-      <class name="CheckoutTest">
+      <class name="LoginTest">
         <methods>
           <include name="checkoutTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- CheckoutTest -->
+      </class> <!-- LoginTest -->
     </classes>
-  </test> <!-- TestSet_Chrome(failed) -->
+  </test> <!-- TestSet_Login(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

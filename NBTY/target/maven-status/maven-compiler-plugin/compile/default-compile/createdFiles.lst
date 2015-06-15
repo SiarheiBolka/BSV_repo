@@ -1,3 +1,4 @@
+pages\LoginPage.class
 pages\AbstractPage.class
 pages\HomePage.class
 pages\CheckoutDeliveryPaymentPage$CardType.class
@@ -5,15 +6,16 @@ pages\CheckoutAboutYouPage.class
 pages\CheckoutDeliveryPaymentPage$1.class
 PropertyFileReader.class
 pages\BasketPage.class
-Checkout.class
+pages\SearchPage.class
 pages\LandingPage.class
+SearchTest.class
 CheckoutTest.class
 pages\ProductDetailsPage.class
 pages\CheckoutWelcomePage.class
 pages\CheckoutDeliveryPaymentPage$PaymentDetails.class
+LoginTest.class
 pages\CheckoutDeliveryPaymentPage.class
 pages\OrderConfirmationPage.class
 TestRunner.class
 pages\CheckoutDeliveryPaymentPage$PaymentType.class
-Login.class
 pages\CheckoutDeliveryPaymentPage$DeliveryType.class
