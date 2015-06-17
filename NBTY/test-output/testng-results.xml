@@ -2,44 +2,30 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTest" duration-ms="37996" started-at="2015-06-15T07:28:23Z" finished-at="2015-06-15T07:29:01Z">
+  <suite name="SmokeTest" duration-ms="26573" started-at="2015-06-17T12:13:23Z" finished-at="2015-06-17T12:13:50Z">
     <groups>
       <group name="logintest">
-        <method signature="LoginTest.checkoutTest(java.lang.String)[pri:0, instance:LoginTest@a62e15c]" name="checkoutTest" class="LoginTest"/>
+        <method signature="LoginTest.loginTest()[pri:0, instance:tests.LoginTest@4928ef7d]" name="loginTest" class="tests.LoginTest"/>
       </group> <!-- logintest -->
       <group name="searchtest">
-        <method signature="SearchTest.checkoutTest(java.lang.String)[pri:0, instance:SearchTest@75e49fd3]" name="checkoutTest" class="SearchTest"/>
+        <method signature="SearchTest.searchTest()[pri:0, instance:tests.SearchTest@6f72be2a]" name="searchTest" class="tests.SearchTest"/>
       </group> <!-- searchtest -->
     </groups>
-    <test name="TestSet_Search" duration-ms="15059" started-at="2015-06-15T07:28:23Z" finished-at="2015-06-15T07:28:38Z">
-      <class name="SearchTest">
-        <test-method status="PASS" signature="checkoutTest(java.lang.String)[pri:0, instance:SearchTest@75e49fd3]" name="checkoutTest" duration-ms="15050" started-at="2015-06-15T04:28:23Z" finished-at="2015-06-15T04:28:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+    <test name="TestSet_Search" duration-ms="15554" started-at="2015-06-17T12:13:23Z" finished-at="2015-06-17T12:13:39Z">
+      <class name="tests.SearchTest">
+        <test-method status="PASS" signature="searchTest()[pri:0, instance:tests.SearchTest@6f72be2a]" name="searchTest" duration-ms="15545" started-at="2015-06-17T09:13:23Z" finished-at="2015-06-17T09:13:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkoutTest -->
-      </class> <!-- SearchTest -->
+        </test-method> <!-- searchTest -->
+      </class> <!-- tests.SearchTest -->
     </test> <!-- TestSet_Search -->
-    <test name="TestSet_Login" duration-ms="22919" started-at="2015-06-15T07:28:38Z" finished-at="2015-06-15T07:29:01Z">
-      <class name="LoginTest">
-        <test-method status="PASS" signature="checkoutTest(java.lang.String)[pri:0, instance:LoginTest@a62e15c]" name="checkoutTest" duration-ms="22917" started-at="2015-06-15T04:28:38Z" finished-at="2015-06-15T04:29:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
+    <test name="TestSet_Login" duration-ms="11001" started-at="2015-06-17T12:13:39Z" finished-at="2015-06-17T12:13:50Z">
+      <class name="tests.LoginTest">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:tests.LoginTest@4928ef7d]" name="loginTest" duration-ms="11000" started-at="2015-06-17T09:13:39Z" finished-at="2015-06-17T09:13:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkoutTest -->
-      </class> <!-- LoginTest -->
+        </test-method> <!-- loginTest -->
+      </class> <!-- tests.LoginTest -->
     </test> <!-- TestSet_Login -->
   </suite> <!-- SmokeTest -->
 </testng-results>

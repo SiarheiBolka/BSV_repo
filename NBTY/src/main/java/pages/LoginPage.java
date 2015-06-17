@@ -4,13 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.localDriver.WebDriverSingleton;
+import utils.remoteDriver.RemoteWebDriverSingleton;
+
+import java.net.MalformedURLException;
 
 /**
  * Created by Siarhei Bolka on 6/15/2015.
  */
 public class LoginPage {
-
-    private WebDriver driver;
 
     @FindBy(id = "frm_login_email")
     private WebElement emailAddressField;
@@ -21,10 +23,8 @@ public class LoginPage {
     @FindBy(name = "/atg/userprofiling/ProfileFormHandler.login")
     private WebElement signInButton;
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
-
+    public LoginPage() {
+        PageFactory.initElements(WebDriverSingleton.getWebDriverInstance(), this);
     }
 
     public void setEmail(String email) {
@@ -39,6 +39,6 @@ public class LoginPage {
         setEmail(validEmail);
         setPassword(validPassword);
         signInButton.click();
-        return new HomePage (driver);
+        return new HomePage();
     }
 }

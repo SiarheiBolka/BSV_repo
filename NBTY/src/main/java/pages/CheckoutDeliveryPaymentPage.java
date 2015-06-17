@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import utils.localDriver.WebDriverSingleton;
 
 import java.util.HashMap;
 import java.util.List;
@@ -71,7 +72,6 @@ public class CheckoutDeliveryPaymentPage {
         }
     }
 
-    WebDriver driver;
     Wait<WebDriver> wait;
 
     @FindBy(linkText = "Delivery")
@@ -140,11 +140,10 @@ public class CheckoutDeliveryPaymentPage {
     @FindBy(xpath = "//ul[contains(@class,'selectBox-dropdown-menu')][contains(.,'Select your card type')]")
     WebElement cardTypeSelect;
 
-    public CheckoutDeliveryPaymentPage(WebDriver driver)
+    public CheckoutDeliveryPaymentPage()
     {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
-        this.wait = new FluentWait<WebDriver>(driver)
+        PageFactory.initElements(WebDriverSingleton.getWebDriverInstance(), this);
+        this.wait = new FluentWait<WebDriver>(WebDriverSingleton.getWebDriverInstance())
                 .withTimeout(15, TimeUnit.SECONDS)
                 .pollingEvery(5, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
@@ -220,8 +219,8 @@ public class CheckoutDeliveryPaymentPage {
 
     public void selectCardTypeMethod (CardType cardType)
     {
-        new Actions(driver).moveToElement(dropdownSelectYourCardType).build().perform();
-        new Actions(driver).clickAndHold(dropdownSelectYourCardType).build().perform();
+        new Actions(WebDriverSingleton.getWebDriverInstance()).moveToElement(dropdownSelectYourCardType).build().perform();
+        new Actions(WebDriverSingleton.getWebDriverInstance()).clickAndHold(dropdownSelectYourCardType).build().perform();
 
         wait.until(ExpectedConditions.visibilityOf(cardTypeSelect));
 
@@ -289,7 +288,7 @@ public class CheckoutDeliveryPaymentPage {
 
         selectCardTypeMethod(getCardType(paymentDetails.get(PaymentDetails.CARD_TYPE)));
 
-        driver.switchTo().frame(framePayPage);
+        WebDriverSingleton.getWebDriverInstance().switchTo().frame(framePayPage);
         setCardNumber(paymentDetails.get(PaymentDetails.CARD_NUMBER));
         setExpiryMonth(paymentDetails.get(PaymentDetails.EXPIRY_MONTH));
         setExpiryYear(paymentDetails.get(PaymentDetails.EXPIRY_YEAR));
@@ -298,7 +297,7 @@ public class CheckoutDeliveryPaymentPage {
         clickButtonPayNow();
         setFieldPassword(paymentDetails.get(PaymentDetails.PASSWORD));
         clickButtonSubmit();
-        return new OrderConfirmationPage(driver);
+        return new OrderConfirmationPage();
     }
 
     public DeliveryType getDeliveryType(String s){

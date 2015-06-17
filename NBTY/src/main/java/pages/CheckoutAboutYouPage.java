@@ -1,17 +1,15 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.localDriver.WebDriverSingleton;
 
 /**
  * Created by Siarhei Bolka on 5/14/2015.
  */
 public class CheckoutAboutYouPage {
-
-    private WebDriver driver;
 
     @FindBy(id = "checkout_form_firstname")
     private WebElement firstName;
@@ -26,10 +24,9 @@ public class CheckoutAboutYouPage {
     private WebElement buttonContinue;
 
 
-    public CheckoutAboutYouPage(WebDriver driver)
+    public CheckoutAboutYouPage()
     {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
+        PageFactory.initElements(WebDriverSingleton.getWebDriverInstance(), this);
     }
 
     public void setFirstName(String fName)
@@ -58,6 +55,6 @@ public class CheckoutAboutYouPage {
         setLastName(lastName);
         selectCheckboxNoThanks();
         clickButtonContinue();
-        return new CheckoutDeliveryPaymentPage(driver);
+        return new CheckoutDeliveryPaymentPage();
     }
 }

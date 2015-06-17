@@ -1,4 +1,4 @@
-
+package utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +10,6 @@ import java.util.Properties;
  * Created by Siarhei Bolka on 6/11/2015.
  */
 public class PropertyFileReader {
-
 
     public static Properties loadPropertiesFile() {
 

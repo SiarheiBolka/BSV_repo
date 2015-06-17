@@ -11,7 +11,7 @@
         </groups>
 
         <classes>
-            <class name="CheckoutTest"/>
+            <class name="tests.CheckoutTest"/>
         </classes>
     </test>
 

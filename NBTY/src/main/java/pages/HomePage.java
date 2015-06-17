@@ -8,27 +8,26 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import utils.localDriver.WebDriverSingleton;
 
+import java.net.MalformedURLException;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
+
 
 /**
  * Created by Siarhei Bolka on 5/14/2015.
  */
 public class HomePage {
 
-    private WebDriver driver;
     Wait<WebDriver> wait;
-
-    @FindBy(linkText = "Personal Care")
-    private WebElement categoryPersonalCare;
 
     @FindBy(xpath = "//li[contains(@class, 'main-nav-item')]")
     List<WebElement> categoryList;
 
-    @FindBy(xpath = "//a[@href=\"/shop/personal-care/bathing/\"]")
-    private WebElement subcategoryBathing;
+    @FindBy(xpath = "//li[contains(@class, 'main-nav-item')]")
+    List<WebElement> subcategoryList;
 
     @FindBy(className = "lnk-my-account")
     private WebElement myAccountLink;
@@ -42,52 +41,57 @@ public class HomePage {
     @FindBy(className = "orangeSubmit")
     private  WebElement goButton;
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
-        this.wait = new FluentWait<WebDriver>(driver)
+    public HomePage() {
+        PageFactory.initElements(WebDriverSingleton.getWebDriverInstance(), this);
+        this.wait = new FluentWait<WebDriver>(WebDriverSingleton.getWebDriverInstance())
                 .withTimeout(15, TimeUnit.SECONDS)
                 .pollingEvery(5, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
     }
 
-    public void openCategoryPersonalCare() {
-        categoryPersonalCare.click();
-    }
-
-    public LandingPage openSubcategoryBathing() {
-        new Actions(driver).moveToElement(categoryPersonalCare).build().perform();
-        new Actions(driver).moveToElement(subcategoryBathing).build().perform();
-        new Actions(driver).click(subcategoryBathing).build().perform();
-        return new LandingPage(driver);
+    public LandingPage openSubcategoryPage(String categoryNmae, String subcategoryName) {
+        expandMenuForCategory(categoryNmae);
+        clickSubcategory(subcategoryName);
+        return new LandingPage();
     }
 
     public LoginPage openLoginPage () {
         myAccountLink.click();
-        return new LoginPage(driver);
+        return new LoginPage();
     }
 
-    public boolean isUserLoggedIn()
-    {
+    public boolean isUserLoggedIn() {
         wait.until(ExpectedConditions.visibilityOf(logoutLink));
         System.out.println(logoutLink.isDisplayed());
         return logoutLink.isDisplayed();
     }
 
-    public SearchPage findProduct (String textForSearch) {
+    public SearchPage search(String textForSearch) throws MalformedURLException {
         searchField.sendKeys(textForSearch);
         goButton.click();
-        return new SearchPage(driver, textForSearch);
+        return new SearchPage(textForSearch);
     }
 
-    public void openCategory(String categoryName){
+    public void expandMenuForCategory(String categoryName){
         for(WebElement element : categoryList){
             if(element.getText().equals(categoryName)){
-                element.click();
+                new Actions(WebDriverSingleton.getWebDriverInstance()).moveToElement(element).build().perform();
+                //element.click();
                 return;
             }
         }
         throw new RuntimeException("Category '"+ categoryName +"' is NOT found.");
+    }
+
+    public void clickSubcategory(String subcategoryName){
+        for(WebElement element : subcategoryList){
+            if(element.getText().equals(subcategoryName)){
+                new Actions(WebDriverSingleton.getWebDriverInstance()).moveToElement(element).build().perform();
+                element.click();
+                return;
+            }
+        }
+        throw new RuntimeException("Subcategory '"+ subcategoryName +"' is NOT found.");
     }
 
 }

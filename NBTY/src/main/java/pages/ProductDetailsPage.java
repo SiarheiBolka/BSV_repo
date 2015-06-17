@@ -4,13 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.localDriver.WebDriverSingleton;
 
 /**
  * Created by Siarhei Bolka on 5/14/2015.
  */
 public class ProductDetailsPage {
-
-    private WebDriver driver;
 
     @FindBy(id = "cartbtn")
     private WebElement buttonAddToBasket;
@@ -18,10 +17,9 @@ public class ProductDetailsPage {
     @FindBy(linkText = "View basket")
     private WebElement linkViewBasket;
 
-    public ProductDetailsPage(WebDriver driver)
+    public ProductDetailsPage()
     {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
+        PageFactory.initElements(WebDriverSingleton.getWebDriverInstance(), this);
     }
 
     public void clickButtonAddToBasket ()
@@ -38,6 +36,6 @@ public class ProductDetailsPage {
     {
         clickButtonAddToBasket();
         clickLinkViewBasket();
-        return new BasketPage(driver);
+        return new BasketPage();
     }
 }

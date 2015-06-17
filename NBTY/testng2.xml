@@ -3,7 +3,6 @@
 
 
     <test name="TestSet_Search" enabled="true">
-        <parameter name="browserName" value="firefox"/>
         <groups>
             <run>
                 <include name="searchtest"/>
@@ -11,12 +10,11 @@
         </groups>
 
         <classes>
-            <class name="SearchTest"/>
+            <class name="tests.SearchTest"/>
         </classes>
     </test>
 
     <test name="TestSet_Login" enabled="true">
-        <parameter name="browserName" value="firefox"/>
         <groups>
             <run>
                 <include name="logintest"/>
@@ -24,12 +22,11 @@
         </groups>
 
         <classes>
-            <class name="LoginTest"/>
+            <class name="tests.LoginTest"/>
         </classes>
     </test>
 
     <!--test name="TestSet_Checkout" enabled="true">
-        <parameter name="browserName" value="firefox"/>
         <groups>
             <run>
                 <include name="checkouttest"/>
@@ -37,7 +34,7 @@
         </groups>
 
         <classes>
-            <class name="CheckoutTest"/>
+            <class name="tests.CheckoutTest"/>
         </classes>
     </test-->
 
