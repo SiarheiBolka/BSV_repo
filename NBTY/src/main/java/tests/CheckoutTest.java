@@ -48,7 +48,7 @@ public class CheckoutTest {
         paymentDetails.put(PaymentDetails.PASSWORD, "password");
 
         homePage = new HomePage();
-        landingPage = homePage.openSubcategoryPage("Personal Care", "Bathing");
+        landingPage = homePage.openSubcategory("Personal Care", "Bathing");
 
         productDetailsPage = landingPage.openPDPOfProduct("60038772");
         basketPage = productDetailsPage.addProductToBasket();

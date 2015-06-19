@@ -1,13 +1,13 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
+import decorator.SizeVisibleElement;
+import decorator.StyleVisibleElement;
+import decorator.WebElementComponent;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.localDriver.WebDriverSingleton;
-import utils.remoteDriver.RemoteWebDriverSingleton;
-
-import java.net.MalformedURLException;
 
 /**
  * Created by Siarhei Bolka on 6/15/2015.
@@ -28,7 +28,14 @@ public class LoginPage {
     }
 
     public void setEmail(String email) {
+
+        //WebElement emailAddressField = new SizeVisibleElement(new StyleVisibleElement(new WebElementComponent(By.id("frm_login_email"))));
+
         emailAddressField.sendKeys(email);
+        //return !emailAddressField2.getCssValue("display").equals("none");
+
+        //emailAddressField2.getSize().getHeight() > 0
+        //emailAddressField2.getSize().getWidth() > 0
     }
 
     public void setPassword(String password) {
@@ -42,3 +49,4 @@ public class LoginPage {
         return new HomePage();
     }
 }
+

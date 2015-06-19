@@ -2,7 +2,7 @@
 <suite name="SmokeTest" xmlns="http://testng.org/testng-1.0.dtd">
 
 
-    <test name="TestSet_Search" enabled="true">
+    <!--test name="TestSet_Search" enabled="true">
         <groups>
             <run>
                 <include name="searchtest"/>
@@ -12,7 +12,7 @@
         <classes>
             <class name="tests.SearchTest"/>
         </classes>
-    </test>
+    </test-->
 
     <test name="TestSet_Login" enabled="true">
         <groups>

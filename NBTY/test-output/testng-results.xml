@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="SmokeTest" duration-ms="26573" started-at="2015-06-17T12:13:23Z" finished-at="2015-06-17T12:13:50Z">
+  <suite name="SmokeTest" duration-ms="69370" started-at="2015-06-18T09:23:26Z" finished-at="2015-06-18T09:24:35Z">
     <groups>
-      <group name="logintest">
-        <method signature="LoginTest.loginTest()[pri:0, instance:tests.LoginTest@4928ef7d]" name="loginTest" class="tests.LoginTest"/>
-      </group> <!-- logintest -->
-      <group name="searchtest">
-        <method signature="SearchTest.searchTest()[pri:0, instance:tests.SearchTest@6f72be2a]" name="searchTest" class="tests.SearchTest"/>
-      </group> <!-- searchtest -->
+      <group name="checkouttest">
+        <method signature="CheckoutTest.checkoutTest()[pri:0, instance:tests.CheckoutTest@6fe81bb3]" name="checkoutTest" class="tests.CheckoutTest"/>
+      </group> <!-- checkouttest -->
     </groups>
-    <test name="TestSet_Search" duration-ms="15554" started-at="2015-06-17T12:13:23Z" finished-at="2015-06-17T12:13:39Z">
-      <class name="tests.SearchTest">
-        <test-method status="PASS" signature="searchTest()[pri:0, instance:tests.SearchTest@6f72be2a]" name="searchTest" duration-ms="15545" started-at="2015-06-17T09:13:23Z" finished-at="2015-06-17T09:13:39Z">
+    <test name="TestSet_Checkout" duration-ms="69370" started-at="2015-06-18T09:23:26Z" finished-at="2015-06-18T09:24:35Z">
+      <class name="tests.CheckoutTest">
+        <test-method status="PASS" signature="checkoutTest()[pri:0, instance:tests.CheckoutTest@6fe81bb3]" name="checkoutTest" duration-ms="69360" started-at="2015-06-18T06:23:26Z" finished-at="2015-06-18T06:24:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchTest -->
-      </class> <!-- tests.SearchTest -->
-    </test> <!-- TestSet_Search -->
-    <test name="TestSet_Login" duration-ms="11001" started-at="2015-06-17T12:13:39Z" finished-at="2015-06-17T12:13:50Z">
-      <class name="tests.LoginTest">
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:tests.LoginTest@4928ef7d]" name="loginTest" duration-ms="11000" started-at="2015-06-17T09:13:39Z" finished-at="2015-06-17T09:13:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-      </class> <!-- tests.LoginTest -->
-    </test> <!-- TestSet_Login -->
+        </test-method> <!-- checkoutTest -->
+      </class> <!-- tests.CheckoutTest -->
+    </test> <!-- TestSet_Checkout -->
   </suite> <!-- SmokeTest -->
 </testng-results>

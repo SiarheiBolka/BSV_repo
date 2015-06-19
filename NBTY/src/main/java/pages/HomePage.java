@@ -1,5 +1,9 @@
 package pages;
 
+import decorator.SizeVisibleElement;
+import decorator.StyleVisibleElement;
+import decorator.WebElementComponent;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -26,14 +30,14 @@ public class HomePage {
     @FindBy(xpath = "//li[contains(@class, 'main-nav-item')]")
     List<WebElement> categoryList;
 
-    @FindBy(xpath = "//li[contains(@class, 'main-nav-item')]")
+    @FindBy(xpath = "//li[contains(@class, 'main-nav-item')]//li[@role='menuitem']/a")
     List<WebElement> subcategoryList;
 
     @FindBy(className = "lnk-my-account")
     private WebElement myAccountLink;
 
-    @FindBy (linkText = "Logout")
-    private WebElement logoutLink;
+//    @FindBy (linkText = "Logout")
+//    private WebElement logoutLink;
 
     @FindBy (id = "sitesearch")
     private WebElement searchField;
@@ -49,20 +53,16 @@ public class HomePage {
                 .ignoring(NoSuchElementException.class);
     }
 
-    public LandingPage openSubcategoryPage(String categoryNmae, String subcategoryName) {
-        expandMenuForCategory(categoryNmae);
-        clickSubcategory(subcategoryName);
-        return new LandingPage();
-    }
-
     public LoginPage openLoginPage () {
         myAccountLink.click();
         return new LoginPage();
     }
 
     public boolean isUserLoggedIn() {
-        wait.until(ExpectedConditions.visibilityOf(logoutLink));
-        System.out.println(logoutLink.isDisplayed());
+    //TODO add decorated element
+    WebElement logoutLink = new StyleVisibleElement(new SizeVisibleElement(new WebElementComponent(By.linkText("Logout"))));
+//        wait.until(ExpectedConditions.visibilityOf(logoutLink));
+//        System.out.println(logoutLink.isDisplayed());
         return logoutLink.isDisplayed();
     }
 
@@ -72,7 +72,7 @@ public class HomePage {
         return new SearchPage(textForSearch);
     }
 
-    public void expandMenuForCategory(String categoryName){
+    public void expandCategoryMenu(String categoryName){
         for(WebElement element : categoryList){
             if(element.getText().equals(categoryName)){
                 new Actions(WebDriverSingleton.getWebDriverInstance()).moveToElement(element).build().perform();
@@ -83,12 +83,13 @@ public class HomePage {
         throw new RuntimeException("Category '"+ categoryName +"' is NOT found.");
     }
 
-    public void clickSubcategory(String subcategoryName){
+    public LandingPage openSubcategory(String categoryName, String subcategoryName){
+        expandCategoryMenu(categoryName);
         for(WebElement element : subcategoryList){
             if(element.getText().equals(subcategoryName)){
                 new Actions(WebDriverSingleton.getWebDriverInstance()).moveToElement(element).build().perform();
                 element.click();
-                return;
+                return new LandingPage();
             }
         }
         throw new RuntimeException("Subcategory '"+ subcategoryName +"' is NOT found.");

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [SmokeTest]">
-  <test name="TestSet_Login(failed)">
+  <test name="TestSet_Checkout(failed)">
     <groups>
       <run>
-        <include name="logintest"/>
+        <include name="checkouttest"/>
       </run>
     </groups>
     <classes>
-      <class name="tests.LoginTest">
+      <class name="tests.CheckoutTest">
         <methods>
-          <include name="loginTest"/>
+          <include name="checkoutTest"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.CheckoutTest -->
     </classes>
-  </test> <!-- TestSet_Login(failed) -->
+  </test> <!-- TestSet_Checkout(failed) -->
 </suite> <!-- Failed suite [SmokeTest] -->

@@ -225,12 +225,12 @@ public class CheckoutDeliveryPaymentPage {
         wait.until(ExpectedConditions.visibilityOf(cardTypeSelect));
 
         for(WebElement element : cardTypeSelectOptionsList){
-            if(element.getAttribute("rel").equals(cardType.getType())){
+            if(element.getText().equals(cardType.getType())){
                 element.click();
                 return;
             }
         }
-        throw new RuntimeException("");
+        throw new RuntimeException("Error: Credit card is not selected");
 
     }
 
