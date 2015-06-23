@@ -69,10 +69,10 @@ public abstract class WebElementDecorator implements WebElement {
     }
 
     public Dimension getSize() {
-        return null;
+        return decoratedWebElement.getSize();
     }
 
     public String getCssValue(String propertyName) {
-        return null;
+        return decoratedWebElement.getCssValue(propertyName);
     }
 }

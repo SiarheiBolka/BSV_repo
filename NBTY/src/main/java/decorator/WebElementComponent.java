@@ -13,18 +13,10 @@ import java.util.List;
  */
 public class WebElementComponent implements WebElement {
 
-    By locator;
+    WebElement element;
 
     public WebElementComponent(By locator) {
-        this.locator = locator;
-    }
-
-    public By getLocator() {
-        return locator;
-    }
-
-    public void setLocator(By locator) {
-        this.locator = locator;
+        this.element = WebDriverSingleton.getWebDriverInstance().findElement(locator);
     }
 
     @Override
@@ -83,7 +75,7 @@ public class WebElementComponent implements WebElement {
 
     @Override
     public boolean isDisplayed() {
-        return WebDriverSingleton.getWebDriverInstance().findElement(locator).isDisplayed();
+        return element.isDisplayed();
     }
 
     @Override
@@ -93,11 +85,11 @@ public class WebElementComponent implements WebElement {
 
     @Override
     public Dimension getSize() {
-        return null;
+        return element.getSize();
     }
 
     @Override
     public String getCssValue(String propertyName) {
-        return null;
+        return element.getCssValue(propertyName);
     }
 }

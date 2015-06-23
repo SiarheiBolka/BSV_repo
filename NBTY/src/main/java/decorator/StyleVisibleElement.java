@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
  */
 public class StyleVisibleElement extends WebElementDecorator{
 
-    protected StyleVisibleElement styleVisibleElement;
-
     public StyleVisibleElement(WebElement decoratedWebElement) {
         super(decoratedWebElement);
     }
@@ -20,7 +18,10 @@ public class StyleVisibleElement extends WebElementDecorator{
 
     @Override
     public boolean isDisplayed() {
-        //return !styleVisibleElement.getCssValue("display").equals("none");
+        if (!decoratedWebElement.getCssValue("display").equals("none")){
+            return true;
+        }
+
         return super.isDisplayed();
     }
 

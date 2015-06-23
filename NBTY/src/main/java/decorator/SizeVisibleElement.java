@@ -8,15 +8,13 @@ import utils.localDriver.WebDriverSingleton;
  */
 public class SizeVisibleElement extends WebElementDecorator{
 
-    protected SizeVisibleElement sizeVisibleElement;
-
     public SizeVisibleElement(WebElement decoratedWebElement) {
         super(decoratedWebElement);
     }
 
     @Override
     public boolean isDisplayed() {
-/*       if ((sizeVisibleElement.getSize().getHeight() > 0) && (sizeVisibleElement.getSize().getWidth() > 0)) {
+/*       if ((decoratedWebElement.getSize().getHeight() > 0) && (decoratedWebElement.getSize().getWidth() > 0)) {
            return super.isDisplayed();
         }*/
         return super.isDisplayed();
