@@ -11,13 +11,18 @@ public class StyleVisibleElement extends WebElementDecorator{
         super(decoratedWebElement);
     }
 
+/*    @Override
+    public void sendKeys(CharSequence... keysToSend) {
+        super.sendKeys(keysToSend);
+    }*/
+
     @Override
     public boolean isDisplayed() {
-        if (super.isDisplayed()){
-            System.out.println("StyleVisibleElement.isDisplayed");
-            return !decoratedWebElement.getCssValue("display").equals("none");
+        if (!decoratedWebElement.getCssValue("display").equals("none")){
+            return true;
         }
-        return false;
+
+        return super.isDisplayed();
     }
 
 }
