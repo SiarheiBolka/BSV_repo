@@ -59,10 +59,10 @@ public class HomePage {
     }
 
     public boolean isUserLoggedIn() {
-    //TODO add decorated element
-    WebElement logoutLink = new StyleVisibleElement(new SizeVisibleElement(new WebElementComponent(By.linkText("Logout"))));
-//        wait.until(ExpectedConditions.visibilityOf(logoutLink));
-//        System.out.println(logoutLink.isDisplayed());
+    //        wait.until(ExpectedConditions.visibilityOf(logoutLink));
+    //        System.out.println(logoutLink.isDisplayed());
+        WebElement logoutLink = new StyleVisibleElement(new SizeVisibleElement(new WebElementComponent(By.linkText("Logout"))));
+
         return logoutLink.isDisplayed();
     }
 

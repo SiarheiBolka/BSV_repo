@@ -1,12 +1,10 @@
 package decorator;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import utils.localDriver.WebDriverSingleton;
 
 import java.util.List;
+
 
 /**
  * Created by Siarhei Bolka on 6/19/2015.
@@ -16,7 +14,13 @@ public class WebElementComponent implements WebElement {
     WebElement element;
 
     public WebElementComponent(By locator) {
-        this.element = WebDriverSingleton.getWebDriverInstance().findElement(locator);
+        try {
+            this.element = WebDriverSingleton.getWebDriverInstance().findElement(locator);
+        } catch (NoSuchElementException e) {
+            //e.printStackTrace();
+
+        }
+
     }
 
     @Override
@@ -75,6 +79,10 @@ public class WebElementComponent implements WebElement {
 
     @Override
     public boolean isDisplayed() {
+        System.out.println("WebElementComponent.isDisplayed");
+        if (element == null) {
+            return false;
+        }
         return element.isDisplayed();
     }
 
