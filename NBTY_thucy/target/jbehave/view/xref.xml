@@ -1,0 +1,47 @@
+<xref>
+  <whenMade>1435321001399</whenMade>
+  <createdBy>JBehave</createdBy>
+  <metaFilter>-ignore</metaFilter>
+  <meta/>
+  <stories>
+    <story>
+      <description></description>
+      <narrative></narrative>
+      <name>Search.story</name>
+      <path>com/nbty/stories/search/Search.story</path>
+      <html>com.nbty.stories.search.Search.html</html>
+      <meta></meta>
+      <scenarios>Scenario:(SC01) Customer can find the product by name.
+Given I am on Home page
+When searching the product by name
+Then I see the desired products on Search results page
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1435320899783</started>
+      <duration>55857</duration>
+    </story>
+    <story>
+      <description></description>
+      <narrative></narrative>
+      <name>Login.story</name>
+      <path>com/nbty/stories/account/Login.story</path>
+      <html>com.nbty.stories.account.Login.html</html>
+      <meta></meta>
+      <scenarios>Scenario:(SC01) Customer can log in to his account.
+Given I am on Login page
+When Passing successfull authentivation
+Then I get My Account: Account overview page with logged in status
+
+
+</scenarios>
+      <passed>true</passed>
+      <pending>false</pending>
+      <started>1435320956030</started>
+      <duration>41739</duration>
+    </story>
+  </stories>
+  <stepMatches/>
+</xref>

@@ -1,0 +1,7 @@
+<story path="com/nbty/stories/account/Login.story" title="">
+<scenario keyword="Scenario:" title="(SC01) Customer can log in to his account.">
+<step outcome="successful">Given I am on Login page</step>
+<step outcome="successful">When Passing successfull authentivation</step>
+<step outcome="successful">Then I get My Account: Account overview page with logged in status</step>
+</scenario>
+</story>

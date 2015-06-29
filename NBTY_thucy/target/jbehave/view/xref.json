@@ -1,0 +1,35 @@
+{"xref": {
+  "whenMade": 1435321001399,
+  "createdBy": "JBehave",
+  "metaFilter": "-ignore",
+  "meta": [],
+  "stories": [
+    {
+      "description": "",
+      "narrative": "",
+      "name": "Search.story",
+      "path": "com/nbty/stories/search/Search.story",
+      "html": "com.nbty.stories.search.Search.html",
+      "meta": "",
+      "scenarios": "Scenario:(SC01) Customer can find the product by name.\u000aGiven I am on Home page\u000aWhen searching the product by name\u000aThen I see the desired products on Search results page\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1435320899783,
+      "duration": 55857
+    },
+    {
+      "description": "",
+      "narrative": "",
+      "name": "Login.story",
+      "path": "com/nbty/stories/account/Login.story",
+      "html": "com.nbty.stories.account.Login.html",
+      "meta": "",
+      "scenarios": "Scenario:(SC01) Customer can log in to his account.\u000aGiven I am on Login page\u000aWhen Passing successfull authentivation\u000aThen I get My Account: Account overview page with logged in status\u000a\u000a\u000a",
+      "passed": true,
+      "pending": false,
+      "started": 1435320956030,
+      "duration": 41739
+    }
+  ],
+  "stepMatches": []
+}}

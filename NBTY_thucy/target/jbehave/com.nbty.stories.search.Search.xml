@@ -1,0 +1,7 @@
+<story path="com/nbty/stories/search/Search.story" title="">
+<scenario keyword="Scenario:" title="(SC01) Customer can find the product by name.">
+<step outcome="successful">Given I am on Home page</step>
+<step outcome="successful">When searching the product by name</step>
+<step outcome="successful">Then I see the desired products on Search results page</step>
+</scenario>
+</story>

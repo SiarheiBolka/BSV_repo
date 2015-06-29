@@ -1,0 +1,54 @@
+<acceptance-test-run title="(SC01) Customer can find the product by name." name="(SC01) Customer can find the product by name." steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="55679" timestamp="2015-06-26T09:14:59.841-03:00">
+  <user-story id="Search" name="Search" path="com/nbty/stories/search/Search.story"/>
+  <tags>
+    <tag name="Search" type="story"/>
+    <tag name="Search/Search" type="story"/>
+  </tags>
+  <test-group name="Given I am on Home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="b4bedbe57fcda7981a3bc07cde63f1a0_NONE.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="22165">
+      <screenshots>
+        <screenshot image="b4bedbe57fcda7981a3bc07cde63f1a0_NONE.png"/>
+      </screenshots>
+      <description>Open home page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When searching the product by name" result="SUCCESS">
+    <screenshots>
+      <screenshot image="fa912bc090497d2bdcb7c7e9c7cdf3f1_NONE.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="7902">
+      <screenshots>
+        <screenshot image="fa912bc090497d2bdcb7c7e9c7cdf3f1_NONE.png"/>
+        <screenshot image="5558abd54301e35faffe6630ff579394_NONE.png"/>
+      </screenshots>
+      <description>Fill in search field</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="9988">
+      <screenshots>
+        <screenshot image="6be882315c9a8a9c20dbe84fe94119a9_NONE.png"/>
+        <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+      </screenshots>
+      <description>Press go button</description>
+    </test-step>
+  </test-group>
+  <test-group name="Then I see the desired products on Search results page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="2530">
+      <screenshots>
+        <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+      </screenshots>
+      <description>Assert on search results page</description>
+    </test-step>
+    <test-step result="SUCCESS" duration="2560">
+      <screenshots>
+        <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+      </screenshots>
+      <description>Assert products displayed</description>
+    </test-step>
+  </test-group>
+</acceptance-test-run>
