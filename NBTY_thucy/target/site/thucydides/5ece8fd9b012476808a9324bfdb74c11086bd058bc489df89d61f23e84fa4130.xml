@@ -1,4 +1,4 @@
-<acceptance-test-run title="(SC01) Customer can find the product by name." name="(SC01) Customer can find the product by name." steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="55679" timestamp="2015-06-26T09:14:59.841-03:00">
+<acceptance-test-run title="(SC01) Customer can find the product by name." name="(SC01) Customer can find the product by name." steps="5" successful="5" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="53344" timestamp="2015-07-06T08:22:34.996-03:00">
   <user-story id="Search" name="Search" path="com/nbty/stories/search/Search.story"/>
   <tags>
     <tag name="Search" type="story"/>
@@ -6,47 +6,47 @@
   </tags>
   <test-group name="Given I am on Home page" result="SUCCESS">
     <screenshots>
-      <screenshot image="b4bedbe57fcda7981a3bc07cde63f1a0_NONE.png"/>
+      <screenshot image="b3e54c7d2aa0707b3e6ea6e1ed032e4d_NONE.png"/>
     </screenshots>
-    <test-step result="SUCCESS" duration="22165">
+    <test-step result="SUCCESS" duration="18661">
       <screenshots>
-        <screenshot image="b4bedbe57fcda7981a3bc07cde63f1a0_NONE.png"/>
+        <screenshot image="b3e54c7d2aa0707b3e6ea6e1ed032e4d_NONE.png"/>
       </screenshots>
       <description>Open home page</description>
     </test-step>
   </test-group>
   <test-group name="When searching the product by name" result="SUCCESS">
     <screenshots>
-      <screenshot image="fa912bc090497d2bdcb7c7e9c7cdf3f1_NONE.png"/>
+      <screenshot image="c02f485ef34e2779c8a1299d39c4b754_NONE.png"/>
     </screenshots>
-    <test-step result="SUCCESS" duration="7902">
+    <test-step result="SUCCESS" duration="8218">
       <screenshots>
-        <screenshot image="fa912bc090497d2bdcb7c7e9c7cdf3f1_NONE.png"/>
-        <screenshot image="5558abd54301e35faffe6630ff579394_NONE.png"/>
+        <screenshot image="5ec970f40a281b3de7e440e23b385241_NONE.png"/>
+        <screenshot image="b75a7741c76dd201047b437448afd15b_NONE.png"/>
       </screenshots>
       <description>Fill in search field</description>
     </test-step>
-    <test-step result="SUCCESS" duration="9988">
+    <test-step result="SUCCESS" duration="9576">
       <screenshots>
-        <screenshot image="6be882315c9a8a9c20dbe84fe94119a9_NONE.png"/>
-        <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+        <screenshot image="eb171e215e03db4eac5587bad17bd518_NONE.png"/>
+        <screenshot image="087ee2964ceeb9167296266a9a6273dc_NONE.png"/>
       </screenshots>
       <description>Press go button</description>
     </test-step>
   </test-group>
   <test-group name="Then I see the desired products on Search results page" result="SUCCESS">
     <screenshots>
-      <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+      <screenshot image="087ee2964ceeb9167296266a9a6273dc_NONE.png"/>
     </screenshots>
-    <test-step result="SUCCESS" duration="2530">
+    <test-step result="SUCCESS" duration="2756">
       <screenshots>
-        <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+        <screenshot image="087ee2964ceeb9167296266a9a6273dc_NONE.png"/>
       </screenshots>
       <description>Assert on search results page</description>
     </test-step>
-    <test-step result="SUCCESS" duration="2560">
+    <test-step result="SUCCESS" duration="2783">
       <screenshots>
-        <screenshot image="156c14b123c056107d6dd023ae0b8fba_NONE.png"/>
+        <screenshot image="087ee2964ceeb9167296266a9a6273dc_NONE.png"/>
       </screenshots>
       <description>Assert products displayed</description>
     </test-step>

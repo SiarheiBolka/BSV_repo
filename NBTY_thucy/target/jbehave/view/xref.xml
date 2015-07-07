@@ -1,5 +1,5 @@
 <xref>
-  <whenMade>1435321001399</whenMade>
+  <whenMade>1436181848459</whenMade>
   <createdBy>JBehave</createdBy>
   <metaFilter>-ignore</metaFilter>
   <meta/>
@@ -20,8 +20,8 @@ Then I see the desired products on Search results page
 </scenarios>
       <passed>true</passed>
       <pending>false</pending>
-      <started>1435320899783</started>
-      <duration>55857</duration>
+      <started>1436181754941</started>
+      <duration>53523</duration>
     </story>
     <story>
       <description></description>
@@ -39,8 +39,8 @@ Then I get My Account: Account overview page with logged in status
 </scenarios>
       <passed>true</passed>
       <pending>false</pending>
-      <started>1435320956030</started>
-      <duration>41739</duration>
+      <started>1436181808753</started>
+      <duration>36153</duration>
     </story>
   </stories>
   <stepMatches/>

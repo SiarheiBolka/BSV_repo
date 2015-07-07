@@ -1,4 +1,4 @@
-<acceptance-test-run title="(SC01) Customer can log in to his account." name="(SC01) Customer can log in to his account." steps="6" successful="6" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="41729" timestamp="2015-06-26T09:15:56.040-03:00">
+<acceptance-test-run title="(SC01) Customer can log in to his account." name="(SC01) Customer can log in to his account." steps="6" successful="6" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="36147" timestamp="2015-07-06T08:23:28.756-03:00">
   <user-story id="Login" name="Login" path="com/nbty/stories/account/Login.story"/>
   <tags>
     <tag name="Account/Login" type="story"/>
@@ -6,53 +6,53 @@
   </tags>
   <test-group name="Given I am on Login page" result="SUCCESS">
     <screenshots>
-      <screenshot image="add172626095e37dc8feab7ac6ae138d_NONE.png"/>
+      <screenshot image="38023845699848b5507a1ddd37c7d6da_NONE.png"/>
     </screenshots>
-    <test-step result="SUCCESS" duration="18731">
+    <test-step result="SUCCESS" duration="14501">
       <screenshots>
-        <screenshot image="add172626095e37dc8feab7ac6ae138d_NONE.png"/>
+        <screenshot image="38023845699848b5507a1ddd37c7d6da_NONE.png"/>
       </screenshots>
       <description>Open login page</description>
     </test-step>
   </test-group>
   <test-group name="When Passing successfull authentivation" result="SUCCESS">
     <screenshots>
-      <screenshot image="add172626095e37dc8feab7ac6ae138d_NONE.png"/>
+      <screenshot image="38023845699848b5507a1ddd37c7d6da_NONE.png"/>
     </screenshots>
-    <test-step result="SUCCESS" duration="2430">
+    <test-step result="SUCCESS" duration="2642">
       <screenshots>
-        <screenshot image="9a0b809a9d32a7c67da22ab8387750e1_NONE.png"/>
+        <screenshot image="232d869d2964e4d921843da4111c197c_NONE.png"/>
       </screenshots>
       <description>Fill in email</description>
     </test-step>
-    <test-step result="SUCCESS" duration="1890">
+    <test-step result="SUCCESS" duration="2004">
       <screenshots>
-        <screenshot image="9a0b809a9d32a7c67da22ab8387750e1_NONE.png"/>
-        <screenshot image="7ac6a48fc69a5a65485352f9bdcef1ef_NONE.png"/>
+        <screenshot image="232d869d2964e4d921843da4111c197c_NONE.png"/>
+        <screenshot image="a60cb4c9194e55cd34d285cc693a83af_NONE.png"/>
       </screenshots>
       <description>Fill in password</description>
     </test-step>
-    <test-step result="SUCCESS" duration="8881">
+    <test-step result="SUCCESS" duration="6490">
       <screenshots>
-        <screenshot image="7ac6a48fc69a5a65485352f9bdcef1ef_NONE.png"/>
-        <screenshot image="fdd7ab7be4656e2f75f73fdb22bd2094_NONE.png"/>
+        <screenshot image="a60cb4c9194e55cd34d285cc693a83af_NONE.png"/>
+        <screenshot image="daa3d3caae3d58cc121177c3bedbd9c6_NONE.png"/>
       </screenshots>
       <description>Press sign in button</description>
     </test-step>
   </test-group>
   <test-group name="Then I get My Account: Account overview page with logged in status" result="SUCCESS">
     <screenshots>
-      <screenshot image="fdd7ab7be4656e2f75f73fdb22bd2094_NONE.png"/>
+      <screenshot image="daa3d3caae3d58cc121177c3bedbd9c6_NONE.png"/>
     </screenshots>
-    <test-step result="SUCCESS" duration="2612">
+    <test-step result="SUCCESS" duration="2836">
       <screenshots>
-        <screenshot image="fdd7ab7be4656e2f75f73fdb22bd2094_NONE.png"/>
+        <screenshot image="daa3d3caae3d58cc121177c3bedbd9c6_NONE.png"/>
       </screenshots>
       <description>Assert on my account page</description>
     </test-step>
-    <test-step result="SUCCESS" duration="2705">
+    <test-step result="SUCCESS" duration="2902">
       <screenshots>
-        <screenshot image="fdd7ab7be4656e2f75f73fdb22bd2094_NONE.png"/>
+        <screenshot image="daa3d3caae3d58cc121177c3bedbd9c6_NONE.png"/>
       </screenshots>
       <description>Assert logged in</description>
     </test-step>

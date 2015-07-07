@@ -1,5 +1,5 @@
 {"xref": {
-  "whenMade": 1435321001399,
+  "whenMade": 1436181848459,
   "createdBy": "JBehave",
   "metaFilter": "-ignore",
   "meta": [],
@@ -14,8 +14,8 @@
       "scenarios": "Scenario:(SC01) Customer can find the product by name.\u000aGiven I am on Home page\u000aWhen searching the product by name\u000aThen I see the desired products on Search results page\u000a\u000a\u000a",
       "passed": true,
       "pending": false,
-      "started": 1435320899783,
-      "duration": 55857
+      "started": 1436181754941,
+      "duration": 53523
     },
     {
       "description": "",
@@ -27,8 +27,8 @@
       "scenarios": "Scenario:(SC01) Customer can log in to his account.\u000aGiven I am on Login page\u000aWhen Passing successfull authentivation\u000aThen I get My Account: Account overview page with logged in status\u000a\u000a\u000a",
       "passed": true,
       "pending": false,
-      "started": 1435320956030,
-      "duration": 41739
+      "started": 1436181808753,
+      "duration": 36153
     }
   ],
   "stepMatches": []
