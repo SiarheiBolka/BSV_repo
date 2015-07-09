@@ -16,7 +16,8 @@ import java.util.concurrent.TimeUnit;
  * Created by Siarhei Bolka on 7/8/2015.
  */
 public class RegisterSecondPage {
-    Wait<WebDriver> wait;
+
+    AppiumFieldDecorator afd = new AppiumFieldDecorator(AndroidDriverSingleton.createDriver(), 120, TimeUnit.SECONDS);
 
     @AndroidFindBy(uiAutomator = "new UiSelector().className(\"android.widget.EditText\")")
     public List<MobileElement> textFieldsOnRegistrationPage;
@@ -25,7 +26,7 @@ public class RegisterSecondPage {
     public MobileElement createAccountButton;
 
     public RegisterSecondPage(){
-        PageFactory.initElements(new AppiumFieldDecorator(AndroidDriverSingleton.createDriver()), this);
+        PageFactory.initElements(afd, this);
     }
 
     public void setFullName(String fullName)
@@ -45,18 +46,17 @@ public class RegisterSecondPage {
 
     public void setPassword(String password)
     {
-        textFieldsOnRegistrationPage.get(0).sendKeys(password);
+        textFieldsOnRegistrationPage.get(3).sendKeys(password);
     }
 
     public SuccessfullRegistrationPage fillRegistrationForm (String fullName, String companyName, String email, String password)
     {
         setFullName(fullName);
-        setCompanyName(companyName);
-        setEmail(email);
-        AndroidDriverSingleton.createDriver().swipe(20, 450, 50, 50, 400);
+        AndroidDriverSingleton.createDriver().swipe(20, 250, 50, 50, 200);
         setPassword(password);
+        setEmail(email);
+        setCompanyName(companyName);
         clickcreateAccountButton();
-        AndroidDriverSingleton.createDriver().swipe(20, 450, 50, 50, 400);
         return new SuccessfullRegistrationPage();
     }
 

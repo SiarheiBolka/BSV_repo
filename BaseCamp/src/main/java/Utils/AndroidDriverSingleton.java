@@ -32,11 +32,12 @@ public class AndroidDriverSingleton {
             try {
                 seleniumGridUrl = new URL("http://127.0.0.1:4723/wd/hub");
             } catch (MalformedURLException e) {
+                System.out.println("Error: HUB is not connected");
                 e.printStackTrace();
             }
 
             driver = new AndroidDriver(seleniumGridUrl, dc);
-            driver.manage().timeouts().implicitlyWait(200, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
         }
 
         return driver;
