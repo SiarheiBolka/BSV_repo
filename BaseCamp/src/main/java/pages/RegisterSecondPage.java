@@ -52,7 +52,11 @@ public class RegisterSecondPage {
     public SuccessfullRegistrationPage fillRegistrationForm (String fullName, String companyName, String email, String password)
     {
         setFullName(fullName);
-        AndroidDriverSingleton.createDriver().swipe(20, 250, 50, 50, 200);
+        AndroidDriverSingleton.createDriver().swipe(20, 250, 50, 50, 500);
+        try {
+            Thread.sleep(5*1000);
+        } catch (InterruptedException e) {
+        }
         setPassword(password);
         setEmail(email);
         setCompanyName(companyName);

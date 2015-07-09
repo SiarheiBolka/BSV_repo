@@ -26,7 +26,7 @@ public class RegisterFirstPage {
     public RegisterSecondPage clickStartButton ()
     {
         if (startButton.isDisplayed()) {
-            AndroidDriverSingleton.createDriver().swipe(714, 1146, 714, 846, 300);
+            AndroidDriverSingleton.createDriver().swipe(714, 1146, 714, 846, 1000);
             startButton.click();
         } else {
             System.out.println("Erorr: startButton on RegisterFirstPage is not displayed");
