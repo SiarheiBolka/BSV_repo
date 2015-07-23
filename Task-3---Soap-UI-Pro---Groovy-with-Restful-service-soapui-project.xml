@@ -1,2 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="3e95a752-6086-4c4e-959d-bb3bf532379a" activeEnvironment="Default" name="Task 3 - Soap UI Pro + Groovy with Restful service" resourceRoot="" soapui-version="5.1.2-m-SNAPSHOT" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/></con:soapui-project>
+<con:soapui-project id="576abefa-353a-4c65-82c7-57ec81f5c134" activeEnvironment="Default" name="Task 3 - Groovy with Restful service" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="37ffe895-6be3-42ab-967c-6d04d7934ef5" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://geoip.elib.ru" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://geoip.elib.ru</con:endpoint></con:endpoints><con:resource name="Getdata_mini.pl" path="/cgi-bin/getdata_mini.pl" id="de0076b1-6e88-4b61-bc46-88fa7e0cbca9"><con:settings/><con:parameters><con:parameter><con:name>ip</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Getdata_mini.pl" id="910bd8c1-ea1b-42ce-a71f-b0fdddfc1156" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html; charset=iso-8859-1</con:mediaType><con:status>500</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/plain; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="3f1198ce-d99a-4f95-9dd4-e3d192ae1cd9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://geoip.elib.ru</con:endpoint><con:request/><con:originalUri>http://geoip.elib.ru/cgi-bin/getdata_mini.pl</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ip" value="213.252.105.59" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ip</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="6947c732-d7ab-462a-8975-07782e6884ff" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="fc8c66fa-246c-4ddc-856a-f55b6a9670a9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script 1" id="0e5360c1-5d6f-4ae7-8e55-ae626413955b"><con:settings/><con:config><script>def testCase = testRunner.testCase;
+log.info(testCase.getName());
+def testStep1 = testCase.getTestStepByName("GetLocationStep1");
+log.info(testStep1.getName());
+testStepContext1 = new com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext(testStep1);
+testStep1.run(testRunner, testStepContext1);
+def content1 = testStepContext1.httpResponse.responseContent;
+log.info content1;
+def httpResponseHeaders1 = context.testCase.testSteps["GetLocationStep1"].testRequest.response.responseHeaders;
+def httpStatus1 = httpResponseHeaders1["#status#"];
+def httpStatusCode1 = (httpStatus1 =~ "[1-5]\\d\\d")[0];
+log.info("HTTP status code: " + httpStatusCode1);
+assert httpStatusCode1 == "200" : "Status code test failed";
+def  latitude1 = content1.substring(0, 9).trim();
+log.info latitude1;
+assert latitude1 == "55.755787" : "Error: latitude is not correct"
+def  longitude1 = content1.substring(10, 19).trim();
+log.info longitude1;
+assert longitude1 == "37.617634" : "Error: longitude is not correct"
+def  city1 = content1.substring(20, content1.length()).trim();
+log.info city1;
+assert city1 == "Москва" : "Error: city is not correct"
+
+log.info "**************************************************************";
+
+def testCase2 = testRunner.testCase;
+log.info(testCase2.getName());
+def testStep2 = testCase2.getTestStepByName("GetLocationStep2");
+log.info(testStep2.getName());
+testStepContext2 = new com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext(testStep2);
+testStep2.run(testRunner, testStepContext2);
+def content2 = testStepContext2.httpResponse.responseContent
+log.info content2;
+def httpResponseHeaders2 = context.testCase.testSteps["GetLocationStep2"].testRequest.response.responseHeaders;
+def httpStatus2 = httpResponseHeaders2["#status#"];
+def httpStatusCode2 = (httpStatus2 =~ "[1-5]\\d\\d")[0];
+log.info("HTTP status code: " + httpStatusCode2);
+assert httpStatusCode2 == "200" : "Status code test failed";
+log.info content2;
+def  latitude2 = content2.substring(0, 8).trim();
+log.info latitude2;
+assert latitude2 == "55.88781" : "Error: latitude is not correct"
+def  longitude2 = content2.substring(9, 17).trim();
+log.info longitude2;
+assert longitude2 == "37.44418" : "Error: longitude is not correct"
+def  city2 = content2.substring(18, content2.length()).trim();
+log.info city2;
+assert city2 == "Химки" : "Error: city is not correct"
+
+log.info "**************************************************************";
+
+def testCase3 = testRunner.testCase;
+log.info(testCase3.getName());
+def testStep3 = testCase3.getTestStepByName("GetLocationStep3");
+log.info(testStep3.getName());
+testStepContext3 = new com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext(testStep3);
+testStep3.run(testRunner, testStepContext3);
+def content3 = testStepContext3.httpResponse.responseContent
+log.info content3;
+def httpResponseHeaders3 = context.testCase.testSteps["GetLocationStep3"].testRequest.response.responseHeaders;
+def httpStatus3 = httpResponseHeaders3["#status#"];
+def httpStatusCode3 = (httpStatus3 =~ "[1-5]\\d\\d")[0];
+log.info("HTTP status code: " + httpStatusCode3);
+assert httpStatusCode3 == "200" : "Status code test failed";
+log.info content3;
+def  latitude3 = content3.substring(0, 9).trim();
+log.info latitude3;
+assert latitude3 == "49.948071" : "Error: latitude is not correct"
+def  longitude3 = content3.substring(10, 19).trim();
+log.info longitude3;
+assert longitude3 == "36.212299" : "Error: longitude is not correct"
+def  city3 = content3.substring(20, content3.length()).trim();
+log.info city3;
+assert city3 == "Харьков" : "Error: city is not correct"
+
+log.info "**************************************************************";
+
+def testCase4 = testRunner.testCase;
+log.info(testCase4.getName());
+def testStep4 = testCase4.getTestStepByName("GetLocationStep4");
+log.info(testStep4.getName());
+testStepContext4 = new com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext(testStep4);
+testStep4.run(testRunner, testStepContext4);
+def content4 = testStepContext4.httpResponse.responseContent
+log.info content4;
+def httpResponseHeaders4 = context.testCase.testSteps["GetLocationStep4"].testRequest.response.responseHeaders;
+def httpStatus4 = httpResponseHeaders4["#status#"];
+def httpStatusCode4 = (httpStatus4 =~ "[1-5]\\d\\d")[0];
+log.info("HTTP status code: " + httpStatusCode4);
+assert httpStatusCode4 == "200" : "Status code test failed";
+log.info content4;
+def  latitude4 = content4.substring(0, 9).trim();
+log.info latitude4;
+assert latitude4 == "49.948071" : "Error: latitude is not correct"
+def  longitude4 = content4.substring(10, 19).trim();
+log.info longitude4;
+assert longitude4 == "36.212299" : "Error: longitude is not correct"
+def  city4 = content4.substring(20, content4.length()).trim();
+log.info city4;
+assert city4 == "Харьков" : "Error: city is not correct"
+
+assert city3 == city4 : "Error: Sities are not equals"
+log.info "**************************************************************";
+
+def testCase5 = testRunner.testCase;
+log.info(testCase5.getName());
+def testStep5 = testCase5.getTestStepByName("GetLocationStep5");
+log.info(testStep5.getName());
+testStepContext5 = new com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext(testStep5);
+testStep5.run(testRunner, testStepContext5);
+def content5 = testStepContext5.httpResponse.responseContent
+log.info content5;
+def httpResponseHeaders5 = context.testCase.testSteps["GetLocationStep5"].testRequest.response.responseHeaders;
+def httpStatus5 = httpResponseHeaders5["#status#"];
+def httpStatusCode5 = (httpStatus5 =~ "[1-5]\\d\\d")[0];
+log.info("HTTP status code: " + httpStatusCode5);
+assert httpStatusCode5 == "200" : "Status code test failed";
+log.info content5;
+assert content5.trim() == "E10" : "Error: 10 error code is not received"
+
+log.info "**************************************************************";
+
+def testCase6 = testRunner.testCase;
+log.info(testCase6.getName());
+def testStep6 = testCase6.getTestStepByName("GetLocationStep6");
+log.info(testStep6.getName());
+testStepContext6 = new com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext(testStep6);
+testStep6.run(testRunner, testStepContext6);
+def content6 = testStepContext6.httpResponse.responseContent
+log.info content6;
+def httpResponseHeaders6 = context.testCase.testSteps["GetLocationStep6"].testRequest.response.responseHeaders;
+def httpStatus6 = httpResponseHeaders6["#status#"];
+def httpStatusCode6 = (httpStatus6 =~ "[1-5]\\d\\d")[0];
+log.info("HTTP status code: " + httpStatusCode6);
+assert httpStatusCode6 == "200" : "Status code test failed";
+log.info content6;
+assert content6.trim() == "E205" : "Error: 205 error code is not received"
+
+log.info "**************************************************************";</script></con:config></con:testStep><con:testStep type="restrequest" name="GetLocationStep1" id="d33e00ed-281b-4634-9221-edbf5689c3a7"><con:settings/><con:config service="http://geoip.elib.ru" resourcePath="/cgi-bin/getdata_mini.pl" methodName="Getdata_mini.pl" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetLocationStep1" id="3f1198ce-d99a-4f95-9dd4-e3d192ae1cd9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://geoip.elib.ru</con:endpoint><con:request/><con:originalUri>http://geoip.elib.ru/cgi-bin/getdata_mini.pl</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9af8b882-b8cb-43d4-8274-29fcf96e2262" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ip" value="${Properties#ip1}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ip</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetLocationStep2" id="c9a5eb71-461c-4b09-98c2-889f88c2e6b0"><con:settings/><con:config service="http://geoip.elib.ru" resourcePath="/cgi-bin/getdata_mini.pl" methodName="Getdata_mini.pl" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetLocationStep2" id="3f1198ce-d99a-4f95-9dd4-e3d192ae1cd9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://geoip.elib.ru</con:endpoint><con:request/><con:originalUri>http://geoip.elib.ru/cgi-bin/getdata_mini.pl</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9af8b882-b8cb-43d4-8274-29fcf96e2262" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ip" value="${Properties#ip2}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ip</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetLocationStep3" id="76c2cb16-b0ee-4547-8432-d164f56565d7"><con:settings/><con:config service="http://geoip.elib.ru" resourcePath="/cgi-bin/getdata_mini.pl" methodName="Getdata_mini.pl" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetLocationStep3" id="3f1198ce-d99a-4f95-9dd4-e3d192ae1cd9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://geoip.elib.ru</con:endpoint><con:request/><con:originalUri>http://geoip.elib.ru/cgi-bin/getdata_mini.pl</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9af8b882-b8cb-43d4-8274-29fcf96e2262" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ip" value="${Properties#ip3}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ip</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetLocationStep4" id="1f8baf5d-5e51-4061-9b20-c018a9cc029c"><con:settings/><con:config service="http://geoip.elib.ru" resourcePath="/cgi-bin/getdata_mini.pl" methodName="Getdata_mini.pl" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetLocationStep4" id="3f1198ce-d99a-4f95-9dd4-e3d192ae1cd9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://geoip.elib.ru</con:endpoint><con:request/><con:originalUri>http://geoip.elib.ru/cgi-bin/getdata_mini.pl</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9af8b882-b8cb-43d4-8274-29fcf96e2262" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ip" value="${Properties#ip4}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ip</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetLocationStep5"><con:settings/><con:config service="http://geoip.elib.ru" resourcePath="/cgi-bin/getdata_mini.pl" methodName="Getdata_mini.pl" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetLocationStep5" id="3f1198ce-d99a-4f95-9dd4-e3d192ae1cd9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://geoip.elib.ru</con:endpoint><con:request/><con:originalUri>http://geoip.elib.ru/cgi-bin/getdata_mini.pl</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9af8b882-b8cb-43d4-8274-29fcf96e2262" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ip" value="${Properties#ip5}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ip</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetLocationStep6"><con:settings/><con:config service="http://geoip.elib.ru" resourcePath="/cgi-bin/getdata_mini.pl" methodName="Getdata_mini.pl" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetLocationStep6" id="3f1198ce-d99a-4f95-9dd4-e3d192ae1cd9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://geoip.elib.ru</con:endpoint><con:request/><con:originalUri>http://geoip.elib.ru/cgi-bin/getdata_mini.pl</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="9af8b882-b8cb-43d4-8274-29fcf96e2262" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="ip" value="${Properties#ip6}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>ip</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="Properties" id="d65fa012-3372-4fd6-a619-8c5162d0299d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>ip1</con:name><con:value>213.252.105.59</con:value></con:property><con:property><con:name>ip2</con:name><con:value>87.255.23.236</con:value></con:property><con:property><con:name>ip3</con:name><con:value>91.222.248.14</con:value></con:property><con:property><con:name>ip4</con:name><con:value>91.222.248.15</con:value></con:property><con:property><con:name>ip5</con:name><con:value>93.178.204</con:value></con:property><con:property><con:name>ip6</con:name><con:value>105.93.178.204</con:value></con:property></con:properties></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>d33e00ed-281b-4634-9221-edbf5689c3a7</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>0e5360c1-5d6f-4ae7-8e55-ae626413955b</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>d65fa012-3372-4fd6-a619-8c5162d0299d</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:oAuth2ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:parameters/></con:reporting><con:sensitiveInformation/></con:soapui-project>
